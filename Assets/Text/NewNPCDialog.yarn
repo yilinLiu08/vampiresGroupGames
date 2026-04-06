@@ -1,0 +1,70 @@
+﻿title: NewNPCDialog
+position: -15,-198
+---
+<<declare $firstVisit = false>>
+<<if $firstVisit == false>>
+<<jump introNPC>>
+<<else>>
+<<jump returnText>>
+<<endif>>
+===
+title: introNPC
+position: -10,-9
+---
+Hey there Buddy.
+Nice to see you. Not many people come around these parts.
+I heard you're looking for something like the thing I have here.
+I'd be happy to give it to you... for a price!
+Find me another object that looks like this, and we can make a trade.
+Sound good?
+<<set $firstVisit = true>>
+    ->Yes!
+        <<jump accepted>>
+    ->Nah.
+        <<jump denied>>
+===
+title: accepted
+position: -168,198
+---
+Excellent!
+Please come back when you've collected the item I was looking for.
+===
+title: denied
+position: 99,206
+---
+Shucks.
+Let me know if you change your mind.
+===
+title: returnText
+position: 231,-23
+---
+<<declare $doneQuest = false>>
+<<if $doneQuest == false>>
+Hi again!
+Good to see you... I guess.
+<<if visited("accepted")>>
+Did you get my shit?
+    ->Yeah.
+        <<if qCollectCheck() == true>>
+        Great.
+        Pleasure doing business with you!
+        <<_collectItem item>>
+        <<set $doneQuest = true>>
+        <<else>>
+        Please don't joke with me.
+        Go get my shit.
+        <<endif>>
+    ->Nope.
+        Ok... then... go get it, I guess?
+<<else>>
+Did you rethink my offer?
+    ->Yeah.
+        <<jump accepted>>
+    ->No.
+        <<jump denied>>
+<<endif>>
+<<else>>
+Hey! Good to see you, partner.
+Thanks again for completing my quest. See ya!
+<<endif>>
+===
