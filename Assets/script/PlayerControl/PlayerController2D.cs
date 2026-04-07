@@ -56,7 +56,7 @@ public class PlayerController2D : MonoBehaviour
     {
         MovePlayer();
 
-        JumpPlayer();
+       JumpPlayer();
     }
 
 
@@ -68,13 +68,14 @@ public class PlayerController2D : MonoBehaviour
 
 
 
-    public void OnJump(InputValue value)
+   public void OnJump(InputValue value)
     {
         if (value.isPressed)
         {
             jumpPressed = true;
         }
     }
+   
 
 
 
@@ -116,7 +117,7 @@ public class PlayerController2D : MonoBehaviour
 
         jumpPressed = false;
     }
-
+    
 
 
     private void CheckGround()
