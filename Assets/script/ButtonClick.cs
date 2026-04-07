@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement; // Make sure to add this namespace
 using UnityEngine.UI;
 
-public class Button : MonoBehaviour
+public class ButtonClick : MonoBehaviour
 {
     
     public void OnButtonClick()
