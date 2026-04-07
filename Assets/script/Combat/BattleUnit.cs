@@ -13,6 +13,10 @@ public class BattleUnit : MonoBehaviour
     public int attackDamage = 20;
     public int skillDamage = 35;
 
+    [Header("Mana")]
+    public int maxMana = 100;
+    public int currentMana = 100;
+
     [Header("UI")]
     public Image hpBarImage;
     public Image highlightImage;
@@ -20,6 +24,7 @@ public class BattleUnit : MonoBehaviour
     private void Start()
     {
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+        currentMana = Mathf.Clamp(currentMana, 0, maxMana);
         UpdateHPBar();
         SetHighlight(false);
     }
@@ -36,6 +41,45 @@ public class BattleUnit : MonoBehaviour
         currentHP += amount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
         UpdateHPBar();
+    }
+
+    public void RestoreMana(int amount)
+    {
+        currentMana += amount;
+        currentMana = Mathf.Clamp(currentMana, 0, maxMana);
+    }
+
+    public void AddDamageBoost(int amount)
+    {
+        attackDamage += amount;
+    }
+
+    public void UseFruit(Fruit fruit)
+    {
+        if (fruit == null)
+        {
+            return;
+        }
+
+        foreach (FruitEffect effect in fruit.effects)
+        {
+            if (effect == FruitEffect.Heal)
+            {
+                Heal(fruit.healAmount);
+            }
+
+            if (effect == FruitEffect.DamageBoost)
+            {
+                AddDamageBoost(fruit.damageBoostAmount);
+            }
+
+            if (effect == FruitEffect.ManaRestore)
+            {
+                RestoreMana(fruit.manaAmount);
+            }
+        }
+
+        Debug.Log(unitName + " used fruit: " + fruit.itemName);
     }
 
     public bool IsDead()

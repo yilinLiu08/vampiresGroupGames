@@ -363,4 +363,4 @@ public class TurnBattleManager : MonoBehaviour
             enemies[i].SetHighlight(false);
         }
     }
-}
+} 

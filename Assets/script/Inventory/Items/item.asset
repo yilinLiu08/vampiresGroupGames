@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9110f8d29753ed84d92848b0410f438e, type: 3}
-  m_Name: fruit
+  m_Name: item
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
-  itemName: 
-  description: Test
-  icon: {fileID: 21300000, guid: df8c2b7ee31f3d54093ba0f8e0a6d800, type: 3}
-  healAmount: 99
-  damageBoostAmount: 10
-  manaAmount: 99
-  effects: 0100000000000000
+  itemName: item
+  description: item
+  icon: {fileID: 21300000, guid: e586ead65f4bdfe488c21ce83e2aff88, type: 3}
+  healAmount: 0
+  damageBoostAmount: 0
+  manaAmount: 0
+  effects: 
