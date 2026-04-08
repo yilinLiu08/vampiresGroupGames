@@ -372,8 +372,8 @@ Transform:
   m_GameObject: {fileID: 39590302}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3, y: 5.01, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 10.181, y: 11.91, z: 0}
+  m_LocalScale: {x: 0.0294042, y: 0.06197022, z: 0.043083787}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 572707128}
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8f4054f8bb1859f418b753d0707274e5, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1712,8 +1712,15 @@ MonoBehaviour:
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 0
+  healAmount: 30
+  shieldActive: 0
   hpBarImage: {fileID: 1351369392}
+  manaBarImage: {fileID: 0}
   highlightImage: {fileID: 662836890}
+  hpText: {fileID: 0}
+  manaText: {fileID: 0}
 --- !u!1 &116879010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8bbcefea694009443bd05a79dab63417, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2203,7 +2210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &175636145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3084,14 +3091,14 @@ RectTransform:
   m_GameObject: {fileID: 315223392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18581562, y: 0.18581562, z: 0.18581562}
+  m_LocalScale: {x: 0.12887985, y: 0.084845476, z: 0.12887985}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 39590303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -443.89, y: -229.85}
+  m_AnchoredPosition: {x: -439.4, y: -229.85}
   m_SizeDelta: {x: 223.83, y: 44.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315223394
@@ -3114,7 +3121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HealthNum
+  m_text: '99999
 
 '
   m_isRightToLeft: 0
@@ -3516,7 +3523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8f4054f8bb1859f418b753d0707274e5, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3742,7 +3749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fa16dbc7bb3bd484089b0f10cfcba20a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4232,7 +4239,8 @@ GameObject:
   m_Component:
   - component: {fileID: 527832314}
   - component: {fileID: 527832316}
-  - component: {fileID: 527832315}
+  - component: {fileID: 527832318}
+  - component: {fileID: 527832317}
   m_Layer: 0
   m_Name: TankPic
   m_TagString: Untagged
@@ -4247,45 +4255,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527832313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.016071882, y: -0.016071882, z: -0.016071882}
+  m_LocalScale: {x: -0.0197652, y: -0.0197652, z: -0.0197652}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1612991409}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3.08, y: -1.81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &527832315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527832313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 0}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!222 &527832316
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4294,6 +4275,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527832313}
   m_CullTransparentMesh: 1
+--- !u!114 &527832317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527832313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 21445d96cd3ecb74a9514b5ced9f772d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &527832318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527832313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fb20f8c681deb4f8174f7e778b58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFruitDropReceiver
+  targetUnit: {fileID: 1612991408}
 --- !u!1 &538693156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,7 +4344,7 @@ Transform:
   m_GameObject: {fileID: 538693156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.04287, y: 1.4115547, z: 17.349403}
+  m_LocalPosition: {x: 8.04287, y: 0.29, z: 17.349403}
   m_LocalScale: {x: 1.2163326, y: 1.2163326, z: 1.2163326}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4350,8 +4374,15 @@ MonoBehaviour:
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 0
+  healAmount: 30
+  shieldActive: 0
   hpBarImage: {fileID: 1077814989}
+  manaBarImage: {fileID: 0}
   highlightImage: {fileID: 643901036}
+  hpText: {fileID: 0}
+  manaText: {fileID: 0}
 --- !u!1 &570902530
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,7 +4481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fa16dbc7bb3bd484089b0f10cfcba20a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4522,7 +4553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.27672952, g: 0.27672952, b: 0.27672952, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5086,7 +5117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fa16dbc7bb3bd484089b0f10cfcba20a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5534,7 +5565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fa16dbc7bb3bd484089b0f10cfcba20a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6820,8 +6851,15 @@ MonoBehaviour:
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 3
+  healAmount: 20
+  shieldActive: 0
   hpBarImage: {fileID: 2143360405}
+  manaBarImage: {fileID: 1362188609}
   highlightImage: {fileID: 709759494}
+  hpText: {fileID: 1131618818}
+  manaText: {fileID: 231939309}
 --- !u!4 &892382589
 Transform:
   m_ObjectHideFlags: 0
@@ -7315,7 +7353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8f4054f8bb1859f418b753d0707274e5, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8067,8 +8105,8 @@ Transform:
   m_GameObject: {fileID: 1031448631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.38, y: 8.09, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 11.33, y: 17.42, z: 0}
+  m_LocalScale: {x: 0.025385652, y: 0.07294282, z: 0.05222186}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1438774894}
@@ -8421,7 +8459,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 487ac817c5765a44884aca9ed49f0857, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8765,7 +8803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 487ac817c5765a44884aca9ed49f0857, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8808,8 +8846,8 @@ Transform:
   m_GameObject: {fileID: 1118465295}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3, y: 5.01, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 10.181, y: 11.91, z: 0}
+  m_LocalScale: {x: 0.0294042, y: 0.06197022, z: 0.043083787}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 405707318}
@@ -8844,14 +8882,14 @@ RectTransform:
   m_GameObject: {fileID: 1131610724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18581562, y: 0.18581562, z: 0.18581562}
+  m_LocalScale: {x: 0.12760662, y: 0.083334066, z: 0.15625235}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1606186571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -443.89, y: -229.85}
+  m_AnchoredPosition: {x: -438.1, y: -229.85}
   m_SizeDelta: {x: 223.83, y: 44.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131610726
@@ -8874,9 +8912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HealthNum
-
-'
+  m_text: 99999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8983,7 +9019,7 @@ RectTransform:
   m_GameObject: {fileID: 1131618816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18581562, y: 0.18581562, z: 0.18581562}
+  m_LocalScale: {x: 0.13289496, y: 0.09165169, z: 0.09165169}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1118465296}
@@ -9013,7 +9049,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HealthNum
+  m_text: '99999
+
 
 '
   m_isRightToLeft: 0
@@ -9110,7 +9147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1149177604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9119,8 +9156,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149177603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 444.99}
-  m_LocalScale: {x: 1.2947, y: 1.2947, z: 1.2947}
+  m_LocalPosition: {x: 0, y: 0, z: 2355.7}
+  m_LocalScale: {x: 2.5600703, y: 2.5600703, z: 2.5600703}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 573766053}
@@ -9136,7 +9173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.026203}
+  m_AnchoredPosition: {x: 18.736, y: 60.984}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1155557705
@@ -9239,8 +9276,8 @@ Transform:
   m_GameObject: {fileID: 1180555257}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.38, y: 8.09, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 11.329001, y: 17.435, z: 0}
+  m_LocalScale: {x: 0.025385652, y: 0.07294282, z: 0.05222186}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 118799046}
@@ -9833,7 +9870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 487ac817c5765a44884aca9ed49f0857, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9884,12 +9921,19 @@ MonoBehaviour:
   isPlayer: 1
   maxHP: 100
   currentHP: 100
-  attackDamage: 20
+  attackDamage: 35
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 0
+  healAmount: 50
+  shieldActive: 0
   hpBarImage: {fileID: 60439050}
+  manaBarImage: {fileID: 429953098}
   highlightImage: {fileID: 1871309568}
+  hpText: {fileID: 315223394}
+  manaText: {fileID: 848023683}
 --- !u!4 &1355035056
 Transform:
   m_ObjectHideFlags: 0
@@ -10285,7 +10329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8bbcefea694009443bd05a79dab63417, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10981,14 +11025,14 @@ RectTransform:
   m_GameObject: {fileID: 1540802945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18581562, y: 0.18581562, z: 0.18581562}
+  m_LocalScale: {x: 0.1375092, y: 0.08250585, z: 0.1650117}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2091022815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -443.89, y: -229.85}
+  m_AnchoredPosition: {x: -439.2, y: -229.85}
   m_SizeDelta: {x: 223.83, y: 44.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540802947
@@ -11011,9 +11055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HealthNum
-
-'
+  m_text: 9999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11149,8 +11191,8 @@ Transform:
   m_GameObject: {fileID: 1567210626}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.38, y: 8.09, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 11.3, y: 17.44, z: 0}
+  m_LocalScale: {x: 0.025385652, y: 0.07294282, z: 0.05222186}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1719402515}
@@ -11396,7 +11438,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 999
   m_TargetDisplay: 0
 --- !u!1 &1597119282
 GameObject:
@@ -11499,7 +11541,7 @@ Transform:
   m_GameObject: {fileID: 1604093521}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4645562, y: -0.75712, z: 17.349403}
+  m_LocalPosition: {x: 3.4645562, y: 0.26, z: 17.349403}
   m_LocalScale: {x: 1.2163326, y: 1.2163326, z: 1.2163326}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11529,8 +11571,15 @@ MonoBehaviour:
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 0
+  healAmount: 30
+  shieldActive: 0
   hpBarImage: {fileID: 1118152638}
+  manaBarImage: {fileID: 0}
   highlightImage: {fileID: 95709718}
+  hpText: {fileID: 0}
+  manaText: {fileID: 0}
 --- !u!1 &1606186570
 GameObject:
   m_ObjectHideFlags: 0
@@ -11556,8 +11605,8 @@ Transform:
   m_GameObject: {fileID: 1606186570}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3, y: 5.01, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 10.087, y: 11.909, z: 0}
+  m_LocalScale: {x: 0.0294042, y: 0.061970223, z: 0.05222186}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 664688769}
@@ -11719,12 +11768,19 @@ MonoBehaviour:
   isPlayer: 1
   maxHP: 100
   currentHP: 100
-  attackDamage: 20
+  attackDamage: 15
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 1
+  healAmount: 30
+  shieldActive: 0
   hpBarImage: {fileID: 958703571}
+  manaBarImage: {fileID: 1217096111}
   highlightImage: {fileID: 230388796}
+  hpText: {fileID: 1540802947}
+  manaText: {fileID: 1991932378}
 --- !u!4 &1612991409
 Transform:
   m_ObjectHideFlags: 0
@@ -12708,7 +12764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8bbcefea694009443bd05a79dab63417, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13360,7 +13416,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1764267067}
   - component: {fileID: 1764267069}
-  - component: {fileID: 1764267068}
+  - component: {fileID: 1764267070}
+  - component: {fileID: 1764267071}
   m_Layer: 0
   m_Name: TankPic
   m_TagString: Untagged
@@ -13375,45 +13432,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764267066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.016071882, y: -0.016071882, z: -0.016071882}
+  m_LocalScale: {x: -0.01929108, y: -0.01929108, z: -0.01929108}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 892382589}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3.08, y: -1.81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1764267068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764267066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 0}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!222 &1764267069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13422,6 +13452,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764267066}
   m_CullTransparentMesh: 1
+--- !u!114 &1764267070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764267066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fb20f8c681deb4f8174f7e778b58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFruitDropReceiver
+  targetUnit: {fileID: 892382588}
+--- !u!114 &1764267071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764267066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 36c5f7534db56864fa22d0517b8482f4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1765976593
 GameObject:
   m_ObjectHideFlags: 0
@@ -13672,7 +13745,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1803912753}
   - component: {fileID: 1803912755}
-  - component: {fileID: 1803912754}
+  - component: {fileID: 1803912757}
+  - component: {fileID: 1803912756}
   m_Layer: 0
   m_Name: TankPic
   m_TagString: Untagged
@@ -13687,45 +13761,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803912752}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.016071882, y: -0.016071882, z: -0.016071882}
+  m_LocalScale: {x: -0.019197863, y: -0.019197863, z: -0.019197863}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1355035056}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3.08, y: -1.81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1803912754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803912752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 0}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!222 &1803912755
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13734,6 +13781,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803912752}
   m_CullTransparentMesh: 1
+--- !u!114 &1803912756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803912752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fb20f8c681deb4f8174f7e778b58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFruitDropReceiver
+  targetUnit: {fileID: 1355035055}
+--- !u!114 &1803912757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803912752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4bad7f7c8922ba248aff0042c650fb81, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1806450641
 GameObject:
   m_ObjectHideFlags: 0
@@ -13760,13 +13850,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806450641}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.016071882, y: -0.016071882, z: -0.016071882}
+  m_LocalScale: {x: -0.020049673, y: -0.020049673, z: -0.020049673}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1903517295}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3.08, y: -1.81}
@@ -13813,7 +13903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f0a47b22a656ba042aed9f25737fec74, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14334,6 +14424,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477828, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2958262986520364887, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -14489,6 +14587,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1870892507}
+    - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870892511}
   m_SourcePrefab: {fileID: 100100000, guid: 52571f68872914e24837210513edea1d, type: 3}
 --- !u!1 &1870892506 stripped
 GameObject:
@@ -14526,6 +14627,18 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!114 &1870892511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870892506}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd686befe879d64782f4cb4778bcb95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIRaycastDebugger
 --- !u!1 &1871309567
 GameObject:
   m_ObjectHideFlags: 0
@@ -14942,14 +15055,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
   unitName: 
   isPlayer: 1
-  maxHP: 100
-  currentHP: 100
-  attackDamage: 20
+  maxHP: 150
+  currentHP: 150
+  attackDamage: 10
   skillDamage: 35
   maxMana: 100
   currentMana: 100
+  skillManaCost: 20
+  skillType: 2
+  healAmount: 30
+  shieldActive: 0
   hpBarImage: {fileID: 365388821}
+  manaBarImage: {fileID: 1387494558}
   highlightImage: {fileID: 966277194}
+  hpText: {fileID: 1131610726}
+  manaText: {fileID: 212062397}
 --- !u!4 &1903517295
 Transform:
   m_ObjectHideFlags: 0
@@ -16197,8 +16317,8 @@ Transform:
   m_GameObject: {fileID: 2091022814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3, y: 5.01, z: 0}
-  m_LocalScale: {x: 0.020943528, y: 0.031953953, z: 0.043083787}
+  m_LocalPosition: {x: 10.181, y: 11.91, z: 0}
+  m_LocalScale: {x: 0.0294042, y: 0.06197022, z: 0.043083787}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 720296469}
@@ -16930,7 +17050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8f4054f8bb1859f418b753d0707274e5, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

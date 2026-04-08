@@ -49,7 +49,9 @@ public class TurnBattleManager : MonoBehaviour
         skillButton.onClick.RemoveAllListeners();
         skillButton.onClick.AddListener(OnClickSkill);
 
-        for (int i = 0; i < enemyTargetButtons.Length; i++)
+        int enemyButtonCount = Mathf.Min(enemyTargetButtons.Length, enemies.Length);
+
+        for (int i = 0; i < enemyButtonCount; i++)
         {
             int index = i;
             enemyTargetButtons[i].onClick.RemoveAllListeners();
@@ -57,7 +59,7 @@ public class TurnBattleManager : MonoBehaviour
         }
 
         HideActionButtons();
-        HideTargetButtons();
+        HideEnemyTargetButtons();
         ClearAllHighlights();
 
         StartTurn();
@@ -80,6 +82,11 @@ public class TurnBattleManager : MonoBehaviour
         }
 
         currentUnit = GetNextAliveUnit();
+
+        if (currentUnit == null)
+        {
+            return;
+        }
 
         selectedAction = ActionType.None;
         waitingForPlayerTarget = false;
@@ -128,9 +135,9 @@ public class TurnBattleManager : MonoBehaviour
     private void StartPlayerTurn()
     {
         ShowActionButtons();
-        HideTargetButtons();
+        HideEnemyTargetButtons();
 
-        messageText.text = currentUnit.unitName + " turn. Choose Attack or Skill.";
+        messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
     }
 
 
@@ -138,13 +145,18 @@ public class TurnBattleManager : MonoBehaviour
     private IEnumerator EnemyTurnRoutine()
     {
         HideActionButtons();
-        HideTargetButtons();
+        HideEnemyTargetButtons();
 
         messageText.text = currentUnit.unitName + " is thinking...";
 
         yield return new WaitForSeconds(enemyActionDelay);
 
         BattleUnit target = GetRandomAlivePlayer();
+
+        if (target == null)
+        {
+            yield break;
+        }
 
         ClearAllHighlights();
         currentUnit.SetHighlight(true);
@@ -182,12 +194,51 @@ public class TurnBattleManager : MonoBehaviour
 
     public void OnClickSkill()
     {
+        if (!currentUnit.TryUseMana())
+        {
+            messageText.text = currentUnit.unitName + " does not have enough mana.";
+            return;
+        }
+
         selectedAction = ActionType.Skill;
-        waitingForPlayerTarget = true;
 
-        ShowAvailableEnemyTargets();
+        if (currentUnit.skillType == BattleUnit.SkillType.Damage)
+        {
+            waitingForPlayerTarget = true;
+            ShowAvailableEnemyTargets();
 
-        messageText.text = "Choose an enemy to use skill on.";
+            messageText.text = currentUnit.unitName + " skill: " + currentUnit.GetSkillDescription();
+            return;
+        }
+
+        if (currentUnit.skillType == BattleUnit.SkillType.TeamHeal)
+        {
+            waitingForPlayerTarget = false;
+            HideEnemyTargetButtons();
+            HideActionButtons();
+
+            StartCoroutine(PlayerTeamHealRoutine());
+            return;
+        }
+
+        if (currentUnit.skillType == BattleUnit.SkillType.TeamShield)
+        {
+            waitingForPlayerTarget = false;
+            HideEnemyTargetButtons();
+            HideActionButtons();
+
+            StartCoroutine(PlayerTeamShieldRoutine());
+            return;
+        }
+
+        if (currentUnit.skillType == BattleUnit.SkillType.AoE)
+        {
+            waitingForPlayerTarget = false;
+            HideEnemyTargetButtons();
+            HideActionButtons();
+
+            StartCoroutine(PlayerAoERoutine());
+        }
     }
 
 
@@ -226,7 +277,7 @@ public class TurnBattleManager : MonoBehaviour
         selectedAction = ActionType.None;
 
         HideActionButtons();
-        HideTargetButtons();
+        HideEnemyTargetButtons();
 
         StartCoroutine(PlayerAttackRoutine(target, damage));
     }
@@ -251,14 +302,108 @@ public class TurnBattleManager : MonoBehaviour
 
 
 
-    private void ShowAvailableEnemyTargets()
+    private IEnumerator PlayerTeamHealRoutine()
     {
-        HideTargetButtons();
+        messageText.text = currentUnit.unitName + " uses skill: heal all allies.";
+
+        yield return new WaitForSeconds(0.4f);
+
+        BattleUnit[] allyTeam = GetAlliesOf(currentUnit);
+
+        for (int i = 0; i < allyTeam.Length; i++)
+        {
+            if (!allyTeam[i].IsDead())
+            {
+                allyTeam[i].Heal(currentUnit.healAmount);
+            }
+        }
+
+        yield return new WaitForSeconds(0.8f);
+
+        CheckBattleResult();
+
+        if (!battleEnded)
+        {
+            StartTurn();
+        }
+    }
+
+
+
+    private IEnumerator PlayerTeamShieldRoutine()
+    {
+        messageText.text = currentUnit.unitName + " uses skill: all allies ignore the next hit.";
+
+        BattleUnit[] allyTeam = GetAlliesOf(currentUnit);
+
+        for (int i = 0; i < allyTeam.Length; i++)
+        {
+            if (!allyTeam[i].IsDead())
+            {
+                allyTeam[i].GiveShield();
+            }
+        }
+
+        yield return new WaitForSeconds(0.8f);
+
+        CheckBattleResult();
+
+        if (!battleEnded)
+        {
+            StartTurn();
+        }
+    }
+
+
+
+    private IEnumerator PlayerAoERoutine()
+    {
+        messageText.text = currentUnit.unitName + " uses skill: deal damage to all enemies.";
+
+        yield return new WaitForSeconds(0.4f);
 
         for (int i = 0; i < enemies.Length; i++)
         {
+            if (!enemies[i].IsDead())
+            {
+                enemies[i].TakeDamage(currentUnit.skillDamage);
+            }
+        }
+
+        yield return new WaitForSeconds(0.8f);
+
+        CheckBattleResult();
+
+        if (!battleEnded)
+        {
+            StartTurn();
+        }
+    }
+
+
+
+    private void ShowAvailableEnemyTargets()
+    {
+        HideEnemyTargetButtons();
+
+        int count = Mathf.Min(enemies.Length, enemyTargetButtons.Length);
+
+        for (int i = 0; i < count; i++)
+        {
             enemyTargetButtons[i].gameObject.SetActive(!enemies[i].IsDead());
         }
+    }
+
+
+
+    private BattleUnit[] GetAlliesOf(BattleUnit unit)
+    {
+        if (unit.isPlayer)
+        {
+            return players;
+        }
+
+        return enemies;
     }
 
 
@@ -273,6 +418,11 @@ public class TurnBattleManager : MonoBehaviour
             {
                 alivePlayers.Add(players[i]);
             }
+        }
+
+        if (alivePlayers.Count == 0)
+        {
+            return null;
         }
 
         int randomIndex = Random.Range(0, alivePlayers.Count);
@@ -308,18 +458,18 @@ public class TurnBattleManager : MonoBehaviour
         {
             battleEnded = true;
             HideActionButtons();
-            HideTargetButtons();
+            HideEnemyTargetButtons();
             ClearAllHighlights();
-            messageText.text = "Defeat";
+            messageText.text = "All players are defeated.";
         }
 
         if (enemiesDead)
         {
             battleEnded = true;
             HideActionButtons();
-            HideTargetButtons();
+            HideEnemyTargetButtons();
             ClearAllHighlights();
-            messageText.text = "Victory";
+            messageText.text = "All enemies are defeated.";
         }
     }
 
@@ -341,7 +491,7 @@ public class TurnBattleManager : MonoBehaviour
 
 
 
-    private void HideTargetButtons()
+    private void HideEnemyTargetButtons()
     {
         for (int i = 0; i < enemyTargetButtons.Length; i++)
         {
@@ -363,4 +513,4 @@ public class TurnBattleManager : MonoBehaviour
             enemies[i].SetHighlight(false);
         }
     }
-} 
+}
