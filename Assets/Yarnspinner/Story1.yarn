@@ -1,0 +1,27 @@
+﻿title:Win
+---
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: yo
+<<resetScaleLeft PortraitContainerLeft>>
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: yo momma
+<<resetScaleRight PortraitContainerRight>>
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: yay we won     i dont have anymore dialogue rn
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+===
+
+title:Lose
+---
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: ouch
+<<resetScaleLeft PortraitContainerLeft>>
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: im hurt
+<<resetScaleRight PortraitContainerRight>>
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: idc      didnt put in other sprites 
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+===

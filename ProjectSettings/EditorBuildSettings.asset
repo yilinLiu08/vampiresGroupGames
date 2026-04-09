@@ -15,8 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/BeginScene.unity
     guid: 6d6c93f2f29479247b6d061d3b684cf3
   - enabled: 1
+    path: Assets/Scenes/HQ_realone.unity
+    guid: e6f4e729e85b58c428eedfb723482fc9
+  - enabled: 0
     path: Assets/HQ.unity
     guid: 9d4ecf6117164304f83c5689a3f2c124
+  - enabled: 1
+    path: Assets/Scenes/Fight1.unity
+    guid: 1901c13ec53cfb24da449921ad698f9f
+  - enabled: 1
+    path: Assets/Scenes/Story.unity
+    guid: db7e9346579f7d949baf275285901270
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 94a84577a99ca4d4e9a2a720389a5b34, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
