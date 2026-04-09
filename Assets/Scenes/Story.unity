@@ -177,6 +177,14 @@ MonoBehaviour:
   LovedayScaredR: {fileID: 0}
   LovedayMadR: {fileID: 0}
   LovedayHappyR: {fileID: 0}
+  DahliaBaseR: {fileID: 0}
+  DahliaScaredR: {fileID: 0}
+  DahliaMadR: {fileID: 0}
+  DahliaHappyR: {fileID: 0}
+  VeraBaseR: {fileID: 0}
+  VeraScaredR: {fileID: 0}
+  VeraMadR: {fileID: 0}
+  VeraHappyR: {fileID: 0}
   empty: {fileID: 21300000, guid: 531289e8fa00b3a47b7feddf428d2bf9, type: 3}
   cvGroup: {fileID: 17753490}
   portrait: {fileID: 280098945}
@@ -520,6 +528,14 @@ MonoBehaviour:
   LovedayScaredL: {fileID: 0}
   LovedayMadL: {fileID: 0}
   LovedayHappyL: {fileID: 0}
+  DahliaBaseL: {fileID: 0}
+  DahliaScaredL: {fileID: 0}
+  DahliaMadL: {fileID: 0}
+  DahliaHappyL: {fileID: 0}
+  VeraBaseL: {fileID: 0}
+  VeraScaredL: {fileID: 0}
+  VeraMadL: {fileID: 0}
+  VeraHappyL: {fileID: 0}
   empty: {fileID: 21300000, guid: 531289e8fa00b3a47b7feddf428d2bf9, type: 3}
   cvGroup: {fileID: 368972622}
   portrait: {fileID: 1018457377}
@@ -830,6 +846,14 @@ MonoBehaviour:
   LovedayScaredR: {fileID: 0}
   LovedayMadR: {fileID: 0}
   LovedayHappyR: {fileID: 0}
+  DahliaBaseR: {fileID: 0}
+  DahliaScaredR: {fileID: 0}
+  DahliaMadR: {fileID: 0}
+  DahliaHappyR: {fileID: 0}
+  VeraBaseR: {fileID: 0}
+  VeraScaredR: {fileID: 0}
+  VeraMadR: {fileID: 0}
+  VeraHappyR: {fileID: 0}
   empty: {fileID: 0}
   cvGroup: {fileID: 0}
   portrait: {fileID: 0}

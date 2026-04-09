@@ -10,31 +10,26 @@ public class PortraitControllerRight : MonoBehaviour
     private Vector3 zoomedScale = new Vector3(11f, 11f, 11f);
     private Vector3 targetScale;
 
-
-
     public Sprite ElsieBaseR;
     public Sprite ElsieScaredR;
     public Sprite ElsieMadR;
     public Sprite ElsieHappyR;
-
-    /*
-    public Sprite ElsieBaseL;
-    public Sprite ElsieScaredL;
-    public Sprite ElsieMadL;
-    public Sprite ElsieHappyL;
-    */
 
     public Sprite LovedayBaseR;
     public Sprite LovedayScaredR;
     public Sprite LovedayMadR;
     public Sprite LovedayHappyR;
 
-    /*
-    public Sprite LovedayBaseL;
-    public Sprite LovedayScaredL;
-    public Sprite LovedayMadL;
-    public Sprite LovedayHappyL;
-    */
+    public Sprite DahliaBaseR;
+    public Sprite DahliaScaredR;
+    public Sprite DahliaMadR;
+    public Sprite DahliaHappyR;
+
+    public Sprite VeraBaseR;
+    public Sprite VeraScaredR;
+    public Sprite VeraMadR;
+    public Sprite VeraHappyR;
+
 
     public Sprite empty;
 
@@ -74,13 +69,6 @@ public class PortraitControllerRight : MonoBehaviour
     }
 
 
-
-
-
-
-
-
-
     [YarnCommand("changeNPCImageRight")]
     public void ChangeImage(string character)
     {
@@ -93,61 +81,107 @@ public class PortraitControllerRight : MonoBehaviour
         if (character == "ElsieScaredR")
         {
             portrait.sprite = ElsieScaredR;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "ElsieMadR")
         {
             portrait.sprite = ElsieMadR;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "ElsieHappyR")
         {
             portrait.sprite = ElsieHappyR;
+            targetScale = zoomedScale;
+            Show();
         }
 
 
-        /*
-        if (character == "ElsieBaseL")
-        {
-            portrait.sprite = ElsieBaseL;
-        }
-        if (character == "ElsieScaredL")
-        {
-            portrait.sprite = ElsieScaredL;
-        }
-        if (character == "ElsieMadL")
-        {
-            portrait.sprite = ElsieMadL;
-        }
-        if (character == "ElsieHappyL")
-        {
-            portrait.sprite = ElsieHappyL;
-        }
-
-
-        if (character == "LovedayBaseL")
-        {
-            portrait.sprite = LovedayBaseL;
-        }
-        */
 
         if (character == "LovedayBaseR")
         {
             portrait.sprite = LovedayBaseR;
-         
             targetScale = zoomedScale;
             Show();
         }
         if (character == "LovedayScaredR")
         {
             portrait.sprite = LovedayScaredR;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "LovedayMadR")
         {
             portrait.sprite = LovedayMadR;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "LovedayHappyR")
         {
             portrait.sprite = LovedayHappyR;
+            targetScale = zoomedScale;
+            Show();
         }
+
+
+
+        if (character == "VeradBaseR")
+        {
+            portrait.sprite = VeraBaseR;
+            targetScale = zoomedScale;
+            Show();
+        }
+        if (character == "VeraScaredR")
+        {
+            portrait.sprite = VeraScaredR;
+            targetScale = zoomedScale;
+            Show();
+        }
+        if (character == "VeraMadR")
+        {
+            portrait.sprite = VeraMadR;
+            targetScale = zoomedScale;
+            Show();
+        }
+        if (character == "VeraHappyR")
+        {
+            portrait.sprite = VeraHappyR;
+            targetScale = zoomedScale;
+            Show();
+        }
+
+
+
+
+
+        if (character == "DahliaBaseR")
+        {
+            portrait.sprite = VeraBaseR;
+            targetScale = zoomedScale;
+            Show();
+        }
+        if (character == "DahliaScaredR")
+        {
+            portrait.sprite = VeraScaredR;
+            targetScale = zoomedScale;
+            Show();
+        }
+        if (character == "DahliaMadR")
+        {
+            portrait.sprite = VeraMadR;
+            targetScale = zoomedScale;
+            Show();
+        }
+        if (character == "DahliaHappyR")
+        {
+            portrait.sprite = VeraHappyR;
+            targetScale = zoomedScale;
+            Show();
+        }
+
+
+
 
 
 
