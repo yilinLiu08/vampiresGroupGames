@@ -40,7 +40,7 @@ public class TurnBattleManager : MonoBehaviour
     private bool battleEnded = false;
 
 
-
+   
     private void Start()
     {
         attackButton.onClick.RemoveAllListeners();
@@ -513,4 +513,9 @@ public class TurnBattleManager : MonoBehaviour
             enemies[i].SetHighlight(false);
         }
     }
+
+   
+
+    //我开始场景有3个enemy，还有另外3个enemy，另外三个enemy是看不见的，开始的3个enemy死后，开启第二round，另外3个enemy才出现，并且我可以像现在这样设置round攻击顺序
+
 }
