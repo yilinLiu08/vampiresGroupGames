@@ -91,6 +91,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         {
             return;
         }
+        Debug.Log("Begin Drag");
 
         Debug.Log("Begin drag: " + currentFruit.itemName);
 
@@ -113,7 +114,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
         Vector2 localPoint;
         RectTransform canvasRect = mainCanvas.transform as RectTransform;
-
+        Debug.Log("dragging");
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, eventData.pressEventCamera, out localPoint))
         {
             dragIconRect.localPosition = localPoint;
@@ -131,6 +132,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         {
             Destroy(dragIconObject);
         }
+        Debug.Log("drag over");
 
         Debug.Log("End drag: " + currentFruit.itemName + " valid = " + wasDroppedOnValidTarget);
 
