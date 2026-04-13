@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9110f8d29753ed84d92848b0410f438e, type: 3}
   m_Name: item
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
-  itemName: item
-  description: item
+  itemName: DamageBoost
+  description: boosts damage for one character
   icon: {fileID: 21300000, guid: e586ead65f4bdfe488c21ce83e2aff88, type: 3}
   healAmount: 0
-  damageBoostAmount: 0
+  damageBoostAmount: 30
   manaAmount: 0
-  effects: 
+  effects: 01000000
