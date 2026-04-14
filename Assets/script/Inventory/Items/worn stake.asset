@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9110f8d29753ed84d92848b0410f438e, type: 3}
-  m_Name: item
+  m_Name: worn stake
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   itemName: item
   description: item
-  icon: {fileID: 21300000, guid: e586ead65f4bdfe488c21ce83e2aff88, type: 3}
+  icon: {fileID: 21300000, guid: 7c13db8a7868f484f9c7c2d6ac21230b, type: 3}
   healAmount: 0
   damageBoostAmount: 0
   manaAmount: 0
