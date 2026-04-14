@@ -40,6 +40,7 @@ public class BattleUnit : MonoBehaviour
     public Image highlightImage;
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI manaText;
+    public Button targetButton;
 
     private void Start()
     {
@@ -49,6 +50,7 @@ public class BattleUnit : MonoBehaviour
         UpdateHPUI();
         UpdateManaUI();
         SetHighlight(false);
+        HideTargetButton();
     }
 
     public void TakeDamage(int damage)
@@ -179,6 +181,39 @@ public class BattleUnit : MonoBehaviour
         {
             case Image image:
                 image.gameObject.SetActive(value);
+                break;
+        }
+    }
+
+    public void ShowTargetButton()
+    {
+        switch (targetButton)
+        {
+            case Button button:
+                button.gameObject.SetActive(true);
+                break;
+        }
+    }
+
+    public void HideTargetButton()
+    {
+        switch (targetButton)
+        {
+            case Button button:
+                button.onClick.RemoveAllListeners();
+                button.gameObject.SetActive(false);
+                break;
+        }
+    }
+
+    public void BindTargetButton(UnityEngine.Events.UnityAction action)
+    {
+        switch (targetButton)
+        {
+            case Button button:
+                button.onClick.RemoveAllListeners();
+                button.onClick.AddListener(action);
+                button.gameObject.SetActive(true);
                 break;
         }
     }

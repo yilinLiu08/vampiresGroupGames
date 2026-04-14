@@ -16,10 +16,16 @@ public class TurnBattleManager : MonoBehaviour
     [Header("Players")]
     public BattleUnit[] players = new BattleUnit[4];
 
-    [Header("Enemies")]
-    public BattleUnit[] enemies;
+    [Header("Round Enemies")]
+    public BattleUnit[] round1Enemies;
+    public BattleUnit[] round2Enemies;
 
-    [Header("Turn Order")]
+    [Header("Round Turn Order")]
+    public BattleUnit[] round1TurnOrder;
+    public BattleUnit[] round2TurnOrder;
+
+    [Header("Current Round")]
+    public BattleUnit[] currentEnemies;
     public BattleUnit[] turnOrder;
 
     [Header("UI")]
@@ -27,20 +33,19 @@ public class TurnBattleManager : MonoBehaviour
     public Button attackButton;
     public Button skillButton;
 
-    [Header("Enemy Target Buttons")]
-    public Button[] enemyTargetButtons;
-
     [Header("Settings")]
     public float enemyActionDelay = 1f;
 
     private int currentTurnIndex = 0;
+    private int currentRound = 1;
+
     private BattleUnit currentUnit;
     private ActionType selectedAction = ActionType.None;
+
     private bool waitingForPlayerTarget = false;
     private bool battleEnded = false;
+    private bool changingRound = false;
 
-
-   
     private void Start()
     {
         attackButton.onClick.RemoveAllListeners();
@@ -49,23 +54,46 @@ public class TurnBattleManager : MonoBehaviour
         skillButton.onClick.RemoveAllListeners();
         skillButton.onClick.AddListener(OnClickSkill);
 
-        int enemyButtonCount = Mathf.Min(enemyTargetButtons.Length, enemies.Length);
-
-        for (int i = 0; i < enemyButtonCount; i++)
-        {
-            int index = i;
-            enemyTargetButtons[i].onClick.RemoveAllListeners();
-            enemyTargetButtons[i].onClick.AddListener(() => OnSelectEnemyTarget(enemies[index]));
-        }
-
         HideActionButtons();
-        HideEnemyTargetButtons();
+        HideAllEnemyTargetButtons();
         ClearAllHighlights();
 
+        SetRound(1);
         StartTurn();
     }
 
+    private void SetRound(int round)
+    {
+        currentRound = round;
+        currentTurnIndex = 0;
 
+        SetEnemyGroupActive(round1Enemies, false);
+        SetEnemyGroupActive(round2Enemies, false);
+
+        if (round == 1)
+        {
+            currentEnemies = round1Enemies;
+            turnOrder = round1TurnOrder;
+            SetEnemyGroupActive(round1Enemies, true);
+        }
+        else
+        {
+            currentEnemies = round2Enemies;
+            turnOrder = round2TurnOrder;
+            SetEnemyGroupActive(round2Enemies, true);
+        }
+
+        HideAllEnemyTargetButtons();
+    }
+
+    private void SetEnemyGroupActive(BattleUnit[] group, bool value)
+    {
+        for (int i = 0; i < group.Length; i++)
+        {
+            group[i].gameObject.SetActive(value);
+            group[i].HideTargetButton();
+        }
+    }
 
     private void StartTurn()
     {
@@ -74,9 +102,19 @@ public class TurnBattleManager : MonoBehaviour
             return;
         }
 
+        if (changingRound)
+        {
+            return;
+        }
+
         CheckBattleResult();
 
         if (battleEnded)
+        {
+            return;
+        }
+
+        if (changingRound)
         {
             return;
         }
@@ -91,20 +129,18 @@ public class TurnBattleManager : MonoBehaviour
         selectedAction = ActionType.None;
         waitingForPlayerTarget = false;
 
+        HideAllEnemyTargetButtons();
         ClearAllHighlights();
         currentUnit.SetHighlight(true);
 
         if (currentUnit.isPlayer)
         {
             StartPlayerTurn();
+            return;
         }
-        else
-        {
-            StartCoroutine(EnemyTurnRoutine());
-        }
+
+        StartCoroutine(EnemyTurnRoutine());
     }
-
-
 
     private BattleUnit GetNextAliveUnit()
     {
@@ -121,31 +157,34 @@ public class TurnBattleManager : MonoBehaviour
             currentTurnIndex++;
             checkedCount++;
 
-            if (!unit.IsDead())
+            if (!unit.gameObject.activeInHierarchy)
             {
-                return unit;
+                continue;
             }
+
+            if (unit.IsDead())
+            {
+                continue;
+            }
+
+            return unit;
         }
 
         return null;
     }
 
-
-
     private void StartPlayerTurn()
     {
         ShowActionButtons();
-        HideEnemyTargetButtons();
+        HideAllEnemyTargetButtons();
 
         messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
     }
 
-
-
     private IEnumerator EnemyTurnRoutine()
     {
         HideActionButtons();
-        HideEnemyTargetButtons();
+        HideAllEnemyTargetButtons();
 
         messageText.text = currentUnit.unitName + " is thinking...";
 
@@ -172,13 +211,11 @@ public class TurnBattleManager : MonoBehaviour
 
         CheckBattleResult();
 
-        if (!battleEnded)
+        if (!battleEnded && !changingRound)
         {
             StartTurn();
         }
     }
-
-
 
     public void OnClickAttack()
     {
@@ -189,8 +226,6 @@ public class TurnBattleManager : MonoBehaviour
 
         messageText.text = "Choose an enemy to attack.";
     }
-
-
 
     public void OnClickSkill()
     {
@@ -211,41 +246,41 @@ public class TurnBattleManager : MonoBehaviour
             return;
         }
 
+        waitingForPlayerTarget = false;
+        HideAllEnemyTargetButtons();
+        HideActionButtons();
+
         if (currentUnit.skillType == BattleUnit.SkillType.TeamHeal)
         {
-            waitingForPlayerTarget = false;
-            HideEnemyTargetButtons();
-            HideActionButtons();
-
             StartCoroutine(PlayerTeamHealRoutine());
             return;
         }
 
         if (currentUnit.skillType == BattleUnit.SkillType.TeamShield)
         {
-            waitingForPlayerTarget = false;
-            HideEnemyTargetButtons();
-            HideActionButtons();
-
             StartCoroutine(PlayerTeamShieldRoutine());
             return;
         }
 
         if (currentUnit.skillType == BattleUnit.SkillType.AoE)
         {
-            waitingForPlayerTarget = false;
-            HideEnemyTargetButtons();
-            HideActionButtons();
-
             StartCoroutine(PlayerAoERoutine());
         }
     }
 
-
-
     public void OnSelectEnemyTarget(BattleUnit target)
     {
         if (!waitingForPlayerTarget)
+        {
+            return;
+        }
+
+        if (target == null)
+        {
+            return;
+        }
+
+        if (!target.gameObject.activeInHierarchy)
         {
             return;
         }
@@ -277,12 +312,10 @@ public class TurnBattleManager : MonoBehaviour
         selectedAction = ActionType.None;
 
         HideActionButtons();
-        HideEnemyTargetButtons();
+        HideAllEnemyTargetButtons();
 
         StartCoroutine(PlayerAttackRoutine(target, damage));
     }
-
-
 
     private IEnumerator PlayerAttackRoutine(BattleUnit target, int damage)
     {
@@ -294,13 +327,11 @@ public class TurnBattleManager : MonoBehaviour
 
         CheckBattleResult();
 
-        if (!battleEnded)
+        if (!battleEnded && !changingRound)
         {
             StartTurn();
         }
     }
-
-
 
     private IEnumerator PlayerTeamHealRoutine()
     {
@@ -322,13 +353,11 @@ public class TurnBattleManager : MonoBehaviour
 
         CheckBattleResult();
 
-        if (!battleEnded)
+        if (!battleEnded && !changingRound)
         {
             StartTurn();
         }
     }
-
-
 
     private IEnumerator PlayerTeamShieldRoutine()
     {
@@ -348,13 +377,11 @@ public class TurnBattleManager : MonoBehaviour
 
         CheckBattleResult();
 
-        if (!battleEnded)
+        if (!battleEnded && !changingRound)
         {
             StartTurn();
         }
     }
-
-
 
     private IEnumerator PlayerAoERoutine()
     {
@@ -362,11 +389,11 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
-        for (int i = 0; i < enemies.Length; i++)
+        for (int i = 0; i < currentEnemies.Length; i++)
         {
-            if (!enemies[i].IsDead())
+            if (!currentEnemies[i].IsDead() && currentEnemies[i].gameObject.activeInHierarchy)
             {
-                enemies[i].TakeDamage(currentUnit.skillDamage);
+                currentEnemies[i].TakeDamage(currentUnit.skillDamage);
             }
         }
 
@@ -374,27 +401,34 @@ public class TurnBattleManager : MonoBehaviour
 
         CheckBattleResult();
 
-        if (!battleEnded)
+        if (!battleEnded && !changingRound)
         {
             StartTurn();
         }
     }
 
-
-
     private void ShowAvailableEnemyTargets()
     {
-        HideEnemyTargetButtons();
+        HideAllEnemyTargetButtons();
 
-        int count = Mathf.Min(enemies.Length, enemyTargetButtons.Length);
-
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < currentEnemies.Length; i++)
         {
-            enemyTargetButtons[i].gameObject.SetActive(!enemies[i].IsDead());
+            BattleUnit enemy = currentEnemies[i];
+
+            if (!enemy.gameObject.activeInHierarchy)
+            {
+                continue;
+            }
+
+            if (enemy.IsDead())
+            {
+                continue;
+            }
+
+            BattleUnit targetEnemy = enemy;
+            targetEnemy.BindTargetButton(() => OnSelectEnemyTarget(targetEnemy));
         }
     }
-
-
 
     private BattleUnit[] GetAlliesOf(BattleUnit unit)
     {
@@ -403,10 +437,8 @@ public class TurnBattleManager : MonoBehaviour
             return players;
         }
 
-        return enemies;
+        return currentEnemies;
     }
-
-
 
     private BattleUnit GetRandomAlivePlayer()
     {
@@ -429,8 +461,6 @@ public class TurnBattleManager : MonoBehaviour
         return alivePlayers[randomIndex];
     }
 
-
-
     private void CheckBattleResult()
     {
         bool playersDead = true;
@@ -445,9 +475,9 @@ public class TurnBattleManager : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < enemies.Length; i++)
+        for (int i = 0; i < currentEnemies.Length; i++)
         {
-            if (!enemies[i].IsDead())
+            if (!currentEnemies[i].IsDead() && currentEnemies[i].gameObject.activeInHierarchy)
             {
                 enemiesDead = false;
                 break;
@@ -458,22 +488,53 @@ public class TurnBattleManager : MonoBehaviour
         {
             battleEnded = true;
             HideActionButtons();
-            HideEnemyTargetButtons();
+            HideAllEnemyTargetButtons();
             ClearAllHighlights();
             messageText.text = "All players are defeated.";
+            return;
         }
 
         if (enemiesDead)
         {
+            if (currentRound == 1)
+            {
+                if (!changingRound)
+                {
+                    StartCoroutine(StartNextRoundRoutine());
+                }
+
+                return;
+            }
+
             battleEnded = true;
             HideActionButtons();
-            HideEnemyTargetButtons();
+            HideAllEnemyTargetButtons();
             ClearAllHighlights();
             messageText.text = "All enemies are defeated.";
         }
     }
 
+    private IEnumerator StartNextRoundRoutine()
+    {
+        changingRound = true;
 
+        HideActionButtons();
+        HideAllEnemyTargetButtons();
+        ClearAllHighlights();
+
+        messageText.text = "Round 1 cleared. Round 2 starts.";
+
+        yield return new WaitForSeconds(1f);
+
+        SetRound(2);
+
+        messageText.text = "Round 2 starts.";
+
+        yield return new WaitForSeconds(0.5f);
+
+        changingRound = false;
+        StartTurn();
+    }
 
     private void ShowActionButtons()
     {
@@ -481,25 +542,24 @@ public class TurnBattleManager : MonoBehaviour
         skillButton.gameObject.SetActive(true);
     }
 
-
-
     private void HideActionButtons()
     {
         attackButton.gameObject.SetActive(false);
         skillButton.gameObject.SetActive(false);
     }
 
-
-
-    private void HideEnemyTargetButtons()
+    private void HideAllEnemyTargetButtons()
     {
-        for (int i = 0; i < enemyTargetButtons.Length; i++)
+        for (int i = 0; i < round1Enemies.Length; i++)
         {
-            enemyTargetButtons[i].gameObject.SetActive(false);
+            round1Enemies[i].HideTargetButton();
+        }
+
+        for (int i = 0; i < round2Enemies.Length; i++)
+        {
+            round2Enemies[i].HideTargetButton();
         }
     }
-
-
 
     private void ClearAllHighlights()
     {
@@ -508,14 +568,38 @@ public class TurnBattleManager : MonoBehaviour
             players[i].SetHighlight(false);
         }
 
-        for (int i = 0; i < enemies.Length; i++)
+        for (int i = 0; i < round1Enemies.Length; i++)
         {
-            enemies[i].SetHighlight(false);
+            round1Enemies[i].SetHighlight(false);
+        }
+
+        for (int i = 0; i < round2Enemies.Length; i++)
+        {
+            round2Enemies[i].SetHighlight(false);
         }
     }
 
-   
+    public void ForceStartRound2()
+    {
+        if (battleEnded)
+        {
+            return;
+        }
 
-    //我开始场景有3个enemy，还有另外3个enemy，另外三个enemy是看不见的，开始的3个enemy死后，开启第二round，另外3个enemy才出现，并且我可以像现在这样设置round攻击顺序
+        StopAllCoroutines();
 
+        changingRound = false;
+        waitingForPlayerTarget = false;
+        selectedAction = ActionType.None;
+
+        HideActionButtons();
+        HideAllEnemyTargetButtons();
+        ClearAllHighlights();
+
+        SetRound(2);
+
+        messageText.text = "Round 2 starts.";
+
+        StartTurn();
+    }
 }
