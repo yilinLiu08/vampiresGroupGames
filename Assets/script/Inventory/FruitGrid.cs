@@ -18,9 +18,6 @@ public class FruitGrid : MonoBehaviour, IDropHandler
     public TextMeshProUGUI manaText;
     public TextMeshProUGUI effectText;
 
-    [Header("Behavior")]
-    public bool autoPopulateOnStart = true;
-
     void Awake()
     {
         if (contentRoot == null)
@@ -29,12 +26,26 @@ public class FruitGrid : MonoBehaviour, IDropHandler
         }
     }
 
-    void Start()
+    void OnEnable()
     {
-        if (autoPopulateOnStart)
+        if (inventory == null)
         {
-            PopulateAll();
+            Debug.Log("FruitGrid: inventory is missing.");
+            return;
         }
+
+        inventory.onInventoryChanged += RefreshGrid;
+        RefreshGrid();
+    }
+
+    void OnDisable()
+    {
+        if (inventory == null)
+        {
+            return;
+        }
+
+        inventory.onInventoryChanged -= RefreshGrid;
     }
 
     public void ClearGridKeepDisplay()
@@ -49,6 +60,7 @@ public class FruitGrid : MonoBehaviour, IDropHandler
     {
         if (inventory == null)
         {
+            Debug.Log("PopulateAll failed: inventory is missing.");
             return;
         }
 
@@ -63,13 +75,9 @@ public class FruitGrid : MonoBehaviour, IDropHandler
 
             CreateSlot(fruit);
         }
-       
 
-
-
-
-    
-}
+        Debug.Log("FruitGrid refreshed. Total fruits: " + inventory.fruits.Count);
+    }
 
     void CreateSlot(Fruit fruit)
     {
