@@ -63,7 +63,13 @@ public class FruitGrid : MonoBehaviour, IDropHandler
 
             CreateSlot(fruit);
         }
-    }
+       
+
+
+
+
+    
+}
 
     void CreateSlot(Fruit fruit)
     {
