@@ -6,3 +6,24 @@ NPC: I've got all types of potions, bandages, daggers...
     <<open_shop Player>>
 -> Nothing. 
 ===
+
+title:ElsieStart
+---
+Elsie: Ngh.... 
+Elsie: I'm so scared...
+Loveday: stop being a scaredass
+Elsie: ok sorry
+===
+
+title:ElsieF1W
+---
+Elsie: Y'know... that was actually kinda easy
+Loveday: ikr
+Elsie: hahahahahhaa
+===
+
+title: ElsieF1L
+---
+Elsie: SHIT
+Loveday: heal me already.
+===

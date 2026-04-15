@@ -6,6 +6,9 @@ public class SceneChange : MonoBehaviour
     private string loseONE = "FightOneLoseCount";
     private string winONE = "FightOneWin";
 
+    private string loseOneD = "LoseOneD";
+    private string winOneD = "WinOneD";
+
    
     public void LoadNextScene(string sceneName)
     {
@@ -16,7 +19,14 @@ public class SceneChange : MonoBehaviour
             currentCount++;
             PlayerPrefs.SetInt(loseONE, currentCount);
             PlayerPrefs.Save();
-            Debug.Log("loss count: " + currentCount);
+
+           /*int currentCount = PlayerPrefs.GetInt(loseOneD, 0);
+            currentCount++;
+            PlayerPrefs.SetInt(loseOneD, currentCount);
+            PlayerPrefs.Save();
+
+            Debug.Log("loss count for dialogue: " + currentCount);
+           */
         }
 
         if (this.gameObject.name == "FightOneWin")
