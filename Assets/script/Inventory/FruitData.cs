@@ -1,9 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
     [Header("Fruit")]
     public Fruit currentFruit;
@@ -12,6 +13,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public FruitInventory inventory;
     public FruitGrid grid;
     public Canvas mainCanvas;
+    public FruitTooltipUI tooltipUI;
 
     [Header("UI")]
     public TextMeshProUGUI nameText;
@@ -24,13 +26,27 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     [Header("Drag")]
     public bool wasDroppedOnValidTarget;
 
+    [Header("Tooltip")]
+    public float hoverDelay = 3f;
+
     private GameObject dragIconObject;
     private RectTransform dragIconRect;
     private CanvasGroup canvasGroup;
 
+    private bool isPointerInside;
+    private bool tooltipVisible;
+    private Vector2 lastPointerPosition;
+    private Coroutine hoverRoutine;
+
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    void OnDisable()
+    {
+        StopHoverRoutine();
+        HideTooltip();
     }
 
     public void LoadData()
@@ -60,7 +76,15 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
         if (damageBoostText)
         {
-            damageBoostText.text = currentFruit.damageBoostAmount.ToString();
+            if (currentFruit.damageBoostTurns > 0 && currentFruit.damageBoostMultiplier > 0f)
+            {
+                damageBoostText.text = "x" + currentFruit.damageBoostMultiplier.ToString("0.0") + " / " + currentFruit.damageBoostTurns + " turns";
+            }
+            else
+            {
+                damageBoostText.text = "-";
+            }
+
             damageBoostText.enabled = true;
         }
 
@@ -85,15 +109,97 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         }
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (currentFruit == null)
+        {
+            return;
+        }
+
+        lastPointerPosition = eventData.position;
+        isPointerInside = true;
+
+        StopHoverRoutine();
+        hoverRoutine = StartCoroutine(HoverRoutine());
+    }
+
+    public void OnPointerMove(PointerEventData eventData)
+    {
+        lastPointerPosition = eventData.position;
+
+        if (tooltipVisible)
+        {
+            switch (tooltipUI)
+            {
+                case FruitTooltipUI ui:
+                    ui.Move(lastPointerPosition);
+                    break;
+            }
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isPointerInside = false;
+        StopHoverRoutine();
+        HideTooltip();
+    }
+
+    IEnumerator HoverRoutine()
+    {
+        yield return new WaitForSeconds(hoverDelay);
+
+        if (!isPointerInside)
+        {
+            yield break;
+        }
+
+        tooltipVisible = true;
+
+        switch (tooltipUI)
+        {
+            case FruitTooltipUI ui:
+                ui.Show(currentFruit, lastPointerPosition);
+                break;
+        }
+    }
+
+    void StopHoverRoutine()
+    {
+        switch (hoverRoutine)
+        {
+            case null:
+                return;
+
+            default:
+                StopCoroutine(hoverRoutine);
+                hoverRoutine = null;
+                break;
+        }
+    }
+
+    void HideTooltip()
+    {
+        tooltipVisible = false;
+
+        switch (tooltipUI)
+        {
+            case FruitTooltipUI ui:
+                ui.Hide();
+                break;
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (currentFruit == null)
         {
             return;
         }
-        Debug.Log("Begin Drag");
 
-        Debug.Log("Begin drag: " + currentFruit.itemName);
+        isPointerInside = false;
+        StopHoverRoutine();
+        HideTooltip();
 
         wasDroppedOnValidTarget = false;
 
@@ -114,7 +220,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
         Vector2 localPoint;
         RectTransform canvasRect = mainCanvas.transform as RectTransform;
-        Debug.Log("dragging");
+
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, eventData.pressEventCamera, out localPoint))
         {
             dragIconRect.localPosition = localPoint;
@@ -132,9 +238,6 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         {
             Destroy(dragIconObject);
         }
-        Debug.Log("drag over");
-
-        Debug.Log("End drag: " + currentFruit.itemName + " valid = " + wasDroppedOnValidTarget);
 
         if (wasDroppedOnValidTarget)
         {

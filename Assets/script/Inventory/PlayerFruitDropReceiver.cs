@@ -36,8 +36,13 @@ public class PlayerFruitDropReceiver : MonoBehaviour, IDropHandler
             return;
         }
 
-        targetUnit.UseFruit(fruitData.currentFruit);
+        bool used = targetUnit.UseFruit(fruitData.currentFruit);
 
-        fruitData.wasDroppedOnValidTarget = true;
+        fruitData.wasDroppedOnValidTarget = used;
+
+        if (!used)
+        {
+            Debug.Log("Fruit use failed on target: " + targetUnit.unitName);
+        }
     }
 }
