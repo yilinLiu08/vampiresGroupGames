@@ -130,16 +130,99 @@ public class TurnBattleManager : MonoBehaviour
         waitingForPlayerTarget = false;
 
         HideAllEnemyTargetButtons();
+        HideActionButtons();
         ClearAllHighlights();
         currentUnit.SetHighlight(true);
+
+        StartCoroutine(BeginTurnRoutine());
+    }
+
+    private IEnumerator BeginTurnRoutine()
+    {
+        yield return StartCoroutine(HandlePoisonRoutine());
+
+        if (battleEnded)
+        {
+            yield break;
+        }
+
+        if (changingRound)
+        {
+            yield break;
+        }
+
+        if (currentUnit == null)
+        {
+            yield break;
+        }
+
+        if (currentUnit.IsDead())
+        {
+            StartTurn();
+            yield break;
+        }
+
+        if (currentUnit.ConsumeClotTurn())
+        {
+            messageText.text = currentUnit.unitName + " is frozen and cannot move.";
+
+            yield return new WaitForSeconds(0.8f);
+
+            CheckBattleResult();
+
+            if (!battleEnded && !changingRound)
+            {
+                StartTurn();
+            }
+
+            yield break;
+        }
 
         if (currentUnit.isPlayer)
         {
             StartPlayerTurn();
-            return;
+            yield break;
         }
 
         StartCoroutine(EnemyTurnRoutine());
+    }
+
+    private IEnumerator HandlePoisonRoutine()
+    {
+        for (int i = 0; i < currentEnemies.Length; i++)
+        {
+            BattleUnit enemy = currentEnemies[i];
+
+            if (!enemy.gameObject.activeInHierarchy)
+            {
+                continue;
+            }
+
+            if (enemy.IsDead())
+            {
+                continue;
+            }
+
+            if (!enemy.HasPoison())
+            {
+                continue;
+            }
+
+            messageText.text = enemy.unitName + " takes " + enemy.GetPoisonDamage() + " poison damage.";
+
+            yield return new WaitForSeconds(0.3f);
+
+            enemy.TickPoison();
+
+            yield return new WaitForSeconds(0.4f);
+
+            CheckBattleResult();
+
+            if (battleEnded || changingRound)
+            {
+                yield break;
+            }
+        }
     }
 
     private BattleUnit GetNextAliveUnit()
@@ -190,6 +273,22 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(enemyActionDelay);
 
+        if (currentUnit.TryFailFromNausea())
+        {
+            messageText.text = currentUnit.unitName + " feels nauseous and misses the turn.";
+
+            yield return new WaitForSeconds(0.8f);
+
+            CheckBattleResult();
+
+            if (!battleEnded && !changingRound)
+            {
+                StartTurn();
+            }
+
+            yield break;
+        }
+
         BattleUnit target = GetRandomAlivePlayer();
 
         if (target == null)
@@ -205,16 +304,11 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
-        target.TakeDamage(currentUnit.attackDamage);
+        target.TakeDamage(currentUnit.GetAttackDamage());
 
         yield return new WaitForSeconds(0.8f);
 
-        CheckBattleResult();
-
-        if (!battleEnded && !changingRound)
-        {
-            StartTurn();
-        }
+        FinishCurrentUnitTurn();
     }
 
     public void OnClickAttack()
@@ -298,7 +392,7 @@ public class TurnBattleManager : MonoBehaviour
 
         if (selectedAction == ActionType.Attack)
         {
-            damage = currentUnit.attackDamage;
+            damage = currentUnit.GetAttackDamage();
             messageText.text = currentUnit.unitName + " attacks " + target.unitName + ".";
         }
 
@@ -325,12 +419,7 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.8f);
 
-        CheckBattleResult();
-
-        if (!battleEnded && !changingRound)
-        {
-            StartTurn();
-        }
+        FinishCurrentUnitTurn();
     }
 
     private IEnumerator PlayerTeamHealRoutine()
@@ -351,12 +440,7 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.8f);
 
-        CheckBattleResult();
-
-        if (!battleEnded && !changingRound)
-        {
-            StartTurn();
-        }
+        FinishCurrentUnitTurn();
     }
 
     private IEnumerator PlayerTeamShieldRoutine()
@@ -375,12 +459,7 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.8f);
 
-        CheckBattleResult();
-
-        if (!battleEnded && !changingRound)
-        {
-            StartTurn();
-        }
+        FinishCurrentUnitTurn();
     }
 
     private IEnumerator PlayerAoERoutine()
@@ -399,6 +478,12 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.8f);
 
+        FinishCurrentUnitTurn();
+    }
+
+    private void FinishCurrentUnitTurn()
+    {
+        currentUnit.AdvanceBuffTurn();
         CheckBattleResult();
 
         if (!battleEnded && !changingRound)

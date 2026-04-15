@@ -10,12 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9110f8d29753ed84d92848b0410f438e, type: 3}
-  m_Name: item
+  m_Name: Stake
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
-  itemName: DamageBoost
-  description: boosts damage for one character
-  icon: {fileID: 21300000, guid: df8c2b7ee31f3d54093ba0f8e0a6d800, type: 3}
+  itemName: Stake
+  description: 'The liquids inside swirl and pulse with energy.  Heal 30 HP to an
+    ally of your choice.  '
+  icon: {fileID: 21300000, guid: 7c13db8a7868f484f9c7c2d6ac21230b, type: 3}
+  fruitCategory: 1
   healAmount: 0
-  damageBoostAmount: 30
+  damageBoostMultiplier: 0
+  damageBoostTurns: 0
   manaAmount: 0
-  effects: 01000000
+  poisonDamagePerTurn: 10
+  poisonTurns: 4
+  clotTurns: 1
+  nauseaFailChance: 0.5
+  nauseaTurns: 1
+  effects: 03000000

@@ -9,6 +9,7 @@ public class FruitGrid : MonoBehaviour, IDropHandler
     public FruitInventory inventory;
     public Transform contentRoot;
     public Canvas mainCanvas;
+    public FruitTooltipUI tooltipUI;
 
     [Header("Fruit Info UI")]
     public TextMeshProUGUI nameText;
@@ -99,6 +100,7 @@ public class FruitGrid : MonoBehaviour, IDropHandler
         fd.inventory = inventory;
         fd.grid = this;
         fd.mainCanvas = mainCanvas;
+        fd.tooltipUI = tooltipUI;
 
         fd.nameText = nameText;
         fd.descriptionText = descriptionText;
@@ -107,7 +109,7 @@ public class FruitGrid : MonoBehaviour, IDropHandler
         fd.manaText = manaText;
         fd.effectText = effectText;
 
-        btn.onClick.AddListener(fd.LoadData);
+        //  btn.onClick.AddListener(fd.LoadData);
     }
 
     public void RefreshGrid()
