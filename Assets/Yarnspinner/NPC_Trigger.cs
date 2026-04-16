@@ -1,27 +1,18 @@
-using Yarn.Unity;
-using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class NPC_Trigger : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
 
-    [Header("Win/Loss Keys")]
-    private string winKey = "FightOneWin";
-    private string loseKey = "FightOneLoseCount";
-
-    [Header("Dialogue Conditions")]
-    public string win1Node = "Fight1Win";
-    public string lose1Node = "Fight1Lose";
-
-    public string win2Node = "Fight2Win";
-    public string lose2Node = "Fight2Lose";
-
-    public string win3Node = "Fight3Win";
-    public string lose3Node = "Fight3Lose";
-
+    [Header("Dialogue Node Names")]
+    public string winNode = "Fight1Win";
+    public string loseNode = "Fight1Lose";
     public string defaultNode = "StartNode";
 
+    
+    private string fight1Complete = "fight1Complete";
+    private string fight1Lose = "fight1Lose";
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,52 +25,37 @@ public class NPC_Trigger : MonoBehaviour
         }
     }
 
-    private void DetermineAndStartDialogue()
+    public void OnTriggerExit2D(Collider2D other)
     {
-        int winCount = PlayerPrefs.GetInt(winKey, 0);
-        int loseCount = PlayerPrefs.GetInt(loseKey, 0);
+        if (other.CompareTag("Player"))
+        {       
+            dialogueRunner.Stop();
+           
+        }
+    }
+
+    private void DetermineAndStartDialogue()
+    { 
+        int winCount = PlayerPrefs.GetInt(fight1Complete, 0);
+        int loseCount = PlayerPrefs.GetInt(fight1Lose, 0);
 
         string nodeToPlay = defaultNode;
 
-        //this order matters dont touch this reminder for myself -zoe yu
-        if (winCount >= 3)
+        if (winCount >= 1)
         {
-            nodeToPlay = win3Node;
-        }
-        else if (winCount == 2)
-        {
-            nodeToPlay = win2Node;
-        }
-        else if (winCount == 1)
-        {
-            nodeToPlay = win1Node;
+            nodeToPlay = winNode;
         }
        
-        else if (loseCount >= 3)
+        else if (loseCount >= 1)
         {
-            nodeToPlay = lose3Node;
+            nodeToPlay = loseNode;
         }
-        else if (loseCount == 2)
-        {
-            nodeToPlay = lose2Node;
-        }
-        else if (loseCount == 1)
-        {
-            nodeToPlay = lose1Node;
-        }
+        
         else
         {
             nodeToPlay = defaultNode;
         }
 
-       
-
         dialogueRunner.StartDialogue(nodeToPlay);
-
-        /* if (PlayerMovement.Instance != null)
-        {
-            PlayerMovement.Instance.StopMoving();
-        }
-        */
     }
 }

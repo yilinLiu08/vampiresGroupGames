@@ -29,14 +29,45 @@ public class FruitGrid : MonoBehaviour, IDropHandler
 
     void OnEnable()
     {
+
+        /*
+
         if (inventory == null)
         {
-            Debug.Log("FruitGrid: inventory is missing.");
+            inventory = FindObjectOfType<FruitInventory>();
+        }
+
+        if (inventory == null)
+        {
+            Debug.LogWarning("need da inventory");
             return;
         }
 
         inventory.onInventoryChanged += RefreshGrid;
         RefreshGrid();
+        */
+
+        if (InventoryPersistence.Instance != null)
+        {
+            inventory = InventoryPersistence.Instance.GetComponent<FruitInventory>();
+        }
+
+        
+        if (inventory == null)
+        {
+            inventory = FindObjectOfType<FruitInventory>();
+        }
+
+        
+        if (inventory != null)
+        {
+            inventory.onInventoryChanged += RefreshGrid;
+            RefreshGrid();
+        }
+        else
+        {
+            Debug.LogWarning("wheres the persistent inventory!?");
+        }
     }
 
     void OnDisable()
@@ -61,7 +92,7 @@ public class FruitGrid : MonoBehaviour, IDropHandler
     {
         if (inventory == null)
         {
-            Debug.Log("PopulateAll failed: inventory is missing.");
+            Debug.Log("PopulateAll failed: inventory is missing!!!!!!!!!!!");
             return;
         }
 
@@ -77,7 +108,7 @@ public class FruitGrid : MonoBehaviour, IDropHandler
             CreateSlot(fruit);
         }
 
-        Debug.Log("FruitGrid refreshed. Total fruits: " + inventory.fruits.Count);
+        Debug.Log("Grid refreshed.  items: " + inventory.fruits.Count);
     }
 
     void CreateSlot(Fruit fruit)

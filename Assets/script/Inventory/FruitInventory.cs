@@ -31,4 +31,6 @@ public class FruitInventory : MonoBehaviour
     {
         return fruits.Contains(checkFruit);
     }
+
+   
 }

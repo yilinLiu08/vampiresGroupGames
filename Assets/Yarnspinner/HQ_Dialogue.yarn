@@ -7,7 +7,7 @@ NPC: I've got all types of potions, bandages, daggers...
 -> Nothing. 
 ===
 
-title:NPCFight1Lose
+title:NPCFight1Win
 ---
 NPC: Hey. I got new stuff for ya! nice job moving forward!
 NPC: Nedd something?
@@ -16,7 +16,7 @@ NPC: Nedd something?
 -> Nothing. 
 ===
 
-title:NPCFight2Lose
+title:NPCFight1Lose
 ---
 NPC: Hey. Y'all are Looking rough...
 NPC: I've got all types of potions, bandages, daggers...

@@ -1785,7 +1785,7 @@ GameObject:
   - component: {fileID: 1230244225}
   - component: {fileID: 1230244224}
   m_Layer: 5
-  m_Name: FinishFightLose
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8130,7 +8130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Linker
 --- !u!1 &4261563374720921718 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3259931382973854304, guid: fb22c55aac7cb424fa86062424192f90, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8505417658930793926, guid: fb22c55aac7cb424fa86062424192f90, type: 3}
   m_PrefabInstance: {fileID: 4261563374720921715}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &4261563374720921719 stripped
