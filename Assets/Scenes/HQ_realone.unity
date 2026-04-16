@@ -2457,7 +2457,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC_Trigger
   dialogueRunner: {fileID: 1889642055}
-  nodeName: Start
+  win1Node: NPCFight1Win
+  lose1Node: NPCFight1Lose
+  win2Node: 
+  lose2Node: 
+  win3Node: 
+  lose3Node: 
+  defaultNode: StartNode
 --- !u!61 &136641297
 BoxCollider2D:
   m_ObjectHideFlags: 0

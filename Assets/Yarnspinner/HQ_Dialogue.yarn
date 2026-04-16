@@ -1,0 +1,47 @@
+﻿title:StartNode
+---
+NPC: Hey. You're back early. Need something?
+NPC: I've got all types of potions, bandages, daggers...
+-> Let me purchase something.
+    <<open_shop Player>>
+-> Nothing. 
+===
+
+title:NPCFight1Lose
+---
+NPC: Hey. I got new stuff for ya! nice job moving forward!
+NPC: Nedd something?
+-> Let me purchase something.
+    <<open_shop Player>>
+-> Nothing. 
+===
+
+title:NPCFight2Lose
+---
+NPC: Hey. Y'all are Looking rough...
+NPC: I've got all types of potions, bandages, daggers...
+-> Let me purchase something.
+    <<open_shop Player>>
+-> Nothing. 
+===
+
+title:ElsieStart
+---
+Elsie: Ngh.... 
+Elsie: I'm so scared...
+Loveday: stop being a scaredass
+Elsie: ok sorry
+===
+
+title:ElsieF1W
+---
+Elsie: Y'know... that was actually kinda easy
+Loveday: ikr
+Elsie: hahahahahhaa
+===
+
+title: ElsieF1L
+---
+Elsie: SHIT
+Loveday: heal me already.
+===

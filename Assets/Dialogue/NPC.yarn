@@ -1,8 +1,0 @@
-﻿title:Start
----
-NPC: Hey. You're back early. Need something?
-NPC: I've got all types of potions, bandages, daggers...
--> Let me purchase something.
-    <<open_shop Player>>
--> Nothing. 
-===
