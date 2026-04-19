@@ -10,7 +10,6 @@ public class NPC_Trigger : MonoBehaviour
     public string loseNode = "Fight1Lose";
     public string defaultNode = "StartNode";
 
-    
     private string fight1Complete = "fight1Complete";
     private string fight1Lose = "fight1Lose";
 

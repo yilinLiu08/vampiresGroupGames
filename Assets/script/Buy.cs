@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Buy : MonoBehaviour
@@ -5,11 +6,9 @@ public class Buy : MonoBehaviour
     [Header("Inventory Settings")]
     public Fruit itemToGive;
 
-    [Header("UI Display Settings")]
-    public GameObject selectionImage; 
+   // public TextMeshProUGUI coinAmt;
 
-    
-    private static GameObject currentlyActiveImage;
+    //public fruit coin amount
 
     public void AddItem()
     {
@@ -19,6 +18,8 @@ public class Buy : MonoBehaviour
         if (inv != null && itemToGive != null)
         {
             inv.AddFruit(itemToGive);
+            SubtractCoins();
+
         }
         else
         {
@@ -26,30 +27,22 @@ public class Buy : MonoBehaviour
         }
     }
 
-        private void HandleImageDisplay()
-        {
-        if (selectionImage == null) return;
-
-        
-        if (currentlyActiveImage != null && currentlyActiveImage != selectionImage)
-        {
-            currentlyActiveImage.SetActive(false);
-        }
-
-        
-        selectionImage.SetActive(true);
-
-        
-        currentlyActiveImage = selectionImage;
-         }
-
-    
-    public void Deselect()
+    void SubtractCoins()
     {
-        if (selectionImage != null)
-        {
-            selectionImage.SetActive(false);
-            if (currentlyActiveImage == selectionImage) currentlyActiveImage = null;
-        }
+        
+        /* int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+         currentCoins -= 30;
+         Debug.Log("minused coins");
+        */
+        // int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+
+        // 2. Check LOSS (Key: FightOneLoseCount)
+
+        // currentCoins += 10;
+        // PlayerPrefs.SetInt("FightOneLoseCount", 0); // Reset it!
+
+
+        //take specific coin amount and 
     }
 }
+
