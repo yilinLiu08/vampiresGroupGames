@@ -25,6 +25,8 @@ public class Fruit : ScriptableObject
     public string description;
     public Sprite icon;
 
+    public int price; // doing coin stuff here
+
     [Header("Category")]
     public FruitCategory fruitCategory = FruitCategory.Buff;
 

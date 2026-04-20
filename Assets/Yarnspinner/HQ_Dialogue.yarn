@@ -10,7 +10,8 @@ NPC: I've got all types of potions, bandages, daggers...
 title:NPCFight1Win
 ---
 NPC: Hey. I got new stuff for ya! nice job moving forward!
-NPC: Nedd something?
+NPC: Need something? I got some garlic for you now!!!
+<<unlock_garlic Player>>    
 -> Let me purchase something.
     <<open_shop Player>>
 -> Nothing. 
