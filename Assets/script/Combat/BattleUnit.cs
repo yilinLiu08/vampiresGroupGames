@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -39,6 +41,14 @@ public class BattleUnit : MonoBehaviour
     public Image[] tintImages;
     public Color deadTint = new Color(0.5f, 0.5f, 0.5f, 1f);
 
+    [Header("Floating Text")]
+    public TextMeshProUGUI damageHealText;
+    public float damageHealTextFadeTime = 2f;
+
+    [Header("Persistent Effect UI")]
+    public Image persistentEffectIconImage;
+    public BattleStatusTooltipUI persistentEffectTooltipUI;
+
     [Header("UI")]
     public Image hpBarImage;
     public Image manaBarImage;
@@ -61,9 +71,30 @@ public class BattleUnit : MonoBehaviour
     private Color[] originalSpriteColors;
     private Color[] originalImageColors;
 
+    private Coroutine damageHealTextRoutine;
+
+    private string damageBoostSourceName;
+    private Sprite damageBoostSourceIcon;
+    private int damageBoostDisplayOrder = -1;
+
+    private string poisonSourceName;
+    private Sprite poisonSourceIcon;
+    private int poisonDisplayOrder = -1;
+
+    private string clotSourceName;
+    private Sprite clotSourceIcon;
+    private int clotDisplayOrder = -1;
+
+    private string nauseaSourceName;
+    private Sprite nauseaSourceIcon;
+    private int nauseaDisplayOrder = -1;
+
+    private int persistentEffectOrderCounter = 0;
+
     private void Awake()
     {
         CacheOriginalColors();
+        SetupPersistentEffectIconHover();
     }
 
     private void Start()
@@ -76,6 +107,8 @@ public class BattleUnit : MonoBehaviour
         SetHighlight(false);
         HideTargetButton();
         UpdateDeadVisual();
+        HideDamageHealText();
+        RefreshPersistentEffectIcon();
     }
 
     void CacheOriginalColors()
@@ -102,6 +135,24 @@ public class BattleUnit : MonoBehaviour
 
             originalImageColors[i] = tintImages[i].color;
         }
+    }
+
+    void SetupPersistentEffectIconHover()
+    {
+        if (persistentEffectIconImage == null)
+        {
+            return;
+        }
+
+        BattleStatusIconHover hover = persistentEffectIconImage.GetComponent<BattleStatusIconHover>();
+
+        if (hover == null)
+        {
+            hover = persistentEffectIconImage.gameObject.AddComponent<BattleStatusIconHover>();
+        }
+
+        hover.owner = this;
+        hover.tooltipUI = persistentEffectTooltipUI;
     }
 
     void UpdateDeadVisual()
@@ -141,6 +192,56 @@ public class BattleUnit : MonoBehaviour
                 tintImages[i].color = originalImageColors[i];
             }
         }
+    }
+
+    void HideDamageHealText()
+    {
+        if (damageHealText == null)
+        {
+            return;
+        }
+
+        damageHealText.gameObject.SetActive(false);
+    }
+
+    void ShowDamageHealText(string textValue)
+    {
+        if (damageHealText == null)
+        {
+            return;
+        }
+
+        if (damageHealTextRoutine != null)
+        {
+            StopCoroutine(damageHealTextRoutine);
+        }
+
+        damageHealTextRoutine = StartCoroutine(DamageHealTextRoutine(textValue));
+    }
+
+    IEnumerator DamageHealTextRoutine(string textValue)
+    {
+        damageHealText.gameObject.SetActive(true);
+        damageHealText.text = textValue;
+
+        Color color = damageHealText.color;
+        color.a = 1f;
+        damageHealText.color = color;
+
+        float timer = 0f;
+
+        while (timer < damageHealTextFadeTime)
+        {
+            timer += Time.deltaTime;
+
+            color.a = Mathf.Lerp(1f, 0f, timer / damageHealTextFadeTime);
+            damageHealText.color = color;
+
+            yield return null;
+        }
+
+        damageHealText.gameObject.SetActive(false);
+        damageHealTextRoutine = null;
     }
 
     bool HasEffect(Fruit fruit, FruitEffect effect)
@@ -199,8 +300,17 @@ public class BattleUnit : MonoBehaviour
             return;
         }
 
+        int beforeHP = currentHP;
+
         currentHP -= damage;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+
+        int actualDamage = beforeHP - currentHP;
+
+        if (actualDamage > 0)
+        {
+            ShowDamageHealText("-" + actualDamage);
+        }
 
         UpdateHPUI();
         UpdateDeadVisual();
@@ -208,8 +318,17 @@ public class BattleUnit : MonoBehaviour
 
     public void TakeDirectDamage(int damage)
     {
+        int beforeHP = currentHP;
+
         currentHP -= damage;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+
+        int actualDamage = beforeHP - currentHP;
+
+        if (actualDamage > 0)
+        {
+            ShowDamageHealText("-" + actualDamage);
+        }
 
         UpdateHPUI();
         UpdateDeadVisual();
@@ -217,8 +336,17 @@ public class BattleUnit : MonoBehaviour
 
     public void Heal(int amount)
     {
+        int beforeHP = currentHP;
+
         currentHP += amount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+
+        int actualHeal = currentHP - beforeHP;
+
+        if (actualHeal > 0)
+        {
+            ShowDamageHealText("+" + actualHeal);
+        }
 
         UpdateHPUI();
         UpdateDeadVisual();
@@ -226,7 +354,16 @@ public class BattleUnit : MonoBehaviour
 
     public void Revive(int amount)
     {
+        int beforeHP = currentHP;
+
         currentHP = Mathf.Clamp(amount, 1, maxHP);
+
+        int actualHeal = currentHP - beforeHP;
+
+        if (actualHeal > 0)
+        {
+            ShowDamageHealText("+" + actualHeal);
+        }
 
         UpdateHPUI();
         UpdateDeadVisual();
@@ -259,10 +396,178 @@ public class BattleUnit : MonoBehaviour
         return Mathf.RoundToInt(attackDamage * damageBoostMultiplier);
     }
 
-    public void ApplyDamageBoost(float multiplier, int turns)
+    void RegisterPersistentDisplay(Fruit fruit, FruitEffect effect)
+    {
+        persistentEffectOrderCounter++;
+
+        if (effect == FruitEffect.DamageBoost)
+        {
+            damageBoostSourceName = fruit.itemName;
+            damageBoostSourceIcon = fruit.icon;
+            damageBoostDisplayOrder = persistentEffectOrderCounter;
+        }
+
+        if (effect == FruitEffect.Poison)
+        {
+            poisonSourceName = fruit.itemName;
+            poisonSourceIcon = fruit.icon;
+            poisonDisplayOrder = persistentEffectOrderCounter;
+        }
+
+        if (effect == FruitEffect.Clot)
+        {
+            clotSourceName = fruit.itemName;
+            clotSourceIcon = fruit.icon;
+            clotDisplayOrder = persistentEffectOrderCounter;
+        }
+
+        if (effect == FruitEffect.Nausea)
+        {
+            nauseaSourceName = fruit.itemName;
+            nauseaSourceIcon = fruit.icon;
+            nauseaDisplayOrder = persistentEffectOrderCounter;
+        }
+
+        RefreshPersistentEffectIcon();
+    }
+
+    void ClearPersistentDisplay(FruitEffect effect)
+    {
+        if (effect == FruitEffect.DamageBoost)
+        {
+            damageBoostSourceName = "";
+            damageBoostSourceIcon = null;
+            damageBoostDisplayOrder = -1;
+        }
+
+        if (effect == FruitEffect.Poison)
+        {
+            poisonSourceName = "";
+            poisonSourceIcon = null;
+            poisonDisplayOrder = -1;
+        }
+
+        if (effect == FruitEffect.Clot)
+        {
+            clotSourceName = "";
+            clotSourceIcon = null;
+            clotDisplayOrder = -1;
+        }
+
+        if (effect == FruitEffect.Nausea)
+        {
+            nauseaSourceName = "";
+            nauseaSourceIcon = null;
+            nauseaDisplayOrder = -1;
+        }
+
+        RefreshPersistentEffectIcon();
+    }
+
+    public bool HasPersistentEffectDisplay()
+    {
+        if (damageBoostTurnsRemaining > 0)
+        {
+            return true;
+        }
+
+        if (poisonTurnsRemaining > 0)
+        {
+            return true;
+        }
+
+        if (clotTurnsRemaining > 0)
+        {
+            return true;
+        }
+
+        if (nauseaTurnsRemaining > 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public string GetPersistentEffectTooltipText()
+    {
+        List<string> lines = new List<string>();
+
+        if (damageBoostTurnsRemaining > 0)
+        {
+            lines.Add(damageBoostSourceName + ": Attack x" + damageBoostMultiplier.ToString("0.0") + ", " + damageBoostTurnsRemaining + " turns left.");
+        }
+
+        if (poisonTurnsRemaining > 0)
+        {
+            lines.Add(poisonSourceName + ": " + poisonDamagePerTurn + " poison damage each turn, " + poisonTurnsRemaining + " turns left.");
+        }
+
+        if (clotTurnsRemaining > 0)
+        {
+            lines.Add(clotSourceName + ": Frozen, " + clotTurnsRemaining + " turns left.");
+        }
+
+        if (nauseaTurnsRemaining > 0)
+        {
+            lines.Add(nauseaSourceName + ": " + Mathf.RoundToInt(nauseaFailChance * 100f) + "% miss chance, " + nauseaTurnsRemaining + " turns left.");
+        }
+
+        return string.Join("\n", lines);
+    }
+
+    void RefreshPersistentEffectIcon()
+    {
+        if (persistentEffectIconImage == null)
+        {
+            return;
+        }
+
+        if (!HasPersistentEffectDisplay())
+        {
+            persistentEffectIconImage.gameObject.SetActive(false);
+            persistentEffectIconImage.sprite = null;
+            return;
+        }
+
+        Sprite newestSprite = null;
+        int newestOrder = -1;
+
+        if (damageBoostTurnsRemaining > 0 && damageBoostDisplayOrder > newestOrder)
+        {
+            newestOrder = damageBoostDisplayOrder;
+            newestSprite = damageBoostSourceIcon;
+        }
+
+        if (poisonTurnsRemaining > 0 && poisonDisplayOrder > newestOrder)
+        {
+            newestOrder = poisonDisplayOrder;
+            newestSprite = poisonSourceIcon;
+        }
+
+        if (clotTurnsRemaining > 0 && clotDisplayOrder > newestOrder)
+        {
+            newestOrder = clotDisplayOrder;
+            newestSprite = clotSourceIcon;
+        }
+
+        if (nauseaTurnsRemaining > 0 && nauseaDisplayOrder > newestOrder)
+        {
+            newestOrder = nauseaDisplayOrder;
+            newestSprite = nauseaSourceIcon;
+        }
+
+        persistentEffectIconImage.gameObject.SetActive(true);
+        persistentEffectIconImage.sprite = newestSprite;
+        persistentEffectIconImage.preserveAspect = true;
+    }
+
+    public void ApplyDamageBoost(float multiplier, int turns, Fruit sourceFruit)
     {
         damageBoostMultiplier = Mathf.Max(1f, multiplier);
         damageBoostTurnsRemaining = Mathf.Max(1, turns);
+
+        RegisterPersistentDisplay(sourceFruit, FruitEffect.DamageBoost);
 
         Debug.Log(unitName + " attack boost: x" + damageBoostMultiplier + " for " + damageBoostTurnsRemaining + " turns.");
     }
@@ -278,19 +583,24 @@ public class BattleUnit : MonoBehaviour
 
         if (damageBoostTurnsRemaining > 0)
         {
+            RefreshPersistentEffectIcon();
             return;
         }
 
         damageBoostMultiplier = 1f;
         damageBoostTurnsRemaining = 0;
 
+        ClearPersistentDisplay(FruitEffect.DamageBoost);
+
         Debug.Log(unitName + " attack boost ended.");
     }
 
-    public void ApplyPoison(int damagePerTurn, int turns)
+    public void ApplyPoison(int damagePerTurn, int turns, Fruit sourceFruit)
     {
         poisonDamagePerTurn = Mathf.Max(poisonDamagePerTurn, damagePerTurn);
         poisonTurnsRemaining = Mathf.Max(poisonTurnsRemaining, turns);
+
+        RegisterPersistentDisplay(sourceFruit, FruitEffect.Poison);
 
         Debug.Log(unitName + " is poisoned.");
     }
@@ -318,18 +628,23 @@ public class BattleUnit : MonoBehaviour
 
         if (poisonTurnsRemaining > 0)
         {
+            RefreshPersistentEffectIcon();
             return;
         }
 
         poisonDamagePerTurn = 0;
         poisonTurnsRemaining = 0;
 
+        ClearPersistentDisplay(FruitEffect.Poison);
+
         Debug.Log(unitName + " poison ended.");
     }
 
-    public void ApplyClot(int turns)
+    public void ApplyClot(int turns, Fruit sourceFruit)
     {
         clotTurnsRemaining = Mathf.Max(clotTurnsRemaining, turns);
+
+        RegisterPersistentDisplay(sourceFruit, FruitEffect.Clot);
 
         Debug.Log(unitName + " is frozen.");
     }
@@ -346,16 +661,23 @@ public class BattleUnit : MonoBehaviour
         if (clotTurnsRemaining <= 0)
         {
             clotTurnsRemaining = 0;
+            ClearPersistentDisplay(FruitEffect.Clot);
             Debug.Log(unitName + " clot ended.");
+        }
+        else
+        {
+            RefreshPersistentEffectIcon();
         }
 
         return true;
     }
 
-    public void ApplyNausea(float failChance, int turns)
+    public void ApplyNausea(float failChance, int turns, Fruit sourceFruit)
     {
         nauseaFailChance = Mathf.Max(nauseaFailChance, failChance);
         nauseaTurnsRemaining = Mathf.Max(nauseaTurnsRemaining, turns);
+
+        RegisterPersistentDisplay(sourceFruit, FruitEffect.Nausea);
 
         Debug.Log(unitName + " is nauseous.");
     }
@@ -375,7 +697,12 @@ public class BattleUnit : MonoBehaviour
         {
             nauseaTurnsRemaining = 0;
             nauseaFailChance = 0f;
+            ClearPersistentDisplay(FruitEffect.Nausea);
             Debug.Log(unitName + " nausea ended.");
+        }
+        else
+        {
+            RefreshPersistentEffectIcon();
         }
 
         return failed;
@@ -402,7 +729,7 @@ public class BattleUnit : MonoBehaviour
 
             if (effect == FruitEffect.DamageBoost)
             {
-                ApplyDamageBoost(fruit.damageBoostMultiplier, fruit.damageBoostTurns);
+                ApplyDamageBoost(fruit.damageBoostMultiplier, fruit.damageBoostTurns, fruit);
             }
 
             if (effect == FruitEffect.ManaRestore)
@@ -412,17 +739,17 @@ public class BattleUnit : MonoBehaviour
 
             if (effect == FruitEffect.Poison)
             {
-                ApplyPoison(fruit.poisonDamagePerTurn, fruit.poisonTurns);
+                ApplyPoison(fruit.poisonDamagePerTurn, fruit.poisonTurns, fruit);
             }
 
             if (effect == FruitEffect.Clot)
             {
-                ApplyClot(fruit.clotTurns);
+                ApplyClot(fruit.clotTurns, fruit);
             }
 
             if (effect == FruitEffect.Nausea)
             {
-                ApplyNausea(fruit.nauseaFailChance, fruit.nauseaTurns);
+                ApplyNausea(fruit.nauseaFailChance, fruit.nauseaTurns, fruit);
             }
 
             if (effect == FruitEffect.Revive)
