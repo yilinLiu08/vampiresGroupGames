@@ -6,6 +6,8 @@ using TMPro;
 
 public class TurnBattleManager : MonoBehaviour
 {
+    public static TurnBattleManager Instance { get; private set; }
+
     public enum ActionType
     {
         None,
@@ -38,6 +40,7 @@ public class TurnBattleManager : MonoBehaviour
 
     private int currentTurnIndex = 0;
     private int currentRound = 1;
+    private int turnCycle = 0;
 
     private BattleUnit currentUnit;
     private ActionType selectedAction = ActionType.None;
@@ -45,6 +48,14 @@ public class TurnBattleManager : MonoBehaviour
     private bool waitingForPlayerTarget = false;
     private bool battleEnded = false;
     private bool changingRound = false;
+
+    private float roundSkillBoostMultiplier = 1f;
+    private int roundSkillBoostExpireCycle = -1;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -62,10 +73,77 @@ public class TurnBattleManager : MonoBehaviour
         StartTurn();
     }
 
+    public void ShowFruitMessage(string text)
+    {
+        if (messageText == null)
+        {
+            return;
+        }
+
+        messageText.text = text;
+    }
+
+    public void ResolveCoinFlipFruit(Fruit fruit)
+    {
+        if (fruit == null)
+        {
+            return;
+        }
+
+        bool heads = Random.value < 0.5f;
+
+        if (heads)
+        {
+            roundSkillBoostMultiplier = Mathf.Max(1f, fruit.coinFlipSkillMultiplier);
+            roundSkillBoostExpireCycle = turnCycle + 1;
+
+            ShowFruitMessage("Heads! All player attack skills are x" + roundSkillBoostMultiplier.ToString("0.0") + " for the rest of this round.");
+            return;
+        }
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].IsDead())
+            {
+                continue;
+            }
+
+            players[i].TakeDirectDamage(fruit.coinFlipTeamDamage);
+        }
+
+        ShowFruitMessage("Tails! All allies lose " + fruit.coinFlipTeamDamage + " HP.");
+        CheckBattleResult();
+    }
+
+    private bool IsRoundSkillBoostActive()
+    {
+        return turnCycle < roundSkillBoostExpireCycle;
+    }
+
+    private int GetModifiedSkillDamage(BattleUnit unit)
+    {
+        int damage = unit.skillDamage;
+
+        if (!unit.isPlayer)
+        {
+            return damage;
+        }
+
+        if (!IsRoundSkillBoostActive())
+        {
+            return damage;
+        }
+
+        return Mathf.RoundToInt(damage * roundSkillBoostMultiplier);
+    }
+
     private void SetRound(int round)
     {
         currentRound = round;
         currentTurnIndex = 0;
+        turnCycle = 0;
+        roundSkillBoostMultiplier = 1f;
+        roundSkillBoostExpireCycle = -1;
 
         SetEnemyGroupActive(round1Enemies, false);
         SetEnemyGroupActive(round2Enemies, false);
@@ -234,6 +312,7 @@ public class TurnBattleManager : MonoBehaviour
             if (currentTurnIndex >= turnOrder.Length)
             {
                 currentTurnIndex = 0;
+                turnCycle++;
             }
 
             BattleUnit unit = turnOrder[currentTurnIndex];
@@ -398,7 +477,7 @@ public class TurnBattleManager : MonoBehaviour
 
         if (selectedAction == ActionType.Skill)
         {
-            damage = currentUnit.skillDamage;
+            damage = GetModifiedSkillDamage(currentUnit);
             messageText.text = currentUnit.unitName + " uses skill on " + target.unitName + ".";
         }
 
@@ -464,6 +543,8 @@ public class TurnBattleManager : MonoBehaviour
 
     private IEnumerator PlayerAoERoutine()
     {
+        int damage = GetModifiedSkillDamage(currentUnit);
+
         messageText.text = currentUnit.unitName + " uses skill: deal damage to all enemies.";
 
         yield return new WaitForSeconds(0.4f);
@@ -472,7 +553,7 @@ public class TurnBattleManager : MonoBehaviour
         {
             if (!currentEnemies[i].IsDead() && currentEnemies[i].gameObject.activeInHierarchy)
             {
-                currentEnemies[i].TakeDamage(currentUnit.skillDamage);
+                currentEnemies[i].TakeDamage(damage);
             }
         }
 

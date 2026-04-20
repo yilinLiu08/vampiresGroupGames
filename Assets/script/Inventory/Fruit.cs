@@ -8,7 +8,9 @@ public enum FruitEffect
     ManaRestore,
     Poison,
     Clot,
-    Nausea
+    Nausea,
+    Revive,
+    CoinFlip
 }
 
 public enum FruitCategory
@@ -45,6 +47,13 @@ public class Fruit : ScriptableObject
     [Range(0f, 1f)]
     public float nauseaFailChance = 0.5f;
     public int nauseaTurns = 1;
+
+    [Header("Revive")]
+    public int reviveHP = 50;
+
+    [Header("Coin Flip")]
+    public float coinFlipSkillMultiplier = 1.2f;
+    public int coinFlipTeamDamage = 20;
 
     [Header("Effects")]
     public List<FruitEffect> effects = new List<FruitEffect>();
