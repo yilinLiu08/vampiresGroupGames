@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9110f8d29753ed84d92848b0410f438e, type: 3}
-  m_Name: Garlic
+  m_Name: HolyWater
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
-  itemName: Garlic
-  description: Its skin feels papery to the touch. Inflicts "Nausea" condition on
-    an enemy of your choice. Chosen enemy could potentially miss attacks.
-  icon: {fileID: 21300000, guid: a20998bb7fdd7e0418f8122338fb9adf, type: 3}
-  price: 20
+  itemName: HolyWater
+  description: Inflicts "Clot" condition on an enemy of your choice. Chosen enemy
+    will be frozen for 2 turns.
+  icon: {fileID: 21300000, guid: 2d8b8ccffce23c54a8ed83993c810799, type: 3}
   fruitCategory: 1
   healAmount: 0
   damageBoostMultiplier: 0
@@ -26,8 +25,8 @@ MonoBehaviour:
   poisonTurns: 0
   clotTurns: 0
   nauseaFailChance: 0.5
-  nauseaTurns: 2
-  reviveHP: 50
-  coinFlipSkillMultiplier: 1.2
-  coinFlipTeamDamage: 20
-  effects: 05000000
+  nauseaTurns: 0
+  reviveHP: 0
+  coinFlipSkillMultiplier: 0
+  coinFlipTeamDamage: 0
+  effects: 04000000

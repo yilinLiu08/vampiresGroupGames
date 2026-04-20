@@ -402,12 +402,6 @@ public class TurnBattleManager : MonoBehaviour
 
     public void OnClickSkill()
     {
-        if (!currentUnit.TryUseMana())
-        {
-            messageText.text = currentUnit.unitName + " does not have enough mana.";
-            return;
-        }
-
         selectedAction = ActionType.Skill;
 
         if (currentUnit.skillType == BattleUnit.SkillType.Damage)
@@ -416,6 +410,13 @@ public class TurnBattleManager : MonoBehaviour
             ShowAvailableEnemyTargets();
 
             messageText.text = currentUnit.unitName + " skill: " + currentUnit.GetSkillDescription();
+            return;
+        }
+
+        if (!currentUnit.TryUseMana())
+        {
+            messageText.text = currentUnit.unitName + " does not have enough mana.";
+            selectedAction = ActionType.None;
             return;
         }
 
@@ -461,6 +462,15 @@ public class TurnBattleManager : MonoBehaviour
         if (target.IsDead())
         {
             return;
+        }
+
+        if (selectedAction == ActionType.Skill)
+        {
+            if (!currentUnit.TryUseMana())
+            {
+                messageText.text = currentUnit.unitName + " does not have enough mana.";
+                return;
+            }
         }
 
         ClearAllHighlights();
