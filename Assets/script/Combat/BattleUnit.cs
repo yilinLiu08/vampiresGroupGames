@@ -34,6 +34,11 @@ public class BattleUnit : MonoBehaviour
     [Header("Status")]
     public bool shieldActive = false;
 
+    [Header("Death Visual")]
+    public SpriteRenderer[] tintSpriteRenderers;
+    public Image[] tintImages;
+    public Color deadTint = new Color(0.5f, 0.5f, 0.5f, 1f);
+
     [Header("UI")]
     public Image hpBarImage;
     public Image manaBarImage;
@@ -53,6 +58,14 @@ public class BattleUnit : MonoBehaviour
     private float nauseaFailChance = 0f;
     private int nauseaTurnsRemaining = 0;
 
+    private Color[] originalSpriteColors;
+    private Color[] originalImageColors;
+
+    private void Awake()
+    {
+        CacheOriginalColors();
+    }
+
     private void Start()
     {
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
@@ -62,6 +75,87 @@ public class BattleUnit : MonoBehaviour
         UpdateManaUI();
         SetHighlight(false);
         HideTargetButton();
+        UpdateDeadVisual();
+    }
+
+    void CacheOriginalColors()
+    {
+        originalSpriteColors = new Color[tintSpriteRenderers.Length];
+        originalImageColors = new Color[tintImages.Length];
+
+        for (int i = 0; i < tintSpriteRenderers.Length; i++)
+        {
+            if (tintSpriteRenderers[i] == null)
+            {
+                continue;
+            }
+
+            originalSpriteColors[i] = tintSpriteRenderers[i].color;
+        }
+
+        for (int i = 0; i < tintImages.Length; i++)
+        {
+            if (tintImages[i] == null)
+            {
+                continue;
+            }
+
+            originalImageColors[i] = tintImages[i].color;
+        }
+    }
+
+    void UpdateDeadVisual()
+    {
+        bool dead = IsDead();
+
+        for (int i = 0; i < tintSpriteRenderers.Length; i++)
+        {
+            if (tintSpriteRenderers[i] == null)
+            {
+                continue;
+            }
+
+            if (dead)
+            {
+                tintSpriteRenderers[i].color = deadTint;
+            }
+            else
+            {
+                tintSpriteRenderers[i].color = originalSpriteColors[i];
+            }
+        }
+
+        for (int i = 0; i < tintImages.Length; i++)
+        {
+            if (tintImages[i] == null)
+            {
+                continue;
+            }
+
+            if (dead)
+            {
+                tintImages[i].color = deadTint;
+            }
+            else
+            {
+                tintImages[i].color = originalImageColors[i];
+            }
+        }
+    }
+
+    bool HasEffect(Fruit fruit, FruitEffect effect)
+    {
+        if (fruit == null)
+        {
+            return false;
+        }
+
+        if (fruit.effects == null)
+        {
+            return false;
+        }
+
+        return fruit.effects.Contains(effect);
     }
 
     public bool CanReceiveFruit(Fruit fruit)
@@ -69,6 +163,13 @@ public class BattleUnit : MonoBehaviour
         if (fruit == null)
         {
             return false;
+        }
+
+        bool hasRevive = HasEffect(fruit, FruitEffect.Revive);
+
+        if (hasRevive)
+        {
+            return isPlayer && IsDead() && fruit.fruitCategory == FruitCategory.Buff;
         }
 
         if (IsDead())
@@ -102,6 +203,7 @@ public class BattleUnit : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
 
         UpdateHPUI();
+        UpdateDeadVisual();
     }
 
     public void TakeDirectDamage(int damage)
@@ -110,6 +212,7 @@ public class BattleUnit : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
 
         UpdateHPUI();
+        UpdateDeadVisual();
     }
 
     public void Heal(int amount)
@@ -118,6 +221,15 @@ public class BattleUnit : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
 
         UpdateHPUI();
+        UpdateDeadVisual();
+    }
+
+    public void Revive(int amount)
+    {
+        currentHP = Mathf.Clamp(amount, 1, maxHP);
+
+        UpdateHPUI();
+        UpdateDeadVisual();
     }
 
     public void RestoreMana(int amount)
@@ -311,6 +423,24 @@ public class BattleUnit : MonoBehaviour
             if (effect == FruitEffect.Nausea)
             {
                 ApplyNausea(fruit.nauseaFailChance, fruit.nauseaTurns);
+            }
+
+            if (effect == FruitEffect.Revive)
+            {
+                Revive(fruit.reviveHP);
+
+                if (TurnBattleManager.Instance != null)
+                {
+                    TurnBattleManager.Instance.ShowFruitMessage(unitName + " was revived with " + fruit.reviveHP + " HP.");
+                }
+            }
+
+            if (effect == FruitEffect.CoinFlip)
+            {
+                if (TurnBattleManager.Instance != null)
+                {
+                    TurnBattleManager.Instance.ResolveCoinFlipFruit(fruit);
+                }
             }
         }
 
