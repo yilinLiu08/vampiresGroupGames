@@ -89,6 +89,12 @@ public class BattleUnit : MonoBehaviour
     private Sprite nauseaSourceIcon;
     private int nauseaDisplayOrder = -1;
 
+    private bool externalStatusActive = false;
+    private string externalStatusName;
+    private string externalStatusDescription;
+    private Sprite externalStatusIcon;
+    private int externalStatusDisplayOrder = -1;
+
     private int persistentEffectOrderCounter = 0;
 
     private void Awake()
@@ -464,6 +470,30 @@ public class BattleUnit : MonoBehaviour
         RefreshPersistentEffectIcon();
     }
 
+    public void SetExternalPersistentEffect(string sourceName, string description, Sprite icon)
+    {
+        persistentEffectOrderCounter++;
+
+        externalStatusActive = true;
+        externalStatusName = sourceName;
+        externalStatusDescription = description;
+        externalStatusIcon = icon;
+        externalStatusDisplayOrder = persistentEffectOrderCounter;
+
+        RefreshPersistentEffectIcon();
+    }
+
+    public void ClearExternalPersistentEffect()
+    {
+        externalStatusActive = false;
+        externalStatusName = "";
+        externalStatusDescription = "";
+        externalStatusIcon = null;
+        externalStatusDisplayOrder = -1;
+
+        RefreshPersistentEffectIcon();
+    }
+
     public bool HasPersistentEffectDisplay()
     {
         if (damageBoostTurnsRemaining > 0)
@@ -486,12 +516,22 @@ public class BattleUnit : MonoBehaviour
             return true;
         }
 
+        if (externalStatusActive)
+        {
+            return true;
+        }
+
         return false;
     }
 
     public string GetPersistentEffectTooltipText()
     {
         List<string> lines = new List<string>();
+
+        if (externalStatusActive)
+        {
+            lines.Add(externalStatusName + ": " + externalStatusDescription);
+        }
 
         if (damageBoostTurnsRemaining > 0)
         {
@@ -532,6 +572,12 @@ public class BattleUnit : MonoBehaviour
 
         Sprite newestSprite = null;
         int newestOrder = -1;
+
+        if (externalStatusActive && externalStatusDisplayOrder > newestOrder)
+        {
+            newestOrder = externalStatusDisplayOrder;
+            newestSprite = externalStatusIcon;
+        }
 
         if (damageBoostTurnsRemaining > 0 && damageBoostDisplayOrder > newestOrder)
         {
@@ -645,6 +691,7 @@ public class BattleUnit : MonoBehaviour
         clotTurnsRemaining = Mathf.Max(clotTurnsRemaining, turns);
 
         RegisterPersistentDisplay(sourceFruit, FruitEffect.Clot);
+        RefreshPersistentEffectIcon();
 
         Debug.Log(unitName + " is frozen.");
     }

@@ -51,6 +51,7 @@ public class TurnBattleManager : MonoBehaviour
 
     private float roundSkillBoostMultiplier = 1f;
     private int roundSkillBoostExpireCycle = -1;
+    private Fruit roundSkillBoostSourceFruit;
 
     private void Awake()
     {
@@ -83,6 +84,32 @@ public class TurnBattleManager : MonoBehaviour
         messageText.text = text;
     }
 
+    void RefreshRoundSkillBoostStatusUI()
+    {
+        bool active = IsRoundSkillBoostActive();
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i] == null)
+            {
+                continue;
+            }
+
+            if (active && roundSkillBoostSourceFruit != null)
+            {
+                players[i].SetExternalPersistentEffect(
+                    roundSkillBoostSourceFruit.itemName,
+                    "Attack skills x" + roundSkillBoostMultiplier.ToString("0.0") + " for the rest of this round.",
+                    roundSkillBoostSourceFruit.icon
+                );
+            }
+            else
+            {
+                players[i].ClearExternalPersistentEffect();
+            }
+        }
+    }
+
     public void ResolveCoinFlipFruit(Fruit fruit)
     {
         if (fruit == null)
@@ -96,6 +123,9 @@ public class TurnBattleManager : MonoBehaviour
         {
             roundSkillBoostMultiplier = Mathf.Max(1f, fruit.coinFlipSkillMultiplier);
             roundSkillBoostExpireCycle = turnCycle + 1;
+            roundSkillBoostSourceFruit = fruit;
+
+            RefreshRoundSkillBoostStatusUI();
 
             ShowFruitMessage("Heads! All player attack skills are x" + roundSkillBoostMultiplier.ToString("0.0") + " for the rest of this round.");
             return;
@@ -144,6 +174,7 @@ public class TurnBattleManager : MonoBehaviour
         turnCycle = 0;
         roundSkillBoostMultiplier = 1f;
         roundSkillBoostExpireCycle = -1;
+        roundSkillBoostSourceFruit = null;
 
         SetEnemyGroupActive(round1Enemies, false);
         SetEnemyGroupActive(round2Enemies, false);
@@ -161,6 +192,7 @@ public class TurnBattleManager : MonoBehaviour
             SetEnemyGroupActive(round2Enemies, true);
         }
 
+        RefreshRoundSkillBoostStatusUI();
         HideAllEnemyTargetButtons();
     }
 
@@ -175,6 +207,8 @@ public class TurnBattleManager : MonoBehaviour
 
     private void StartTurn()
     {
+        RefreshRoundSkillBoostStatusUI();
+
         if (battleEnded)
         {
             return;
@@ -313,6 +347,7 @@ public class TurnBattleManager : MonoBehaviour
             {
                 currentTurnIndex = 0;
                 turnCycle++;
+                RefreshRoundSkillBoostStatusUI();
             }
 
             BattleUnit unit = turnOrder[currentTurnIndex];
