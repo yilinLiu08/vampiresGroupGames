@@ -28,6 +28,17 @@ public class Coins : MonoBehaviour
         PlayerPrefs.SetInt("TotalCoins", currentCoins);
         PlayerPrefs.Save();
 
-        coinAmt.text = "Coins: " + currentCoins;
+        UpdateUI();
+
+        //coinAmt.text = "Coins: " + currentCoins;
+    }
+
+    public void UpdateUI()
+    {
+        int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        if (coinAmt != null)
+        {
+            coinAmt.text = "Coins: " + currentCoins;
+        }
     }
 }

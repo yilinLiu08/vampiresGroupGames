@@ -13,7 +13,7 @@ public class FruitInventory : MonoBehaviour
         
 
         fruits.Add(newFruit);
-        Debug.Log("Added: " + newFruit.itemName + " | Count: " + fruits.Count);
+        Debug.Log("added: " + newFruit.itemName + " count: " + fruits.Count);
 
         onInventoryChanged?.Invoke();
     }
@@ -22,7 +22,7 @@ public class FruitInventory : MonoBehaviour
     {
         
         fruits.Remove(removeFruit);
-        Debug.Log("Removed: " + removeFruit.itemName + " | Count: " + fruits.Count);
+        Debug.Log("removed: " + removeFruit.itemName + " count: " + fruits.Count);
 
         onInventoryChanged?.Invoke();
     }

@@ -4,10 +4,14 @@ using Yarn.Unity;
 
 public class ShopUI : MonoBehaviour
 {
-    
+    public GameObject garlicButton;
+    public GameObject garlicOff;
     public GameObject shopUI;
 
     [YarnCommand("open_shop")]
+
+
+   
     public void OpenShop()
     {
         
@@ -20,5 +24,15 @@ public class ShopUI : MonoBehaviour
         {
             shopUI.SetActive(false);
         }
+    }
+
+
+
+    [YarnCommand("unlock_garlic")]
+
+    public void Garlic()
+    {
+        garlicButton.SetActive(true);
+        garlicOff.SetActive(false);
     }
 }

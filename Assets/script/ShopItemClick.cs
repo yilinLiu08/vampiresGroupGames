@@ -1,29 +1,33 @@
 using UnityEngine;
+using System.Collections;
 
 public class ShopItemClick : MonoBehaviour
 {
 
     [Header("UI Display Settings")]
     public GameObject selectionImage;
-
     private static GameObject currentlyActiveImage;
 
+ 
 
+    
+
+    //public Fruit fruit;
     public void AddItem()
     {
 
-        FruitInventory inv = FindObjectOfType<FruitInventory>();
+       
+            FruitInventory inv = FindObjectOfType<FruitInventory>();
 
-        if (inv != null)
-        {
-           // inv.AddFruit(itemToGive);
-            HandleImageDisplay();
-
-        }
-        else
-        {
-            Debug.LogError("where da inventory");
-        }
+            if (inv != null)
+            {
+                HandleImageDisplay();
+            }
+            else
+            {
+                Debug.LogError("where da inventory");
+            }
+       
     }
 
     public void HandleImageDisplay()
@@ -52,5 +56,9 @@ public class ShopItemClick : MonoBehaviour
             if (currentlyActiveImage == selectionImage) currentlyActiveImage = null;
         }
     }
+
+   
 }
+
+
 

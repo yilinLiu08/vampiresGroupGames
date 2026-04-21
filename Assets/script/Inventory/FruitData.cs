@@ -23,6 +23,8 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public TextMeshProUGUI manaText;
     public TextMeshProUGUI effectText;
 
+   
+
     [Header("Drag")]
     public bool wasDroppedOnValidTarget;
 
