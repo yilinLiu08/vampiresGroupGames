@@ -16,8 +16,15 @@ MonoBehaviour:
   description: 'The liquids inside swirl and pulse with energy.  Heal 30 HP to an
     ally of your choice.  '
   icon: {fileID: 21300000, guid: a5d0b64550eb36745ae4e697f7511d10, type: 3}
+  price: 30
+  fruitCategory: 0
   healAmount: 30
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
+  poisonDamagePerTurn: 5
+  poisonTurns: 3
+  clotTurns: 1
+  nauseaFailChance: 0.5
+  nauseaTurns: 1
   effects: 00000000
