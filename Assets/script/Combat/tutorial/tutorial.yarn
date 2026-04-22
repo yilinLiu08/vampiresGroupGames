@@ -1,0 +1,13 @@
+﻿title: BattleTutorial
+---
+Let’s start your first battle!
+<<Character tutorial>>
+These are your vampire characters. Each one has a different class.
+These are the enemies. After selecting Attack, you can choose a target to attack.
+<<BlueBar tutorial>>
+This is Mana. Each time a vampire uses a skill, it consumes Mana. Choose carefully when to use your skills.
+<<Arrow tutorial>>
+This arrow means it is currently this character’s turn to act or take damage.
+You can try fighting first, and I’ll add more tutorials later.
+You could also leave your feedback and tell me what confused you during the fight, and I can add that to the tutorial later.
+===

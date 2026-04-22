@@ -2547,6 +2547,13 @@ MonoBehaviour:
   skillType: 1
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 785484468}
   manaBarImage: {fileID: 213043480}
   highlightImage: {fileID: 723165225}
@@ -6489,6 +6496,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 300095054}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 1519091549}
@@ -8300,6 +8314,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 50
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 2011352555}
   manaBarImage: {fileID: 985348852}
   highlightImage: {fileID: 1309154761}
@@ -10220,6 +10241,13 @@ MonoBehaviour:
   skillType: 3
   healAmount: 20
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 1348724803}
   manaBarImage: {fileID: 1347497132}
   highlightImage: {fileID: 1973348813}
@@ -10528,6 +10556,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 2023606216}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 596909874}
@@ -10929,6 +10964,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 1392726650}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 1443909772}
@@ -16497,6 +16539,13 @@ MonoBehaviour:
   skillType: 2
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 58933090}
   manaBarImage: {fileID: 560873296}
   highlightImage: {fileID: 932829863}
@@ -21000,6 +21049,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 4719089628926834800}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 8797452727279446891}
@@ -23467,6 +23523,13 @@ MonoBehaviour:
   skillType: 1
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 6894953024664714671}
   manaBarImage: {fileID: 2922952686437688448}
   highlightImage: {fileID: 8398098987501117449}
@@ -27001,6 +27064,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 50
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 8849341554410262321}
   manaBarImage: {fileID: 2951211004676801291}
   highlightImage: {fileID: 9170701991665224297}
@@ -29850,6 +29920,13 @@ MonoBehaviour:
   skillType: 3
   healAmount: 20
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 7306695620664926473}
   manaBarImage: {fileID: 7358097064984973615}
   highlightImage: {fileID: 6090744595326482519}
@@ -30321,6 +30398,13 @@ MonoBehaviour:
   skillType: 2
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 9023255182453869830}
   manaBarImage: {fileID: 103641050596273830}
   highlightImage: {fileID: 6784869171978254081}
@@ -32887,7 +32971,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4b9eaaba4f6dc408521defe6cef129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FruitInventory
-  fruits: []
+  fruits:
+  - {fileID: 11400000, guid: f09b490535117214a9b4bd5b827080a2, type: 2}
+  - {fileID: 11400000, guid: 22075a0ec1947b94d8b71db506775ccd, type: 2}
+  - {fileID: 11400000, guid: 2558701b6acb26f42806b45fbb71cb3c, type: 2}
 --- !u!1 &7676719888078033760
 GameObject:
   m_ObjectHideFlags: 0
@@ -33680,6 +33767,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 5831307119567554197}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 7260775845621996333}
@@ -35375,6 +35469,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  tintSpriteRenderers: []
+  tintImages: []
+  deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  damageHealText: {fileID: 0}
+  damageHealTextFadeTime: 2
+  persistentEffectIconImage: {fileID: 0}
+  persistentEffectTooltipUI: {fileID: 0}
   hpBarImage: {fileID: 5244194590083158953}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 6258243063088914537}
