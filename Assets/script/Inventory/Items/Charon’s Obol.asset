@@ -13,20 +13,22 @@ MonoBehaviour:
   m_Name: "Charon\u2019s Obol"
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   itemName: "Charon\u2019s Obol"
-  description: 'Heads: you get a 1.2x boost to all skill attacks for the rest of
+  description: 'Heads: you get a 1.5x boost to all skill attacks for the rest of
     the round. Tails: All teammates lose 20 HP.'
   icon: {fileID: 21300000, guid: 6e60a11157cd81544810df1d94546f52, type: 3}
+  price: 0
   fruitCategory: 0
   healAmount: 0
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
+  instantDamageAmount: 50
   poisonDamagePerTurn: 10
   poisonTurns: 4
   clotTurns: 1
   nauseaFailChance: 0.5
   nauseaTurns: 1
   reviveHP: 50
-  coinFlipSkillMultiplier: 1.2
+  coinFlipSkillMultiplier: 1.5
   coinFlipTeamDamage: 20
   effects: 07000000

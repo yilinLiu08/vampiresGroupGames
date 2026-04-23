@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Stake
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   itemName: Stake
-  description: 'Inflicts "Clot" condition on an enemy of your choice. Chosen enemy
-    will be frozen for 2 turns. '
+  description: Inflicts "Poison" condition on an enemy of your choice. Chosen enemy
+    will lose 20 HP each turn. A worn stake covered in ropes and grime. Still gets
+    the job done.
   icon: {fileID: 21300000, guid: 7c13db8a7868f484f9c7c2d6ac21230b, type: 3}
   price: 5
   fruitCategory: 1
@@ -22,7 +23,8 @@ MonoBehaviour:
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
-  poisonDamagePerTurn: 5
+  instantDamageAmount: 50
+  poisonDamagePerTurn: 20
   poisonTurns: 4
   clotTurns: 1
   nauseaFailChance: 0.5

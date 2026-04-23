@@ -16,14 +16,16 @@ MonoBehaviour:
   description: Inflicts "Clot" condition on an enemy of your choice. Chosen enemy
     will be frozen for 2 turns.
   icon: {fileID: 21300000, guid: 2d8b8ccffce23c54a8ed83993c810799, type: 3}
+  price: 0
   fruitCategory: 1
   healAmount: 0
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
+  instantDamageAmount: 50
   poisonDamagePerTurn: 0
   poisonTurns: 0
-  clotTurns: 0
+  clotTurns: 2
   nauseaFailChance: 0.5
   nauseaTurns: 0
   reviveHP: 0
