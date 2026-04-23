@@ -1,8 +1,8 @@
 ﻿title:StartNode
 ---
-NPC: Hey! Y'all finally made it! I was startin' to get worried there.
-NPC: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
-NPC: It's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
+Jude: Hey! Y'all finally made it! I was startin' to get worried there.
+Jude: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
+Jude: It's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
 Loveday: Thanks for this, really.
 -> (Let's see what Jude's got.)
     <<open_shop Player>>
@@ -11,18 +11,19 @@ Loveday: Thanks for this, really.
 
 title:NPCFight1Win
 ---
-NPC: Hey. I got new stuff for ya! nice job moving forward!
-NPC: Need something? I got some garlic for you now!!!
+Jude: Hey. I got new stuff for ya! Wanna check it out?
+Loveday: What is it?
+Jude: It's GARLIC!!!!
 <<unlock_garlic Player>>    
--> Let me purchase something.
+-> Sure gimme garlic.
     <<open_shop Player>>
--> Nothing. 
+-> I'm okay.
 ===
 
 title:NPCFight1Lose
 ---
-NPC: Hey. Y'all are Looking rough...
-NPC: Here to buy somethin'?
+Jude: Hey. Y'all are Looking rough...
+Jude: Here to buy somethin'?
 -> Yes, we need to. 
     <<open_shop Player>>
 -> Not right now. 

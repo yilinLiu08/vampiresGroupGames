@@ -9,6 +9,7 @@ public class Coins : MonoBehaviour
     {
         // get current balance
         int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        currentCoins += 25;
 
         // check LOSS (Key: FightOneLoseCount)
         if (PlayerPrefs.GetInt("FightOneLoseCount", 0) >= 1)
