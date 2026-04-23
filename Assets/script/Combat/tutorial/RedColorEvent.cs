@@ -8,6 +8,7 @@ public class RedColorEvent : MonoBehaviour
     public UnityEvent BlueBar;
     public UnityEvent Enemy;
     public UnityEvent Arrow;
+    public UnityEvent Inventory;
 
     [YarnCommand("Character")]
     public void CharacterEvent()
@@ -29,5 +30,11 @@ public class RedColorEvent : MonoBehaviour
     public void ArrowEvent()
     {
         Arrow.Invoke();
+    }
+
+    [YarnCommand("Inventory")]
+    public void InventoryEvent()
+    {
+        Inventory.Invoke();
     }
 }

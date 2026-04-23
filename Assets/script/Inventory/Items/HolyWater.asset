@@ -22,7 +22,7 @@ MonoBehaviour:
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
-  instantDamageAmount: 50
+  instantDamageAmount: 0
   poisonDamagePerTurn: 0
   poisonTurns: 0
   clotTurns: 2
