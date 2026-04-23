@@ -1,10 +1,12 @@
 ﻿title:StartNode
 ---
-NPC: Hey. You're back early. Need something?
-NPC: I've got all types of potions, bandages, daggers...
--> Let me purchase something.
+NPC: Hey! Y'all finally made it! I was startin' to get worried there.
+NPC: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
+NPC: It's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
+Loveday: Thanks for this, really.
+-> (Let's see what Jude's got.)
     <<open_shop Player>>
--> Nothing. 
+-> I think we're good for now.
 ===
 
 title:NPCFight1Win
@@ -20,37 +22,46 @@ NPC: Need something? I got some garlic for you now!!!
 title:NPCFight1Lose
 ---
 NPC: Hey. Y'all are Looking rough...
-NPC: I've got all types of potions, bandages, daggers...
--> Let me purchase something.
+NPC: Here to buy somethin'?
+-> Yes, we need to. 
     <<open_shop Player>>
--> Nothing. 
+-> Not right now. 
 ===
 
 title:ElsieStart
 ---
-Elsie: Ngh.... 
-Elsie: I'm so scared...
-Loveday: stop being a scaredass
-Elsie: ok sorry
+Elsie: Oh… uh… do we really have to do this? 
+Loveday: Do what? 
+Elsie: Y-you know, fighting and all… Hahahaha… What if we just stayed here for a little longer?
+Loveday: You know damn well you’re gonna stand on that battlefield and do your job. 
+Elsie: …E-EEK!
 ===
 
 title:ElsieF1W
 ---
-Elsie: Y'know... that was actually kinda easy
-Loveday: ikr
-Elsie: hahahahahhaa
+Elsie: (Sulking.)
+Loveday: She’s still sulking. 
+	-> You know Dahlia’s just a realist.
+        Elsie: Still…!
+	Elsie: Without Dahlia…. or you and Vera here… what will happen to me?
+	-> ( Ignore her.)
+
 ===
 
 title: ElsieF1L
 ---
-Elsie: SHIT
-Loveday: heal me already.
+Elsie: Don’t make me go back out there…
+Loveday: Now, let’s not forget our goal. 
+Elsie: Y-You’re right.
+
+
 ===
 
 title:DahliaStart
 ---
-Dahlia: I wonder what Elsie's doing...
-Loveday: Ok.
+Dahlia: Just finished sharpening your sword for ya. 
+Loveday: Oh, thanks. 
+
 ===
 
 
@@ -61,28 +72,56 @@ Loveday: Uh u sure.
 ===
 
 
-title:DahliaF1W
+title: DahliaF1W
 ---
-Dahlia: We fucked them uppp!!!
-Loveday: i guess.
+Dahlia: ...
+Dahlia: What.
+Loveday: Nothing.
+Dahlia: Okay...?
+Loveday: (Dahlia seems different.)
+
+-> Was it what Elsie said?
+    Loveday: Was it what Elsie said?
+    Dahlia: Hm? Am I that obvious?
+    Loveday: Yes. You sure did ruin the mood.
+    Dahlia: Ugh, you’re one to talk, Mr. High-And-Mighty.
+    Loveday: It’s not often I agree with her, but I too don’t appreciate you thinking we’d die so easily. 
+    Dahlia: *Sigh*
+
+-> Leave her be.
+    Loveday: (Best not to pry. She'll snap out of it eventually.)
+
 ===
 
 title:VeraStart
 ---
-Vera: hi
-Loveday: hi
+Vera: Uhh- Ah- Ehhhhhhh…
+Vera: Dang, is there nothing left in this packet???
+Vera: Not even a drop of blood left for me… 
+Loveday: You can’t possibly be scrounging for scraps right before battle. 
+Vera: Hey! I need to be energized before a fight, okay?!
 ===
 
 
 title:VeraF1L
 ---
-Vera: damn it
-Loveday: damn
+Vera: Are we gonna win this one???
+Loveday: Dunno. We’ll see.
+Vera: Aw man… I just wanna get a taste of victory…
+
 ===
 
 
 title:VeraF1W
 ---
-Vera: yaaaa!
-Loveday: yes.
+Vera: The stars are so bright today, I can’t take my eyes off them.
+Loveday: (Are stars not visible where she’s originally from?)
+	-> Do you like the stars?
+	    Vera: Yes, I love the stars!
+	    Vera: It’s only until recently I’ve learned the wonders that lie in the sky. 
+        Loveday: I assume you’re not accustomed to seeing them this bright? You are from (insert main city here.) I heard the lights make it harder to see the stars.
+        Vera: Wow, you’re correct!
+        Vera: My days used to be filled with fog that was within arms-reach.
+
+    -> Leave her to gaze.
 ===
