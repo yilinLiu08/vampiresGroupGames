@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Garlic
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   itemName: Garlic
-  description: 'Inflicts "Nausea" condition on an enemy of your choice. Chosen enemy
-    could potentially miss attacks.Its skin feels papery to the touch. '
+  description: Splits the enemies' health in half.Its skin feels papery to the touch
   icon: {fileID: 21300000, guid: a20998bb7fdd7e0418f8122338fb9adf, type: 3}
   price: 20
   fruitCategory: 1
@@ -22,6 +21,7 @@ MonoBehaviour:
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
+  instantDamageAmount: 50
   poisonDamagePerTurn: 0
   poisonTurns: 0
   clotTurns: 0
@@ -30,4 +30,4 @@ MonoBehaviour:
   reviveHP: 50
   coinFlipSkillMultiplier: 1.2
   coinFlipTeamDamage: 20
-  effects: 05000000
+  effects: 08000000

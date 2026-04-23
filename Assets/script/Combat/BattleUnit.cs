@@ -816,6 +816,16 @@ public class BattleUnit : MonoBehaviour
                     TurnBattleManager.Instance.ResolveCoinFlipFruit(fruit);
                 }
             }
+
+            if (effect == FruitEffect.InstantDamage)
+            {
+                TakeDamage(fruit.instantDamageAmount);
+
+                if (TurnBattleManager.Instance != null)
+                {
+                    TurnBattleManager.Instance.ShowFruitMessage(unitName + " takes " + fruit.instantDamageAmount + " damage.");
+                }
+            }
         }
 
         Debug.Log(unitName + " used fruit: " + fruit.itemName);

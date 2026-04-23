@@ -33247,10 +33247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4b9eaaba4f6dc408521defe6cef129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FruitInventory
-  fruits:
-  - {fileID: 11400000, guid: f09b490535117214a9b4bd5b827080a2, type: 2}
-  - {fileID: 11400000, guid: 22075a0ec1947b94d8b71db506775ccd, type: 2}
-  - {fileID: 11400000, guid: 2558701b6acb26f42806b45fbb71cb3c, type: 2}
+  fruits: []
 --- !u!1 &7676719888078033760
 GameObject:
   m_ObjectHideFlags: 0
