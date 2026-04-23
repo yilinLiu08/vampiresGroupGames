@@ -8,6 +8,7 @@ public class WhatYarn : MonoBehaviour
 
     public string fightoneWin = "Win";
     public string fightoneLose = "Lose";
+    public string pregame = "Pregame";
 
     void Start()
     {
@@ -29,7 +30,12 @@ public class WhatYarn : MonoBehaviour
            // PlayerPrefs.SetInt("FightOneLoseCount", 0);
         }
 
-        PlayerPrefs.Save();
+        else
+        {
+            dialogueRunner.StartDialogue(pregame);
+        }
+
+            PlayerPrefs.Save();
     }
 
     [YarnCommand("HQ")]
