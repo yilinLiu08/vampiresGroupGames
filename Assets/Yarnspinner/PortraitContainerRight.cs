@@ -126,7 +126,7 @@ public class PortraitControllerRight : MonoBehaviour
 
 
 
-        if (character == "VeradBaseR")
+        if (character == "VeraBaseR")
         {
             portrait.sprite = VeraBaseR;
             targetScale = zoomedScale;
@@ -157,25 +157,25 @@ public class PortraitControllerRight : MonoBehaviour
 
         if (character == "DahliaBaseR")
         {
-            portrait.sprite = VeraBaseR;
+            portrait.sprite = DahliaBaseR;
             targetScale = zoomedScale;
             Show();
         }
         if (character == "DahliaScaredR")
         {
-            portrait.sprite = VeraScaredR;
+            portrait.sprite = DahliaScaredR;
             targetScale = zoomedScale;
             Show();
         }
         if (character == "DahliaMadR")
         {
-            portrait.sprite = VeraMadR;
+            portrait.sprite = DahliaMadR;
             targetScale = zoomedScale;
             Show();
         }
         if (character == "DahliaHappyR")
         {
-            portrait.sprite = VeraHappyR;
+            portrait.sprite = DahliaHappyR;
             targetScale = zoomedScale;
             Show();
         }

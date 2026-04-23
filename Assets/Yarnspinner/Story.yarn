@@ -1,27 +1,267 @@
 ﻿title:Win
 ---
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: yo
+Loveday: ….!
 <<resetScaleLeft PortraitContainerLeft>>
-<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: yo momma
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: Whew, oh man. I thought we were absolutely done for. 
 <<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: What… I’m all out of elixir...
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: yay we won     i dont have anymore dialogue rn
+Loveday: What?! 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: Pff… I’m just sayin… Did you really give it your all?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Do you ever shut that mouth of yours??
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: I’d worry more about yours. You’ll be missing a couple teeth soon, pretty boy.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: O-oh no! Lili… You’re still bleeding…!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: Hm?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: Mmph…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: A-ack! That stings… Those damn leeches got me good.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: THIS STORY IS IN PROGRESS
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
 ===
 
 title:Lose
 ---
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: ouch
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: <b>DAMMIT!</b>
+Dahlia: God… only if I… 
 <<resetScaleLeft PortraitContainerLeft>>
-<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: im hurt
+
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Well. We just have to keep going. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: …Ugh. 
 <<resetScaleRight PortraitContainerRight>>
+
+
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: idc      didnt put in other sprites 
+Loveday: The technique was impeccable… just how did the guy swing like that? 
+Loveday: I must study those moves the vampires used. 
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: And I MUST…take a nice looonggg nap…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: Loveday, you got snot comin’ out your nose.
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Oh.
+Loveday: Uhh.
+Loveday: Vera. Fetch me a tissue.
 <<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: On it!
+Vera: Wait. 
+Vera: Where am I supposed to find that… Lol…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Uhh. Whatever. I’ll just use this tissue I found on the floor.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: <b>GAHHHH!!!</b>
+Elsie: <b>T-THAT’S MY ARM, YOU FREAK!!!</b>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Oh. Disgusting. 
+Loveday: THIS STORY IS IN PROGRESS
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+
+===
+
+title:Pregame
+---
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: …
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+Elsie: Ngh… how long is this going to take…?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: Not too much longer, I promise.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+Elsie: I swear it’s been days since we rested! My feet are gonna fall off!
+Elsie: Lili, carry me?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+Dahlia: Hop on my back.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Quit being a spoiled brat.
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Aren’t you the one with infinite limbs? Why not just chop them off and regrow them if they hurt so bad?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: I’m not a masochist like you are!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Right. All purebloods like YOU are <i>sadists.<i/>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
+Vera: Is that true?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: No, dumbass.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
+Vera: I see!
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: Elsie has a point though. I <i>am</i> starting to feel the hungies… hehe.
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+Dahlia: Are you KIDDING ME??! You just sucked the last remaining blood pouches we had an hour ago!
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Haven’t you been a vampire longer than me and Dahlia? How’s your hunger still so insatiable? Haven’t you starved enough?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: Hey… you've clearly never had siblings before. 
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Elsie, do you have all the bottles? There’s someone I know here that’s willing to sell us some elixir.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: Y-yes…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+Dahlia: Don’t be scared, Elsie. I’m right by your side.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: …Is this really okay?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
+Vera: What is okay?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: You know… picking fights with the royal guards?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Well, we’re all here for a reason. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: But-
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Don’t you <i>dare</i> go back on your word after what you’ve pulled us into!
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+Dahlia: Hey cut it out! That wasn’t her fault, okay?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: If I remember correctly it was <i>Elsie</i> who went on a sudden rampage in front of the literal <i>princess</i> about us coming to find her and slit her throat on her daddy’s throne. Am I mistaken?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
+Vera: I mean, I think she kinda deserved it.
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: It’s okay Elsie! I understand you! From the bottom of my heart!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+Elsie: <i>...ah…ahhhh…ack…</i>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+Dahlia: Vera! You’re not helping!
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Oh. Is she breathing?
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaScaredL">>
+Dahlia: Elsie… Elllsiieeee… wake up.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Ah, water. I see it, we’re almost there.
+Loveday: Elsie, conceal us. Those pesky scoundrels have the power to sniff us out if they try hard enough. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: Fine…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Prepare yourselves. This is just the beginning.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+Dahlia: Ya don’t have to tell me twice.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: I’m ready and raring to go!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: …okay…
+<<resetScaleRight PortraitContainerRight>>
+
+
 <<HQ DialogueSystem>>
 ===

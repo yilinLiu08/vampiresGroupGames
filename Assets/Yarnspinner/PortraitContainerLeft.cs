@@ -87,14 +87,20 @@ public class PortraitControllerLeft : MonoBehaviour
         if (character == "ElsieScaredL")
         {
             portrait.sprite = ElsieScaredL;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "ElsieMadL")
         {
             portrait.sprite = ElsieMadL;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "ElsieHappyL")
         {
             portrait.sprite = ElsieHappyL;
+            targetScale = zoomedScale;
+            Show();
         }
 
 
@@ -109,19 +115,25 @@ public class PortraitControllerLeft : MonoBehaviour
         if (character == "LovedayScaredL")
         {
             portrait.sprite = LovedayScaredL;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "LovedayMadL")
         {
             portrait.sprite = LovedayMadL;
+            targetScale = zoomedScale;
+            Show();
         }
         if (character == "LovedayHappyR")
         {
             portrait.sprite = LovedayHappyL;
+            targetScale = zoomedScale;
+            Show();
         }
 
 
 
-        if (character == "VeradBaseL")
+        if (character == "VeraBaseL")
         {
             portrait.sprite = VeraBaseL;
             targetScale = zoomedScale;
@@ -152,25 +164,25 @@ public class PortraitControllerLeft : MonoBehaviour
 
         if (character == "DahliaBaseL")
         {
-            portrait.sprite = VeraBaseL;
+            portrait.sprite = DahliaBaseL;
             targetScale = zoomedScale;
             Show();
         }
         if (character == "DahliaScaredL")
         {
-            portrait.sprite = VeraScaredL;
+            portrait.sprite = DahliaScaredL;
             targetScale = zoomedScale;
             Show();
         }
-        if (character == "DahliaMadR")
+        if (character == "DahliaMadL")
         {
-            portrait.sprite = VeraMadL;
+            portrait.sprite = DahliaMadL;
             targetScale = zoomedScale;
             Show();
         }
-        if (character == "DahliaHappyR")
+        if (character == "DahliaHappyL")
         {
-            portrait.sprite = VeraHappyL;
+            portrait.sprite = DahliaHappyL;
             targetScale = zoomedScale;
             Show();
         }
