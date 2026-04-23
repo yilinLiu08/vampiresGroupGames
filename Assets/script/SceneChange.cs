@@ -45,6 +45,7 @@ public class SceneChange : MonoBehaviour
         if (this.gameObject.name == "StartScreen")
         {
             PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
             SceneManager.LoadScene("StartScreen");
         }
         

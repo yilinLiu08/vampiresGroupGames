@@ -4,8 +4,8 @@ using Yarn.Unity;
 
 public class PortraitControllerLeft : MonoBehaviour
 {
-    private Vector3 originalScale = new Vector3(10f, 10f, 10f);
-    private Vector3 zoomedScale = new Vector3(11f, 11f, 11f);
+    private Vector3 originalScale = new Vector3(8.5f, 10f, 10f);
+    private Vector3 zoomedScale = new Vector3(9.5f, 11f, 11f);
     private Vector3 targetScale;
 
     public Sprite ElsieBaseL;
