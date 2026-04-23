@@ -146,7 +146,7 @@ RectTransform:
   m_GameObject: {fileID: 17753487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.677648, y: 12.051785, z: 12.051785}
+  m_LocalScale: {x: 7.723019, y: 12.051785, z: 12.051785}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 280098944}
@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 407.02002, y: -68}
+  m_AnchoredPosition: {x: 365.11, y: -68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &17753490
@@ -188,11 +188,11 @@ MonoBehaviour:
   LovedayBaseR: {fileID: 21300000, guid: 238f0f63cd5d6df458f25a5942415b3d, type: 3}
   LovedayScaredR: {fileID: 21300000, guid: 254ad2e2da019234facda9311ea8af47, type: 3}
   LovedayMadR: {fileID: 21300000, guid: a2c2634c769d5bb428487f60ea9a9834, type: 3}
-  LovedayHappyR: {fileID: 0}
-  DahliaBaseR: {fileID: 21300000, guid: e4630e0899004bc4a84ae8ee6f92a444, type: 3}
-  DahliaScaredR: {fileID: 21300000, guid: be6fcc4310c81af499daf0ee35120f6b, type: 3}
-  DahliaMadR: {fileID: 21300000, guid: a0c94dbc69c896d48bc5bc8a59820c0c, type: 3}
-  DahliaHappyR: {fileID: 21300000, guid: 169d8b79da03cfb4eac8deeb064e35df, type: 3}
+  LovedayHappyR: {fileID: 21300000, guid: 238f0f63cd5d6df458f25a5942415b3d, type: 3}
+  DahliaBaseR: {fileID: 21300000, guid: 6a9c545eb6f377642aefd4ba87be1823, type: 3}
+  DahliaScaredR: {fileID: 21300000, guid: 35c0427370c877a46b68ff96f8ee328b, type: 3}
+  DahliaMadR: {fileID: 21300000, guid: 3e06515bb59fbcf4aa049f08edbd3ed2, type: 3}
+  DahliaHappyR: {fileID: 21300000, guid: 90e0ba1a2477a3843abac119706374d3, type: 3}
   VeraBaseR: {fileID: 21300000, guid: df9688454dd26054c867fd55c344d2ee, type: 3}
   VeraScaredR: {fileID: 21300000, guid: de9fdf22ac69ce747b435d914772e776, type: 3}
   VeraMadR: {fileID: 21300000, guid: ceac1f9b3def13f4ebebc9b7213a2b72, type: 3}
@@ -501,7 +501,7 @@ RectTransform:
   m_GameObject: {fileID: 368972619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.677648, y: 12.051785, z: 12.051785}
+  m_LocalScale: {x: 7.723019, y: 12.051785, z: 12.051785}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1018457376}
@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -355, y: -68}
+  m_AnchoredPosition: {x: -313.09, y: -68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &368972622
@@ -543,11 +543,11 @@ MonoBehaviour:
   LovedayBaseL: {fileID: 21300000, guid: 238f0f63cd5d6df458f25a5942415b3d, type: 3}
   LovedayScaredL: {fileID: 21300000, guid: 254ad2e2da019234facda9311ea8af47, type: 3}
   LovedayMadL: {fileID: 21300000, guid: a2c2634c769d5bb428487f60ea9a9834, type: 3}
-  LovedayHappyL: {fileID: 0}
-  DahliaBaseL: {fileID: 21300000, guid: e4630e0899004bc4a84ae8ee6f92a444, type: 3}
-  DahliaScaredL: {fileID: 21300000, guid: be6fcc4310c81af499daf0ee35120f6b, type: 3}
-  DahliaMadL: {fileID: 21300000, guid: a0c94dbc69c896d48bc5bc8a59820c0c, type: 3}
-  DahliaHappyL: {fileID: 21300000, guid: 169d8b79da03cfb4eac8deeb064e35df, type: 3}
+  LovedayHappyL: {fileID: 21300000, guid: 238f0f63cd5d6df458f25a5942415b3d, type: 3}
+  DahliaBaseL: {fileID: 21300000, guid: 6a9c545eb6f377642aefd4ba87be1823, type: 3}
+  DahliaScaredL: {fileID: 21300000, guid: 35c0427370c877a46b68ff96f8ee328b, type: 3}
+  DahliaMadL: {fileID: 21300000, guid: 3e06515bb59fbcf4aa049f08edbd3ed2, type: 3}
+  DahliaHappyL: {fileID: 21300000, guid: 90e0ba1a2477a3843abac119706374d3, type: 3}
   VeraBaseL: {fileID: 21300000, guid: df9688454dd26054c867fd55c344d2ee, type: 3}
   VeraScaredL: {fileID: 21300000, guid: de9fdf22ac69ce747b435d914772e776, type: 3}
   VeraMadL: {fileID: 21300000, guid: df9688454dd26054c867fd55c344d2ee, type: 3}

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 946d1ea9155745b4fa7b8f72d2eddc93
+guid: b81d7ce0bdb819d41888d8f7ebfbfead
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7199767607134953768
-    second: loveday_0
-  - first:
-      213: -1931680522808097370
-    second: loveday_1
+      213: 2250783572949784027
+    second: elsie_idle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: loveday_0
+      name: elsie_idle_0
       rect:
         serializedVersion: 2
-        x: 268
-        y: 42
-        width: 25
-        height: 36
+        x: 372
+        y: 67
+        width: 680
+        height: 1114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 821a4a02e76bae360800000000000000
-      internalID: 7199767607134953768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: loveday_1
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 0
-        width: 1593
-        height: 2277
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a58b7a8cca4135e0800000000000000
-      internalID: -1931680522808097370
+      spriteID: bd5d4f30cb36c3f10800000000000000
+      internalID: 2250783572949784027
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      loveday_0: 7199767607134953768
-      loveday_1: -1931680522808097370
+      elsie_idle_0: 2250783572949784027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
