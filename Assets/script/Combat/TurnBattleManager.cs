@@ -415,6 +415,7 @@ public class TurnBattleManager : MonoBehaviour
         target.SetHighlight(true);
 
         messageText.text = currentUnit.unitName + " attacks " + target.unitName + ".";
+        currentUnit.PlayAttackAnimation();
 
         yield return new WaitForSeconds(0.4f);
 
@@ -537,6 +538,8 @@ public class TurnBattleManager : MonoBehaviour
 
     private IEnumerator PlayerAttackRoutine(BattleUnit target, int damage)
     {
+        currentUnit.PlayAttackAnimation();
+
         yield return new WaitForSeconds(0.4f);
 
         target.TakeDamage(damage);
@@ -548,6 +551,8 @@ public class TurnBattleManager : MonoBehaviour
 
     private IEnumerator PlayerTeamHealRoutine()
     {
+        currentUnit.PlayAttackAnimation();
+
         messageText.text = currentUnit.unitName + " uses skill: heal all allies.";
 
         yield return new WaitForSeconds(0.4f);
@@ -569,6 +574,8 @@ public class TurnBattleManager : MonoBehaviour
 
     private IEnumerator PlayerTeamShieldRoutine()
     {
+        currentUnit.PlayAttackAnimation();
+
         messageText.text = currentUnit.unitName + " uses skill: all allies ignore the next hit.";
 
         BattleUnit[] allyTeam = GetAlliesOf(currentUnit);
@@ -589,6 +596,8 @@ public class TurnBattleManager : MonoBehaviour
     private IEnumerator PlayerAoERoutine()
     {
         int damage = GetModifiedSkillDamage(currentUnit);
+
+        currentUnit.PlayAttackAnimation();
 
         messageText.text = currentUnit.unitName + " uses skill: deal damage to all enemies.";
 

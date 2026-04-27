@@ -36,6 +36,9 @@ public class BattleUnit : MonoBehaviour
     [Header("Status")]
     public bool shieldActive = false;
 
+    [Header("Animation")]
+    public BattleCharacterAnimator characterAnimator;
+
     [Header("Death Visual")]
     public SpriteRenderer[] tintSpriteRenderers;
     public Image[] tintImages;
@@ -115,6 +118,11 @@ public class BattleUnit : MonoBehaviour
         UpdateDeadVisual();
         HideDamageHealText();
         RefreshPersistentEffectIcon();
+
+        if (characterAnimator != null)
+        {
+            characterAnimator.SyncDeadState(IsDead());
+        }
     }
 
     void CacheOriginalColors()
@@ -297,6 +305,16 @@ public class BattleUnit : MonoBehaviour
         return false;
     }
 
+    public void PlayAttackAnimation()
+    {
+        if (characterAnimator == null)
+        {
+            return;
+        }
+
+        characterAnimator.PlayAttack();
+    }
+
     public void TakeDamage(int damage)
     {
         if (shieldActive)
@@ -320,6 +338,24 @@ public class BattleUnit : MonoBehaviour
 
         UpdateHPUI();
         UpdateDeadVisual();
+
+        if (actualDamage > 0)
+        {
+            if (IsDead())
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDeath();
+                }
+            }
+            else
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDamaged();
+                }
+            }
+        }
     }
 
     public void TakeDirectDamage(int damage)
@@ -338,6 +374,24 @@ public class BattleUnit : MonoBehaviour
 
         UpdateHPUI();
         UpdateDeadVisual();
+
+        if (actualDamage > 0)
+        {
+            if (IsDead())
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDeath();
+                }
+            }
+            else
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDamaged();
+                }
+            }
+        }
     }
 
     public void Heal(int amount)
@@ -373,6 +427,11 @@ public class BattleUnit : MonoBehaviour
 
         UpdateHPUI();
         UpdateDeadVisual();
+
+        if (characterAnimator != null)
+        {
+            characterAnimator.Revive();
+        }
     }
 
     public void RestoreMana(int amount)

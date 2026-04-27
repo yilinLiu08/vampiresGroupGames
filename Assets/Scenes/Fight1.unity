@@ -515,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2958262985454349543, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2958262986520364887, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -728,14 +728,14 @@ RectTransform:
   m_GameObject: {fileID: 173012339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.000112260175}
-  m_LocalScale: {x: 0.12760644, y: 0.083334506, z: 0.18939301}
+  m_LocalScale: {x: 0.24039777, y: 0.15699388, z: 0.35679752}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4097236368342973291}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -422.7, y: -220.91751}
+  m_AnchoredPosition: {x: -408, y: -224.2}
   m_SizeDelta: {x: 223.83, y: 44.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173012341
@@ -1319,15 +1319,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373487912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3015.0002}
-  m_LocalScale: {x: 0.09506771, y: 0.102844834, z: 1.9338454}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.001883357, y: 0.0020374272, z: 0.03831081}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6640057683218392247}
+  m_Father: {fileID: 6903230671650152458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.4, y: -133.18808}
+  m_AnchoredPosition: {x: -3.53, y: -0.25365174}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373487914
@@ -2104,6 +2104,7 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1798248670}
   tintImages: []
@@ -4794,6 +4795,7 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1099969836}
   tintImages: []
@@ -5838,6 +5840,7 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1027121249}
   tintImages: []
@@ -6063,6 +6066,7 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1043959053}
   tintImages: []
@@ -8993,6 +8997,7 @@ GameObject:
   - component: {fileID: 4592461046684831575}
   - component: {fileID: 5813167909758999255}
   - component: {fileID: 8188824615389185103}
+  - component: {fileID: 8188824615389185104}
   m_Layer: 5
   m_Name: Tank (2)
   m_TagString: Untagged
@@ -9135,6 +9140,7 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 5952536031550007288}
   tintImages: []
@@ -9942,7 +9948,7 @@ GameObject:
   - component: {fileID: 7751868989205989040}
   - component: {fileID: 8329318801529479122}
   m_Layer: 0
-  m_Name: TankPic
+  m_Name: dahliaPic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10404,6 +10410,7 @@ MonoBehaviour:
   skillType: 3
   healAmount: 100
   shieldActive: 0
+  characterAnimator: {fileID: 8684900395743576964}
   tintSpriteRenderers: []
   tintImages:
   - {fileID: 7751868989205989040}
@@ -10530,6 +10537,7 @@ MonoBehaviour:
   skillType: 2
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers: []
   tintImages:
   - {fileID: 5273207339165280106}
@@ -10819,7 +10827,7 @@ Transform:
   m_GameObject: {fileID: 7519259350915150790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.181, y: 11.91, z: 0}
+  m_LocalPosition: {x: 10.181, y: 13.76, z: 0}
   m_LocalScale: {x: 0.0294042, y: 0.06197022, z: 0.043083787}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11795,6 +11803,7 @@ MonoBehaviour:
   skillType: 1
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers: []
   tintImages:
   - {fileID: 6740916788992044720}
@@ -11887,8 +11896,10 @@ GameObject:
   - component: {fileID: 6268217869389969823}
   - component: {fileID: 8684900395743576962}
   - component: {fileID: 130404957219444155}
+  - component: {fileID: 8684900395743576963}
+  - component: {fileID: 8684900395743576964}
   m_Layer: 5
-  m_Name: Tank (3)
+  m_Name: dahlia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12145,7 +12156,6 @@ RectTransform:
   - {fileID: 4464552355345044082}
   - {fileID: 203224359237954623}
   - {fileID: 4592461046684831575}
-  - {fileID: 6268217869389969823}
   m_Father: {fileID: 6640057683218392247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -12829,15 +12839,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5117331633562765525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3721719, y: 1.6648, z: 1.6648}
+  m_LocalPosition: {x: 0, y: 0, z: -0.8914858}
+  m_LocalScale: {x: 0.019014435, y: 0.023069434, z: 0.023069434}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5320081056249718012}
+  m_Father: {fileID: 6903230671650152458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: -25}
+  m_AnchoredPosition: {x: -2.9732666, y: -1.9017181}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &6305999210463673116
@@ -13068,6 +13078,7 @@ MonoBehaviour:
   skillType: 0
   healAmount: 50
   shieldActive: 0
+  characterAnimator: {fileID: 0}
   tintSpriteRenderers: []
   tintImages:
   - {fileID: 2280687495410834986}
@@ -13129,7 +13140,6 @@ RectTransform:
   - {fileID: 1011376910986596654}
   - {fileID: 6422312332603991855}
   - {fileID: 6903230671650152458}
-  - {fileID: 373487913}
   - {fileID: 5985720634059251750}
   - {fileID: 5320081056249718012}
   m_Father: {fileID: 198141707}
@@ -13390,13 +13400,15 @@ Transform:
   m_GameObject: {fileID: 7276233847560024576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 193, y: -26.999992, z: -3015}
+  m_LocalPosition: {x: 26.3, y: 122.1, z: -3015}
   m_LocalScale: {x: 50.477802, y: 50.477802, z: 50.477802}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6268217869389969823}
   - {fileID: 8141938752511386996}
   - {fileID: 4097236368342973291}
   - {fileID: 7509724759159689865}
+  - {fileID: 373487913}
   - {fileID: 6817215920628965219}
   m_Father: {fileID: 6640057683218392247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13749,8 +13761,8 @@ Transform:
   m_GameObject: {fileID: 5494415573745296244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4711003, y: 3.0856009, z: 0}
-  m_LocalScale: {x: 0.019090563, y: 0.025369361, z: 0.03800636}
+  m_LocalPosition: {x: 4.182, y: 4.007, z: 0}
+  m_LocalScale: {x: 0.015828177, y: 0.021033991, z: 0.031511456}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3807089904802467795}
@@ -13961,7 +13973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14310,6 +14322,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &8188824615389185104
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784949173548707914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &8233489326356520417
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14562,6 +14596,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5117331633562765525}
   m_CullTransparentMesh: 1
+--- !u!95 &8684900395743576963
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117331633562765525}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 500107dc8d640a84e951af81212cbbc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8684900395743576964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117331633562765525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e511a867eb5f584abe2430cdfbdeb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleCharacterAnimator
+  animator: {fileID: 8684900395743576963}
 --- !u!222 &8726970168440970761
 CanvasRenderer:
   m_ObjectHideFlags: 0
