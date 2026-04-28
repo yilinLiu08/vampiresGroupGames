@@ -1041,4 +1041,19 @@ public class TurnBattleManager : MonoBehaviour
 
         StartTurn();
     }
+
+    public bool IsChoosingAttackTarget()
+    {
+        if (battleEnded)
+        {
+            return false;
+        }
+
+        if (changingRound)
+        {
+            return false;
+        }
+
+        return waitingForPlayerTarget && selectedAction == ActionType.Attack;
+    }
 }
