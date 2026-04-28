@@ -29,7 +29,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public bool wasDroppedOnValidTarget;
 
     [Header("Tooltip")]
-    public float hoverDelay = 3f;
+    public float hoverDelay = 0.1f;
 
     private GameObject dragIconObject;
     private RectTransform dragIconRect;

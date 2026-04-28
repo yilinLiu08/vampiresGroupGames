@@ -36,6 +36,9 @@ public class BattleUnit : MonoBehaviour
     [Header("Status")]
     public bool shieldActive = false;
 
+    [Header("Animation")]
+    public BattleCharacterAnimator characterAnimator;
+
     [Header("Death Visual")]
     public SpriteRenderer[] tintSpriteRenderers;
     public Image[] tintImages;
@@ -89,6 +92,12 @@ public class BattleUnit : MonoBehaviour
     private Sprite nauseaSourceIcon;
     private int nauseaDisplayOrder = -1;
 
+    private bool externalStatusActive = false;
+    private string externalStatusName;
+    private string externalStatusDescription;
+    private Sprite externalStatusIcon;
+    private int externalStatusDisplayOrder = -1;
+
     private int persistentEffectOrderCounter = 0;
 
     private void Awake()
@@ -109,6 +118,11 @@ public class BattleUnit : MonoBehaviour
         UpdateDeadVisual();
         HideDamageHealText();
         RefreshPersistentEffectIcon();
+
+        if (characterAnimator != null)
+        {
+            characterAnimator.SyncDeadState(IsDead());
+        }
     }
 
     void CacheOriginalColors()
@@ -291,6 +305,16 @@ public class BattleUnit : MonoBehaviour
         return false;
     }
 
+    public void PlayAttackAnimation()
+    {
+        if (characterAnimator == null)
+        {
+            return;
+        }
+
+        characterAnimator.PlayAttack();
+    }
+
     public void TakeDamage(int damage)
     {
         if (shieldActive)
@@ -314,6 +338,24 @@ public class BattleUnit : MonoBehaviour
 
         UpdateHPUI();
         UpdateDeadVisual();
+
+        if (actualDamage > 0)
+        {
+            if (IsDead())
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDeath();
+                }
+            }
+            else
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDamaged();
+                }
+            }
+        }
     }
 
     public void TakeDirectDamage(int damage)
@@ -332,6 +374,24 @@ public class BattleUnit : MonoBehaviour
 
         UpdateHPUI();
         UpdateDeadVisual();
+
+        if (actualDamage > 0)
+        {
+            if (IsDead())
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDeath();
+                }
+            }
+            else
+            {
+                if (characterAnimator != null)
+                {
+                    characterAnimator.PlayDamaged();
+                }
+            }
+        }
     }
 
     public void Heal(int amount)
@@ -367,6 +427,11 @@ public class BattleUnit : MonoBehaviour
 
         UpdateHPUI();
         UpdateDeadVisual();
+
+        if (characterAnimator != null)
+        {
+            characterAnimator.Revive();
+        }
     }
 
     public void RestoreMana(int amount)
@@ -464,6 +529,30 @@ public class BattleUnit : MonoBehaviour
         RefreshPersistentEffectIcon();
     }
 
+    public void SetExternalPersistentEffect(string sourceName, string description, Sprite icon)
+    {
+        persistentEffectOrderCounter++;
+
+        externalStatusActive = true;
+        externalStatusName = sourceName;
+        externalStatusDescription = description;
+        externalStatusIcon = icon;
+        externalStatusDisplayOrder = persistentEffectOrderCounter;
+
+        RefreshPersistentEffectIcon();
+    }
+
+    public void ClearExternalPersistentEffect()
+    {
+        externalStatusActive = false;
+        externalStatusName = "";
+        externalStatusDescription = "";
+        externalStatusIcon = null;
+        externalStatusDisplayOrder = -1;
+
+        RefreshPersistentEffectIcon();
+    }
+
     public bool HasPersistentEffectDisplay()
     {
         if (damageBoostTurnsRemaining > 0)
@@ -486,12 +575,22 @@ public class BattleUnit : MonoBehaviour
             return true;
         }
 
+        if (externalStatusActive)
+        {
+            return true;
+        }
+
         return false;
     }
 
     public string GetPersistentEffectTooltipText()
     {
         List<string> lines = new List<string>();
+
+        if (externalStatusActive)
+        {
+            lines.Add(externalStatusName + ": " + externalStatusDescription);
+        }
 
         if (damageBoostTurnsRemaining > 0)
         {
@@ -532,6 +631,12 @@ public class BattleUnit : MonoBehaviour
 
         Sprite newestSprite = null;
         int newestOrder = -1;
+
+        if (externalStatusActive && externalStatusDisplayOrder > newestOrder)
+        {
+            newestOrder = externalStatusDisplayOrder;
+            newestSprite = externalStatusIcon;
+        }
 
         if (damageBoostTurnsRemaining > 0 && damageBoostDisplayOrder > newestOrder)
         {
@@ -645,6 +750,7 @@ public class BattleUnit : MonoBehaviour
         clotTurnsRemaining = Mathf.Max(clotTurnsRemaining, turns);
 
         RegisterPersistentDisplay(sourceFruit, FruitEffect.Clot);
+        RefreshPersistentEffectIcon();
 
         Debug.Log(unitName + " is frozen.");
     }
@@ -767,6 +873,16 @@ public class BattleUnit : MonoBehaviour
                 if (TurnBattleManager.Instance != null)
                 {
                     TurnBattleManager.Instance.ResolveCoinFlipFruit(fruit);
+                }
+            }
+
+            if (effect == FruitEffect.InstantDamage)
+            {
+                TakeDamage(fruit.instantDamageAmount);
+
+                if (TurnBattleManager.Instance != null)
+                {
+                    TurnBattleManager.Instance.ShowFruitMessage(unitName + " takes " + fruit.instantDamageAmount + " damage.");
                 }
             }
         }

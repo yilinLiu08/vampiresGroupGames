@@ -10,7 +10,8 @@ public enum FruitEffect
     Clot,
     Nausea,
     Revive,
-    CoinFlip
+    CoinFlip,
+    InstantDamage
 }
 
 public enum FruitCategory
@@ -37,6 +38,7 @@ public class Fruit : ScriptableObject
     public float damageBoostMultiplier = 1.5f;
     public int damageBoostTurns = 1;
     public int manaAmount;
+    public int instantDamageAmount = 50;
 
     [Header("Poison")]
     public int poisonDamagePerTurn = 5;
