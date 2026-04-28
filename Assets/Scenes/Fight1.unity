@@ -358,6 +358,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1026618188}
+  - {fileID: 187217259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &35572241
@@ -838,6 +839,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173012339}
   m_CullTransparentMesh: 1
+--- !u!1 &187217258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187217259}
+  - component: {fileID: 187217260}
+  m_Layer: 0
+  m_Name: AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187217259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187217258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 30083110}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &187217260
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187217258}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &198141703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,6 +2396,12 @@ MonoBehaviour:
   healAmount: 30
   shieldActive: 0
   characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1798248670}
   tintImages: []
@@ -4225,7 +4361,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026618187}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -4972,6 +5108,12 @@ MonoBehaviour:
   healAmount: 30
   shieldActive: 0
   characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1099969836}
   tintImages: []
@@ -6017,6 +6159,12 @@ MonoBehaviour:
   healAmount: 30
   shieldActive: 0
   characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1027121249}
   tintImages: []
@@ -6231,7 +6379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5f5ae0474280441867437895400709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  unitName: 
+  unitName: Enemy
   isPlayer: 0
   maxHP: 100
   currentHP: 100
@@ -6244,6 +6392,12 @@ MonoBehaviour:
   healAmount: 30
   shieldActive: 0
   characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 1043959053}
   tintImages: []
@@ -9468,7 +9622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5f5ae0474280441867437895400709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  unitName: 
+  unitName: Enemy
   isPlayer: 0
   maxHP: 100
   currentHP: 100
@@ -9481,6 +9635,12 @@ MonoBehaviour:
   healAmount: 30
   shieldActive: 0
   characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers:
   - {fileID: 2072104884}
   tintImages: []
@@ -10568,6 +10728,8 @@ GameObject:
   - component: {fileID: 203224359237954623}
   - component: {fileID: 583903262439029917}
   - component: {fileID: 7706177549032375889}
+  - component: {fileID: 7706177549032375891}
+  - component: {fileID: 7706177549032375890}
   m_Layer: 5
   m_Name: Tank Animation
   m_TagString: Untagged
@@ -10737,7 +10899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5f5ae0474280441867437895400709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  unitName: 
+  unitName: Dahlia
   isPlayer: 1
   maxHP: 100
   currentHP: 100
@@ -10750,6 +10912,12 @@ MonoBehaviour:
   healAmount: 100
   shieldActive: 0
   characterAnimator: {fileID: 8684900395743576964}
+  sfxSource: {fileID: 187217260}
+  attackSFX: {fileID: 8300000, guid: a2cb3212892db49468311302f070ad65, type: 3}
+  damagedSFX: {fileID: 8300000, guid: a1de75e959158df41a5a98c6d0493e3f, type: 3}
+  deathSFX: {fileID: 8300000, guid: c1c3d0b7a961659489e66730f8bf2463, type: 3}
+  skillSFX: {fileID: 8300000, guid: 3883d24c212d25e4ca3f46a977cce087, type: 3}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -10863,7 +11031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5f5ae0474280441867437895400709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  unitName: 
+  unitName: Vera
   isPlayer: 1
   maxHP: 150
   currentHP: 150
@@ -10875,7 +11043,13 @@ MonoBehaviour:
   skillType: 2
   healAmount: 30
   shieldActive: 0
-  characterAnimator: {fileID: 0}
+  characterAnimator: {fileID: 7706177549032375890}
+  sfxSource: {fileID: 187217260}
+  attackSFX: {fileID: 8300000, guid: 39c4d344665e2984fa3b9c69f9922a06, type: 3}
+  damagedSFX: {fileID: 8300000, guid: a1de75e959158df41a5a98c6d0493e3f, type: 3}
+  deathSFX: {fileID: 8300000, guid: c1c3d0b7a961659489e66730f8bf2463, type: 3}
+  skillSFX: {fileID: 8300000, guid: 15010f2dac025934d97288ae2d03eb77, type: 3}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -12130,7 +12304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5f5ae0474280441867437895400709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  unitName: 
+  unitName: Elsie
   isPlayer: 1
   maxHP: 100
   currentHP: 100
@@ -12143,6 +12317,12 @@ MonoBehaviour:
   healAmount: 30
   shieldActive: 0
   characterAnimator: {fileID: 8188824615389185105}
+  sfxSource: {fileID: 187217260}
+  attackSFX: {fileID: 8300000, guid: a2cb3212892db49468311302f070ad65, type: 3}
+  damagedSFX: {fileID: 8300000, guid: a1de75e959158df41a5a98c6d0493e3f, type: 3}
+  deathSFX: {fileID: 8300000, guid: c1c3d0b7a961659489e66730f8bf2463, type: 3}
+  skillSFX: {fileID: 8300000, guid: 1ecd2b048be3a564e93c76aafe82d786, type: 3}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -13403,7 +13583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5f5ae0474280441867437895400709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  unitName: 
+  unitName: LoveDay
   isPlayer: 1
   maxHP: 100
   currentHP: 100
@@ -13416,6 +13596,12 @@ MonoBehaviour:
   healAmount: 50
   shieldActive: 0
   characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 187217260}
+  attackSFX: {fileID: 8300000, guid: 39c4d344665e2984fa3b9c69f9922a06, type: 3}
+  damagedSFX: {fileID: 8300000, guid: a1de75e959158df41a5a98c6d0493e3f, type: 3}
+  deathSFX: {fileID: 8300000, guid: c1c3d0b7a961659489e66730f8bf2463, type: 3}
+  skillSFX: {fileID: 8300000, guid: cf5c541187c7eea41b6980b326a2d18c, type: 3}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages:
   - {fileID: 2280687495410834986}
@@ -14227,6 +14413,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7706177549032375890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183550752887418606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e511a867eb5f584abe2430cdfbdeb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleCharacterAnimator
+  animator: {fileID: 7706177549032375891}
+--- !u!95 &7706177549032375891
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183550752887418606}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2f8c29fb33d3f548bf740e1e1fc54a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &7727965783045977334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14563,7 +14784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab8cda6778c2ca42ae35014e087cc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTargetHoverOutline
-  targetUnit: {fileID: 1188431485047486308}
 --- !u!114 &7942994452221069817
 MonoBehaviour:
   m_ObjectHideFlags: 0
