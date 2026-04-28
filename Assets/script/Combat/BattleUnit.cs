@@ -39,6 +39,14 @@ public class BattleUnit : MonoBehaviour
     [Header("Animation")]
     public BattleCharacterAnimator characterAnimator;
 
+    [Header("Audio")]
+    public AudioSource sfxSource;
+    public AudioClip attackSFX;
+    public AudioClip damagedSFX;
+    public AudioClip deathSFX;
+    public AudioClip skillSFX;
+    public AudioClip defaultFruitUseSFX;
+
     [Header("Death Visual")]
     public SpriteRenderer[] tintSpriteRenderers;
     public Image[] tintImages;
@@ -104,6 +112,11 @@ public class BattleUnit : MonoBehaviour
     {
         CacheOriginalColors();
         SetupPersistentEffectIconHover();
+
+        if (sfxSource == null)
+        {
+            sfxSource = GetComponent<AudioSource>();
+        }
     }
 
     private void Start()
@@ -305,6 +318,57 @@ public class BattleUnit : MonoBehaviour
         return false;
     }
 
+    void PlaySFX(AudioClip clip)
+    {
+        if (sfxSource == null)
+        {
+            return;
+        }
+
+        if (clip == null)
+        {
+            return;
+        }
+
+        sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayAttackSFX()
+    {
+        PlaySFX(attackSFX);
+    }
+
+    public void PlayDamagedSFX()
+    {
+        PlaySFX(damagedSFX);
+    }
+
+    public void PlayDeathSFX()
+    {
+        PlaySFX(deathSFX);
+    }
+
+    public void PlaySkillSFX()
+    {
+        PlaySFX(skillSFX);
+    }
+
+    public void PlayFruitUseSFX(Fruit fruit)
+    {
+        if (fruit == null)
+        {
+            return;
+        }
+
+        if (fruit.useSFX != null)
+        {
+            PlaySFX(fruit.useSFX);
+            return;
+        }
+
+        PlaySFX(defaultFruitUseSFX);
+    }
+
     public void PlayAttackAnimation()
     {
         if (characterAnimator == null)
@@ -347,6 +411,8 @@ public class BattleUnit : MonoBehaviour
                 {
                     characterAnimator.PlayDeath();
                 }
+
+                PlayDeathSFX();
             }
             else
             {
@@ -354,6 +420,8 @@ public class BattleUnit : MonoBehaviour
                 {
                     characterAnimator.PlayDamaged();
                 }
+
+                PlayDamagedSFX();
             }
         }
     }
@@ -383,6 +451,8 @@ public class BattleUnit : MonoBehaviour
                 {
                     characterAnimator.PlayDeath();
                 }
+
+                PlayDeathSFX();
             }
             else
             {
@@ -390,6 +460,8 @@ public class BattleUnit : MonoBehaviour
                 {
                     characterAnimator.PlayDamaged();
                 }
+
+                PlayDamagedSFX();
             }
         }
     }
@@ -825,6 +897,8 @@ public class BattleUnit : MonoBehaviour
         {
             return false;
         }
+
+        PlayFruitUseSFX(fruit);
 
         foreach (FruitEffect effect in fruit.effects)
         {

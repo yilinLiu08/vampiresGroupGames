@@ -562,6 +562,7 @@ public class TurnBattleManager : MonoBehaviour
 
         messageText.text = currentUnit.unitName + " attacks " + target.unitName + ".";
         currentUnit.PlayAttackAnimation();
+        currentUnit.PlayAttackSFX();
 
         yield return new WaitForSeconds(0.4f);
 
@@ -668,7 +669,9 @@ public class TurnBattleManager : MonoBehaviour
             return;
         }
 
-        if (selectedAction == ActionType.Skill)
+        bool isSkillAttack = selectedAction == ActionType.Skill;
+
+        if (isSkillAttack)
         {
             if (!currentUnit.TryUseMana())
             {
@@ -702,12 +705,21 @@ public class TurnBattleManager : MonoBehaviour
         HideAllEnemyTargetButtons();
         SetAttackButtonNormal();
 
-        StartCoroutine(PlayerAttackRoutine(target, damage));
+        StartCoroutine(PlayerAttackRoutine(target, damage, isSkillAttack));
     }
 
-    private IEnumerator PlayerAttackRoutine(BattleUnit target, int damage)
+    private IEnumerator PlayerAttackRoutine(BattleUnit target, int damage, bool isSkillAttack)
     {
         currentUnit.PlayAttackAnimation();
+
+        if (isSkillAttack)
+        {
+            currentUnit.PlaySkillSFX();
+        }
+        else
+        {
+            currentUnit.PlayAttackSFX();
+        }
 
         yield return new WaitForSeconds(0.4f);
 
@@ -721,6 +733,7 @@ public class TurnBattleManager : MonoBehaviour
     private IEnumerator PlayerTeamHealRoutine()
     {
         currentUnit.PlayAttackAnimation();
+        currentUnit.PlaySkillSFX();
 
         messageText.text = currentUnit.unitName + " uses skill: heal all allies.";
 
@@ -744,6 +757,7 @@ public class TurnBattleManager : MonoBehaviour
     private IEnumerator PlayerTeamShieldRoutine()
     {
         currentUnit.PlayAttackAnimation();
+        currentUnit.PlaySkillSFX();
 
         messageText.text = currentUnit.unitName + " uses skill: all allies ignore the next hit.";
 
@@ -767,6 +781,7 @@ public class TurnBattleManager : MonoBehaviour
         int damage = GetModifiedSkillDamage(currentUnit);
 
         currentUnit.PlayAttackAnimation();
+        currentUnit.PlaySkillSFX();
 
         messageText.text = currentUnit.unitName + " uses skill: deal damage to all enemies.";
 
