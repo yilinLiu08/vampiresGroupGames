@@ -1,5 +1,9 @@
 ﻿title:Win
 ---
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: Whew, oh man. I thought we were absolutely done for. 
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: ….!
 <<resetScaleLeft PortraitContainerLeft>>
@@ -111,9 +115,21 @@ Loveday: THIS STORY IS IN PROGRESS
 
 title:Pregame
 ---
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: Now I could’ve sworn that big, tall tree was right here…
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: …
+Loveday: Vera, give me that map. Why did we even let you guide the way??
 <<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+Dahlia: ‘Cause she’s the closest we’re going to get to an actual surveyor. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: Hey! I’m the real deal!
+<<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Ngh… how long is this going to take…?
@@ -138,24 +154,6 @@ Loveday: Quit being a spoiled brat.
 Loveday: Aren’t you the one with infinite limbs? Why not just chop them off and regrow them if they hurt so bad?
 <<resetScaleLeft PortraitContainerLeft>>
 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
-Elsie: I’m not a masochist like you are!
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Right. All purebloods like YOU are <i>sadists.<i/>
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
-Vera: Is that true?
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
-Dahlia: No, dumbass.
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
-Vera: I see!
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Elsie has a point though. I <i>am</i> starting to feel the hungies… hehe.
 <<resetScaleRight PortraitContainerRight>>
@@ -169,7 +167,16 @@ Loveday: Haven’t you been a vampire longer than me and Dahlia? How’s your hu
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-Vera: Hey… you've clearly never had siblings before. 
+Vera: Hey… it’s been years since I ate this good.
+Vera: But check out all this energy that tasty blood gave me! WHEEEE!!!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: And… she ran off.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+Vera: <b>HEYY!! HEYYY GUYSSSS!!!</b> I think I see the forest clearing up ahead!
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
@@ -177,81 +184,26 @@ Loveday: Elsie, do you have all the bottles? There’s someone I know here that�
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: Y-yes…
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
-Dahlia: Don’t be scared, Elsie. I’m right by your side.
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: …Is this really okay?
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
-Vera: What is okay?
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: You know… picking fights with the royal guards?
+Elsie: Y-yes… is this really okay?
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Well, we’re all here for a reason. 
+Loveday: What's okay?
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: But-
+Elsie: You know… picking fights with the Claredon guards?
 <<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
-Loveday: Don’t you <i>dare</i> go back on your word after what you’ve pulled us into!
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
-Dahlia: Hey cut it out! That wasn’t her fault, okay?
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
-Loveday: If I remember correctly it was <i>Elsie</i> who went on a sudden rampage in front of the literal <i>princess</i> about us coming to find her and slit her throat on her daddy’s throne. Am I mistaken?
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
-Vera: I mean, I think she kinda deserved it.
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-Vera: It’s okay Elsie! I understand you! From the bottom of my heart!
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
-Elsie: <i>...ah…ahhhh…ack…</i>
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
-Dahlia: Vera! You’re not helping!
-<<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Oh. Is she breathing?
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaScaredL">>
-Dahlia: Elsie… Elllsiieeee… wake up.
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Ah, water. I see it, we’re almost there.
-Loveday: Elsie, conceal us. Those pesky scoundrels have the power to sniff us out if they try hard enough. 
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
-Elsie: Fine…
-<<resetScaleRight PortraitContainerRight>>
-
+Loveday: Don't go back on your word now.
+Loveday: And Elsie- you’re FROM Claredon. You know their inner workings the best. 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Prepare yourselves. This is just the beginning.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
-Dahlia: Ya don’t have to tell me twice.
+Dahlia: Don’t have to tell me twice.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
