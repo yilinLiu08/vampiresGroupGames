@@ -17,6 +17,7 @@ MonoBehaviour:
     round.The contents of this vial rattle about.  '
   icon: {fileID: 21300000, guid: 0d3cf3eb5aaf5104c8983a891595f6ba, type: 3}
   price: 10
+  useSFX: {fileID: 8300000, guid: 268d868bed6d46e418b5e8c581a9583b, type: 3}
   fruitCategory: 0
   healAmount: 0
   damageBoostMultiplier: 2

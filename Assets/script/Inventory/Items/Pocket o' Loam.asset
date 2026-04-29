@@ -17,11 +17,13 @@ MonoBehaviour:
     brim with rich soil.'
   icon: {fileID: 21300000, guid: 8f806cd994da2da45aea8372d2976dd1, type: 3}
   price: 15
+  useSFX: {fileID: 8300000, guid: 44d332c420b0fc8489eb277ffb5acfcd, type: 3}
   fruitCategory: 0
   healAmount: 0
   damageBoostMultiplier: 0
   damageBoostTurns: 0
   manaAmount: 0
+  instantDamageAmount: 50
   poisonDamagePerTurn: 0
   poisonTurns: 0
   clotTurns: 0
