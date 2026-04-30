@@ -2638,6 +2638,13 @@ MonoBehaviour:
   skillType: 1
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -6327,7 +6334,14 @@ MonoBehaviour:
   messageText: {fileID: 217517481}
   attackButton: {fileID: 247949577}
   skillButton: {fileID: 1685798549}
+  attackButtonText: {fileID: 0}
+  attackLabel: Attack
+  cancelAttackLabel: Cancel
   enemyActionDelay: 1
+  loseSceneChange: {fileID: 0}
+  winSceneChange: {fileID: 0}
+  resultSceneName: Story
+  resultSceneDelay: 1.2
 --- !u!1 &499854818
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,6 +7528,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -9500,6 +9521,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 50
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -11751,6 +11779,13 @@ MonoBehaviour:
   skillType: 3
   healAmount: 20
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -12066,6 +12101,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -12474,6 +12516,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -19282,6 +19331,13 @@ MonoBehaviour:
   skillType: 2
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -23112,7 +23168,14 @@ MonoBehaviour:
   messageText: {fileID: 377937611469508664}
   attackButton: {fileID: 2482481372851330837}
   skillButton: {fileID: 974268775528029293}
+  attackButtonText: {fileID: 0}
+  attackLabel: Attack
+  cancelAttackLabel: Cancel
   enemyActionDelay: 1
+  loseSceneChange: {fileID: 0}
+  winSceneChange: {fileID: 0}
+  resultSceneName: Story
+  resultSceneDelay: 1.2
 --- !u!114 &685643115501655749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23883,6 +23946,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -26456,6 +26526,13 @@ MonoBehaviour:
   skillType: 1
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -29911,6 +29988,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 50
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -32788,6 +32872,13 @@ MonoBehaviour:
   skillType: 3
   healAmount: 20
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -33201,6 +33292,13 @@ MonoBehaviour:
   skillType: 2
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -35863,7 +35961,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4b9eaaba4f6dc408521defe6cef129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FruitInventory
-  fruits: []
+  fruits:
+  - {fileID: 11400000, guid: 356559a85c2a1a04683f8bd786c7ee76, type: 2}
+  - {fileID: 11400000, guid: 356559a85c2a1a04683f8bd786c7ee76, type: 2}
+  - {fileID: 11400000, guid: 22075a0ec1947b94d8b71db506775ccd, type: 2}
+  - {fileID: 11400000, guid: 2558701b6acb26f42806b45fbb71cb3c, type: 2}
 --- !u!1 &7676719888078033760
 GameObject:
   m_ObjectHideFlags: 0
@@ -36631,6 +36733,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -38312,6 +38421,13 @@ MonoBehaviour:
   skillType: 0
   healAmount: 30
   shieldActive: 0
+  characterAnimator: {fileID: 0}
+  sfxSource: {fileID: 0}
+  attackSFX: {fileID: 0}
+  damagedSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  skillSFX: {fileID: 0}
+  defaultFruitUseSFX: {fileID: 0}
   tintSpriteRenderers: []
   tintImages: []
   deadTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}

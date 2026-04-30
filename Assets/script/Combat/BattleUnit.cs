@@ -71,6 +71,8 @@ public class BattleUnit : MonoBehaviour
     private float damageBoostMultiplier = 1f;
     private int damageBoostTurnsRemaining = 0;
 
+    private int shieldTurnsRemaining = 0;
+
     private int poisonDamagePerTurn = 0;
     private int poisonTurnsRemaining = 0;
 
@@ -383,8 +385,8 @@ public class BattleUnit : MonoBehaviour
     {
         if (shieldActive)
         {
-            shieldActive = false;
-            Debug.Log(unitName + " blocked the damage.");
+            ShowDamageHealText("Miss");
+            Debug.Log(unitName + " missed the damage.");
             return;
         }
 
@@ -751,6 +753,42 @@ public class BattleUnit : MonoBehaviour
 
     public void AdvanceBuffTurn()
     {
+        AdvanceBuffTurn(false);
+    }
+
+    public void AdvanceBuffTurn(bool skipShieldAdvance)
+    {
+        AdvanceShieldTurn(skipShieldAdvance);
+        AdvanceDamageBoostTurn();
+    }
+
+    void AdvanceShieldTurn(bool skipShieldAdvance)
+    {
+        if (!shieldActive)
+        {
+            return;
+        }
+
+        if (skipShieldAdvance)
+        {
+            return;
+        }
+
+        shieldTurnsRemaining--;
+
+        if (shieldTurnsRemaining > 0)
+        {
+            return;
+        }
+
+        shieldTurnsRemaining = 0;
+        shieldActive = false;
+
+        Debug.Log(unitName + " shield ended.");
+    }
+
+    void AdvanceDamageBoostTurn()
+    {
         if (damageBoostTurnsRemaining <= 0)
         {
             return;
@@ -889,6 +927,7 @@ public class BattleUnit : MonoBehaviour
     public void GiveShield()
     {
         shieldActive = true;
+        shieldTurnsRemaining = 1;
     }
 
     public bool UseFruit(Fruit fruit)
@@ -1061,7 +1100,7 @@ public class BattleUnit : MonoBehaviour
 
         if (skillType == SkillType.TeamShield)
         {
-            return "All allies ignore the next hit. Cost: " + skillManaCost + " MP.";
+            return "All allies ignore damage until their next turn ends. Cost: " + skillManaCost + " MP.";
         }
 
         if (skillType == SkillType.AoE)
