@@ -702,6 +702,37 @@ Transform:
   - {fileID: 234875720}
   m_Father: {fileID: 1177844643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &163013351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163013352}
+  m_Layer: 0
+  m_Name: EffectPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &163013352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163013351}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.96, y: -1.8, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1011376910986596654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173012339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2290,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0.19500051, y: 0.4750001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &479523428 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+  m_PrefabInstance: {fileID: 7973378874559928119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &538592279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,6 +2607,13 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -3103,6 +3146,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745359948}
   m_CullTransparentMesh: 1
+--- !u!1 &757200665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757200666}
+  m_Layer: 0
+  m_Name: EffectPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757200666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757200665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.88, y: -2.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7882643931302512797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &761975299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5494,6 +5568,13 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -6664,6 +6745,13 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -7031,6 +7119,13 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -10039,6 +10134,7 @@ Transform:
   m_Children:
   - {fileID: 4592461046684831575}
   - {fileID: 4908083507207240118}
+  - {fileID: 163013352}
   - {fileID: 5533863632469509026}
   - {fileID: 1443199293}
   - {fileID: 1848730331868604609}
@@ -10113,6 +10209,13 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 908562851}
   sfxSource: {fileID: 0}
@@ -10884,36 +10987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2556233661179940901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3308312053617909619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2567526376075292334
 GameObject:
   m_ObjectHideFlags: 0
@@ -11349,24 +11422,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &3308312053617909619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4464552355345044082}
-  - component: {fileID: 7502106770977243817}
-  - component: {fileID: 2556233661179940901}
-  m_Layer: 5
-  m_Name: Tank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &3354366864532663493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11390,6 +11445,13 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 3
   healAmount: 100
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 8684900395743576964}
   sfxSource: {fileID: 187217260}
@@ -11522,6 +11584,13 @@ MonoBehaviour:
   skillManaCost: 50
   skillType: 2
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 757200666}
+  attackHitEffectPrefab: {fileID: 6432684043105238528, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+  healEffectPrefab: {fileID: 6432684043105238528, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 7706177549032375890}
   sfxSource: {fileID: 187217260}
@@ -12539,25 +12608,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4464552355345044082
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3308312053617909619}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5320081056249718012}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -51}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4496402063200917459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12809,6 +12859,13 @@ MonoBehaviour:
   skillManaCost: 30
   skillType: 1
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 8188824615389185105}
   sfxSource: {fileID: 187217260}
@@ -13088,22 +13145,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &5259665043059548758
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5320081056249718012}
-  m_Layer: 5
-  m_Name: Animation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &5273207339165280106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13152,26 +13193,6 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -439.4, y: -229.85}
   m_SizeDelta: {x: 223.83, y: 44.05}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &5320081056249718012
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5259665043059548758}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3060}
-  m_LocalScale: {x: 0.69948, y: 0.69948, z: 0.69948}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4464552355345044082}
-  m_Father: {fileID: 6640057683218392247}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.99999, y: 19}
-  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5404896124678439908
 GameObject:
@@ -13768,6 +13789,7 @@ RectTransform:
   - {fileID: 7727965783045977334}
   - {fileID: 6305999210463673116}
   - {fileID: 6712464400113440177}
+  - {fileID: 479523428}
   m_Father: {fileID: 7205726823548693673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -14089,6 +14111,13 @@ MonoBehaviour:
   skillManaCost: 30
   skillType: 0
   healAmount: 50
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 187217260}
@@ -14159,7 +14188,6 @@ RectTransform:
   - {fileID: 6422312332603991855}
   - {fileID: 6903230671650152458}
   - {fileID: 5985720634059251750}
-  - {fileID: 5320081056249718012}
   m_Father: {fileID: 198141707}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -14747,14 +14775,6 @@ RectTransform:
   m_AnchoredPosition: {x: -443.89, y: -220.7}
   m_SizeDelta: {x: 223.83, y: 44.05}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7502106770977243817
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3308312053617909619}
-  m_CullTransparentMesh: 1
 --- !u!4 &7509724759159689865
 Transform:
   m_ObjectHideFlags: 0
@@ -15161,6 +15181,7 @@ Transform:
   - {fileID: 3700684939135581161}
   - {fileID: 2859826481724589846}
   - {fileID: 3694023553893044861}
+  - {fileID: 757200666}
   m_Father: {fileID: 6640057683218392247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7911578802679315647
@@ -15280,6 +15301,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTargetHoverPreview
   battleManager: {fileID: 7577686362175903796}
   previewObject: {fileID: 467454944}
+--- !u!1001 &7973378874559928119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6055321845077506860}
+    m_Modifications:
+    - target: {fileID: 6432684043105238528, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_Name
+      value: DaliaAttackEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818694574436085161, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd456599adaed54a9fa219d57f3d2f0, type: 3}
 --- !u!224 &8006830737547716799
 RectTransform:
   m_ObjectHideFlags: 0

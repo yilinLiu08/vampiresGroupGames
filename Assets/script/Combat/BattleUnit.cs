@@ -14,6 +14,13 @@ public class BattleUnit : MonoBehaviour
         AoE
     }
 
+    public enum EnemyActionType
+    {
+        NormalAttack,
+        Healer,
+        MagicAoE
+    }
+
     [Header("Info")]
     public string unitName;
     public bool isPlayer;
@@ -32,6 +39,17 @@ public class BattleUnit : MonoBehaviour
     [Header("Skill")]
     public SkillType skillType = SkillType.Damage;
     public int healAmount = 30;
+
+    [Header("Enemy Action")]
+    public EnemyActionType enemyActionType = EnemyActionType.NormalAttack;
+    public int enemyHealAmount = 15;
+    public int enemyMagicDamage = 15;
+
+    [Header("Battle Effects")]
+    public Transform effectPoint;
+    public GameObject attackHitEffectPrefab;
+    public GameObject healEffectPrefab;
+    public float effectDestroyDelay = 2f;
 
     [Header("Status")]
     public bool shieldActive = false;
@@ -182,6 +200,43 @@ public class BattleUnit : MonoBehaviour
 
         hover.owner = this;
         hover.tooltipUI = persistentEffectTooltipUI;
+    }
+
+    public void SpawnAttackEffectOn(BattleUnit target)
+    {
+        SpawnEffectOn(target, attackHitEffectPrefab);
+    }
+
+    public void SpawnHealEffectOn(BattleUnit target)
+    {
+        SpawnEffectOn(target, healEffectPrefab);
+    }
+
+    void SpawnEffectOn(BattleUnit target, GameObject effectPrefab)
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        if (effectPrefab == null)
+        {
+            return;
+        }
+
+        Transform spawnPoint = target.effectPoint;
+
+        if (spawnPoint == null)
+        {
+            spawnPoint = target.transform;
+        }
+
+        GameObject effect = Instantiate(effectPrefab, spawnPoint);
+        effect.transform.localPosition = Vector3.zero;
+        effect.transform.localRotation = Quaternion.identity;
+        effect.transform.localScale = Vector3.one;
+
+        Destroy(effect, effectDestroyDelay);
     }
 
     void UpdateDeadVisual()

@@ -61,6 +61,7 @@ public class TurnBattleManager : MonoBehaviour
     private bool battleEnded = false;
     private bool changingRound = false;
     private bool loadingResultScene = false;
+    private bool currentTurnGaveTeamShield = false;
 
     private float roundSkillBoostMultiplier = 1f;
     private int roundSkillBoostExpireCycle = -1;
@@ -279,6 +280,7 @@ public class TurnBattleManager : MonoBehaviour
         roundSkillBoostMultiplier = 1f;
         roundSkillBoostExpireCycle = -1;
         roundSkillBoostSourceFruit = null;
+        currentTurnGaveTeamShield = false;
 
         SetEnemyGroupActive(round1Enemies, false);
         SetEnemyGroupActive(round2Enemies, false);
@@ -345,6 +347,7 @@ public class TurnBattleManager : MonoBehaviour
 
         selectedAction = ActionType.None;
         waitingForPlayerTarget = false;
+        currentTurnGaveTeamShield = false;
 
         HideAllEnemyTargetButtons();
         HideActionButtons();
@@ -549,6 +552,23 @@ public class TurnBattleManager : MonoBehaviour
             yield break;
         }
 
+        if (currentUnit.enemyActionType == BattleUnit.EnemyActionType.Healer)
+        {
+            yield return StartCoroutine(EnemyHealRoutine());
+            yield break;
+        }
+
+        if (currentUnit.enemyActionType == BattleUnit.EnemyActionType.MagicAoE)
+        {
+            yield return StartCoroutine(EnemyMagicAoERoutine());
+            yield break;
+        }
+
+        yield return StartCoroutine(EnemyNormalAttackRoutine());
+    }
+
+    private IEnumerator EnemyNormalAttackRoutine()
+    {
         BattleUnit target = GetRandomAlivePlayer();
 
         if (target == null)
@@ -566,7 +586,70 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
+        currentUnit.SpawnAttackEffectOn(target);
         target.TakeDamage(currentUnit.GetAttackDamage());
+
+        yield return new WaitForSeconds(0.8f);
+
+        FinishCurrentUnitTurn();
+    }
+
+    private IEnumerator EnemyHealRoutine()
+    {
+        ClearAllHighlights();
+        currentUnit.SetHighlight(true);
+
+        messageText.text = currentUnit.unitName + " heals all enemies.";
+
+        currentUnit.PlayAttackAnimation();
+        currentUnit.PlaySkillSFX();
+
+        yield return new WaitForSeconds(0.4f);
+
+        for (int i = 0; i < currentEnemies.Length; i++)
+        {
+            if (!currentEnemies[i].gameObject.activeInHierarchy)
+            {
+                continue;
+            }
+
+            if (currentEnemies[i].IsDead())
+            {
+                continue;
+            }
+
+            currentUnit.SpawnHealEffectOn(currentEnemies[i]);
+            currentEnemies[i].Heal(currentUnit.enemyHealAmount);
+        }
+
+        yield return new WaitForSeconds(0.8f);
+
+        FinishCurrentUnitTurn();
+    }
+
+    private IEnumerator EnemyMagicAoERoutine()
+    {
+        ClearAllHighlights();
+        currentUnit.SetHighlight(true);
+
+        messageText.text = currentUnit.unitName + " casts magic on all players.";
+
+        currentUnit.PlayAttackAnimation();
+        currentUnit.PlayAttackSFX();
+
+        yield return new WaitForSeconds(0.4f);
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].IsDead())
+            {
+                continue;
+            }
+
+            players[i].SetHighlight(true);
+            currentUnit.SpawnAttackEffectOn(players[i]);
+            players[i].TakeDamage(currentUnit.enemyMagicDamage);
+        }
 
         yield return new WaitForSeconds(0.8f);
 
@@ -723,6 +806,7 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
+        currentUnit.SpawnAttackEffectOn(target);
         target.TakeDamage(damage);
 
         yield return new WaitForSeconds(0.8f);
@@ -745,6 +829,7 @@ public class TurnBattleManager : MonoBehaviour
         {
             if (!allyTeam[i].IsDead())
             {
+                currentUnit.SpawnHealEffectOn(allyTeam[i]);
                 allyTeam[i].Heal(currentUnit.healAmount);
             }
         }
@@ -756,10 +841,12 @@ public class TurnBattleManager : MonoBehaviour
 
     private IEnumerator PlayerTeamShieldRoutine()
     {
+        currentTurnGaveTeamShield = true;
+
         currentUnit.PlayAttackAnimation();
         currentUnit.PlaySkillSFX();
 
-        messageText.text = currentUnit.unitName + " uses skill: all allies ignore the next hit.";
+        messageText.text = currentUnit.unitName + " uses skill: all allies ignore damage until their next turn ends.";
 
         BattleUnit[] allyTeam = GetAlliesOf(currentUnit);
 
@@ -791,6 +878,7 @@ public class TurnBattleManager : MonoBehaviour
         {
             if (!currentEnemies[i].IsDead() && currentEnemies[i].gameObject.activeInHierarchy)
             {
+                currentUnit.SpawnAttackEffectOn(currentEnemies[i]);
                 currentEnemies[i].TakeDamage(damage);
             }
         }
@@ -802,7 +890,9 @@ public class TurnBattleManager : MonoBehaviour
 
     private void FinishCurrentUnitTurn()
     {
-        currentUnit.AdvanceBuffTurn();
+        currentUnit.AdvanceBuffTurn(currentTurnGaveTeamShield);
+        currentTurnGaveTeamShield = false;
+
         CheckBattleResult();
 
         if (!battleEnded && !changingRound)
@@ -1044,6 +1134,7 @@ public class TurnBattleManager : MonoBehaviour
         changingRound = false;
         waitingForPlayerTarget = false;
         selectedAction = ActionType.None;
+        currentTurnGaveTeamShield = false;
 
         HideActionButtons();
         HideAllEnemyTargetButtons();
