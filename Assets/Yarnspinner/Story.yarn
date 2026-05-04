@@ -116,28 +116,39 @@ Loveday: THIS STORY IS IN PROGRESS
 title:Pregame
 ---
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<VeraLaugh audio>>
 Vera: Now I could’ve sworn that big, tall tree was right here…
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<LovedayHmph audio>>
 Loveday: Vera, give me that map. Why did we even let you guide the way??
 <<resetScaleLeft PortraitContainerLeft>>
 
+
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<<DahliaYell audio>>
 Dahlia: ‘Cause she’s the closest we’re going to get to an actual surveyor. 
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<VeraLaugh audio>>
 Vera: Hey! I’m the real deal!
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+<<ElsieSqueal audio>>
 Elsie: Ngh… how long is this going to take…?
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Not too much longer, I promise.
 <<resetScaleLeft PortraitContainerLeft>>
+
+
+<< PlayElsieCutscene elsiecutscene>>
+
 
 <<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: I swear it’s been days since we rested! My feet are gonna fall off!
