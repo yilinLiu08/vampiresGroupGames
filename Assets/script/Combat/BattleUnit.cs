@@ -14,6 +14,13 @@ public class BattleUnit : MonoBehaviour
         AoE
     }
 
+    public enum EnemyActionType
+    {
+        NormalAttack,
+        Healer,
+        MagicAoE
+    }
+
     [Header("Info")]
     public string unitName;
     public bool isPlayer;
@@ -32,6 +39,19 @@ public class BattleUnit : MonoBehaviour
     [Header("Skill")]
     public SkillType skillType = SkillType.Damage;
     public int healAmount = 30;
+
+    [Header("Enemy Action")]
+    public EnemyActionType enemyActionType = EnemyActionType.NormalAttack;
+    public int enemyHealAmount = 15;
+    public int enemyMagicDamage = 15;
+
+    [Header("Battle Effects")]
+    public Transform effectPoint;
+    public GameObject attackHitEffectPrefab;
+    public GameObject healEffectPrefab;
+    public Transform[] attackEffectPoints = new Transform[4];
+    public Transform[] healEffectPoints = new Transform[4];
+    public float effectDestroyDelay = 2f;
 
     [Header("Status")]
     public bool shieldActive = false;
@@ -70,6 +90,8 @@ public class BattleUnit : MonoBehaviour
 
     private float damageBoostMultiplier = 1f;
     private int damageBoostTurnsRemaining = 0;
+
+    private int shieldTurnsRemaining = 0;
 
     private int poisonDamagePerTurn = 0;
     private int poisonTurnsRemaining = 0;
@@ -180,6 +202,114 @@ public class BattleUnit : MonoBehaviour
 
         hover.owner = this;
         hover.tooltipUI = persistentEffectTooltipUI;
+    }
+
+    public void SpawnAttackEffectOn(BattleUnit target)
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        Transform spawnPoint = target.effectPoint;
+
+        if (spawnPoint == null)
+        {
+            spawnPoint = target.transform;
+        }
+
+        SpawnEffectAtPoint(attackHitEffectPrefab, spawnPoint);
+    }
+
+    public void SpawnHealEffectOn(BattleUnit target)
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        Transform spawnPoint = target.effectPoint;
+
+        if (spawnPoint == null)
+        {
+            spawnPoint = target.transform;
+        }
+
+        SpawnEffectAtPoint(healEffectPrefab, spawnPoint);
+    }
+
+    public void SpawnAttackEffectAtIndex(int index)
+    {
+        if (attackEffectPoints == null)
+        {
+            return;
+        }
+
+        if (index < 0 || index >= attackEffectPoints.Length)
+        {
+            return;
+        }
+
+        Transform spawnPoint = attackEffectPoints[index];
+
+        if (spawnPoint == null)
+        {
+            return;
+        }
+
+        SpawnEffectAtPoint(attackHitEffectPrefab, spawnPoint);
+    }
+
+    public void SpawnHealEffectAtIndex(int index)
+    {
+        if (healEffectPoints == null)
+        {
+            return;
+        }
+
+        if (index < 0 || index >= healEffectPoints.Length)
+        {
+            return;
+        }
+
+        Transform spawnPoint = healEffectPoints[index];
+
+        if (spawnPoint == null)
+        {
+            return;
+        }
+
+        SpawnEffectAtPoint(healEffectPrefab, spawnPoint);
+    }
+
+    void SpawnEffectAtPoint(GameObject effectPrefab, Transform spawnPoint)
+    {
+        if (effectPrefab == null)
+        {
+            return;
+        }
+
+        if (spawnPoint == null)
+        {
+            return;
+        }
+
+        GameObject effect = Instantiate(effectPrefab, spawnPoint);
+
+        RectTransform effectRect = effect.transform as RectTransform;
+
+        if (effectRect != null)
+        {
+            effectRect.anchoredPosition = Vector2.zero;
+            effectRect.localRotation = Quaternion.identity;
+        }
+        else
+        {
+            effect.transform.localPosition = Vector3.zero;
+            effect.transform.localRotation = Quaternion.identity;
+        }
+
+        Destroy(effect, effectDestroyDelay);
     }
 
     void UpdateDeadVisual()
@@ -383,8 +513,8 @@ public class BattleUnit : MonoBehaviour
     {
         if (shieldActive)
         {
-            shieldActive = false;
-            Debug.Log(unitName + " blocked the damage.");
+            ShowDamageHealText("Miss");
+            Debug.Log(unitName + " missed the damage.");
             return;
         }
 
@@ -751,6 +881,42 @@ public class BattleUnit : MonoBehaviour
 
     public void AdvanceBuffTurn()
     {
+        AdvanceBuffTurn(false);
+    }
+
+    public void AdvanceBuffTurn(bool skipShieldAdvance)
+    {
+        AdvanceShieldTurn(skipShieldAdvance);
+        AdvanceDamageBoostTurn();
+    }
+
+    void AdvanceShieldTurn(bool skipShieldAdvance)
+    {
+        if (!shieldActive)
+        {
+            return;
+        }
+
+        if (skipShieldAdvance)
+        {
+            return;
+        }
+
+        shieldTurnsRemaining--;
+
+        if (shieldTurnsRemaining > 0)
+        {
+            return;
+        }
+
+        shieldTurnsRemaining = 0;
+        shieldActive = false;
+
+        Debug.Log(unitName + " shield ended.");
+    }
+
+    void AdvanceDamageBoostTurn()
+    {
         if (damageBoostTurnsRemaining <= 0)
         {
             return;
@@ -889,6 +1055,7 @@ public class BattleUnit : MonoBehaviour
     public void GiveShield()
     {
         shieldActive = true;
+        shieldTurnsRemaining = 1;
     }
 
     public bool UseFruit(Fruit fruit)
@@ -1061,7 +1228,7 @@ public class BattleUnit : MonoBehaviour
 
         if (skillType == SkillType.TeamShield)
         {
-            return "All allies ignore the next hit. Cost: " + skillManaCost + " MP.";
+            return "All allies ignore damage until their next turn ends. Cost: " + skillManaCost + " MP.";
         }
 
         if (skillType == SkillType.AoE)
