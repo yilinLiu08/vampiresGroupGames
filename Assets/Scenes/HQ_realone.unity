@@ -2729,6 +2729,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 1
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -7894,6 +7911,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -9887,6 +9921,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 50
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -12236,6 +12287,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 3
   healAmount: 20
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -12558,6 +12626,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -12973,6 +13058,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -20296,6 +20398,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 2
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -24911,6 +25030,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -27491,6 +27627,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 1
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -30953,6 +31106,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 50
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -33837,6 +34007,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 3
   healAmount: 20
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -34257,6 +34444,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 2
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -37759,6 +37963,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -39447,6 +39668,23 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
+  enemyActionType: 0
+  enemyHealAmount: 15
+  enemyMagicDamage: 15
+  effectPoint: {fileID: 0}
+  attackHitEffectPrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  attackEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healEffectPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effectDestroyDelay: 2
   shieldActive: 0
   characterAnimator: {fileID: 0}
   sfxSource: {fileID: 0}

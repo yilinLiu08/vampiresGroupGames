@@ -57,47 +57,35 @@ Loveday: THIS STORY IS IN PROGRESS
 title:Lose
 ---
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<PlaySound audio Dahlia_Damnit>>
 Dahlia: <b>DAMMIT!</b>
-Dahlia: God… only if I… 
 <<resetScaleLeft PortraitContainerLeft>>
 
-
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Well. We just have to keep going. 
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
-Dahlia: …Ugh. 
-<<resetScaleRight PortraitContainerRight>>
-
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<PlaySound audio Loveday_Angry>>
 Loveday: The technique was impeccable… just how did the guy swing like that? 
-Loveday: I must study those moves the vampires used. 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-Vera: And I MUST…take a nice looonggg nap…
-<<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<PlaySound audio Dahlia_Disgust>>
 Dahlia: Loveday, you got snot comin’ out your nose.
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Oh.
-Loveday: Uhh.
+Loveday: Oh. Uhh.
 Loveday: Vera. Fetch me a tissue.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Agree>>
 Vera: On it!
-Vera: Wait. 
-Vera: Where am I supposed to find that… Lol…
+<<PlaySound audio Vera_Coonfused>>
+Vera: Actually, where am I supposed to find that... haha...
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Uhh. Whatever. I’ll just use this tissue I found on the floor.
+<<PlaySound audio Loveday_Realize>>
+Loveday: Whatever. I’ll just use this tissue I found on the floor.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
@@ -105,10 +93,33 @@ Elsie: <b>GAHHHH!!!</b>
 Elsie: <b>T-THAT’S MY ARM, YOU FREAK!!!</b>
 <<resetScaleRight PortraitContainerRight>>
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: Oh. Disgusting. 
-Loveday: THIS STORY IS IN PROGRESS
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<<PlaySound audio Dahlia_Serious>>
+Dahlia: Enough. 
+<<PlaySound audio Dahlia_Pleased>>
+Dahlia: Elsie. Here’s your arm back. 
 <<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Annoyed>>
+Loveday: This little freak can pick it up herself.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: It just feels better when Lili does it… heheheh…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Frustrated>>
+Vera: Ughhhhhh… I’m bored. Are we gonna go back out yet?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<PlaySound audio Loveday_ComeOn>>
+Loveday: Yeah. We’ll be back on our feet in no time.
+<<resetScaleLeft PortraitContainerLeft>>
+
+
 <<HQ DialogueSystem>>
 
 ===
@@ -116,29 +127,26 @@ Loveday: THIS STORY IS IN PROGRESS
 title:Pregame
 ---
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-<<VeraLaugh audio>>
+<<PlaySound audio Vera_Confused>>
 Vera: Now I could’ve sworn that big, tall tree was right here…
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-<<LovedayHmph audio>>
+<< PlaySound audio Loveday_ComeOn>>
 Loveday: Vera, give me that map. Why did we even let you guide the way??
 <<resetScaleLeft PortraitContainerLeft>>
 
-
-
 <<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
-<<DahliaYell audio>>
+<< PlaySound audio Dahlia_Awkward>>
 Dahlia: ‘Cause she’s the closest we’re going to get to an actual surveyor. 
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-<<VeraLaugh audio>>
+<<PlaySound audio Vera_Yeah>>
 Vera: Hey! I’m the real deal!
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
-<<ElsieSqueal audio>>
 Elsie: Ngh… how long is this going to take…?
 <<resetScaleRight PortraitContainerRight>>
 
@@ -146,9 +154,7 @@ Elsie: Ngh… how long is this going to take…?
 Dahlia: Not too much longer, I promise.
 <<resetScaleLeft PortraitContainerLeft>>
 
-
-<< PlayElsieCutscene elsiecutscene>>
-
+//<< PlayElsieCutscene elsiecutscene>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: I swear it’s been days since we rested! My feet are gonna fall off!
@@ -156,20 +162,24 @@ Elsie: Lili, carry me?
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+<< PlaySound audio Dahlia_Pleased>>
 Dahlia: Hop on my back.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<PlaySound audio Loveday_Annoyed>>
 Loveday: Quit being a spoiled brat.
 <<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Aren’t you the one with infinite limbs? Why not just chop them off and regrow them if they hurt so bad?
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Agree>>
 Vera: Elsie has a point though. I <i>am</i> starting to feel the hungies… hehe.
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<< PlaySound audio Dahlia_Damnit>>
 Dahlia: Are you KIDDING ME??! You just sucked the last remaining blood pouches we had an hour ago!
 <<resetScaleLeft PortraitContainerLeft>>
 
@@ -178,23 +188,72 @@ Loveday: Haven’t you been a vampire longer than me and Dahlia? How’s your hu
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Wow>>
 Vera: Hey… it’s been years since I ate this good.
 Vera: But check out all this energy that tasty blood gave me! WHEEEE!!!
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<< PlaySound audio Dahlia_Curious>>
 Dahlia: And… she ran off.
 <<resetScaleLeft PortraitContainerLeft>>
 
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Agree>>
+Loveday: Oh…my… Well. Forget it. It’s not like anyone knows that I broke the rules.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<< PlaySound audio Dahlia_Awkward>>
+Dahlia: You broke rules? What rules?
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Realize>>
+Loveday: Ahem. I’m referring to the first rule in the <i>Squad Communing Handbook.</i> “Rule 1: Squad leaders must attempt to keep all squad members within eyeshot.”
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: Boi you broke the next five too, if I’m reading things corre-
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: “Rule 67: Squad leader is permitted to backhand ill-tempered squad members at any time without warning.”
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<< PlaySound audio Dahlia_Disgust>>
+Dahlia: Oh okay, really funny. We got a funny guy over here. Hello? Guards? We need to apprehend this guy for being wayyyy too funny!
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: A-Are there any rules about stopping scary mean people from arguing???
+<<resetScaleRight PortraitContainerRight>>
+
+
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Yeah>>
 Vera: <b>HEYY!! HEYYY GUYSSSS!!!</b> I think I see the forest clearing up ahead!
 <<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Loveday: Okay. I’m gonna yell, guys. First time yelling. Let me know how it sounds.
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Angry>>
+Loveday: <b>WOW, I NEVER DOUBTED YOU VERA.</b>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Yeah>>
+Vera: <b>GREAT YELL, SIR, YES SIR!!!</b>
+<<resetScaleRight PortraitContainerRight>>
+
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Elsie, do you have all the bottles? There’s someone I know here that’s willing to sell us some elixir.
 <<resetScaleLeft PortraitContainerLeft>>
 
-<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Y-yes… is this really okay?
 <<resetScaleRight PortraitContainerRight>>
 
@@ -208,23 +267,176 @@ Elsie: You know… picking fights with the Claredon guards?
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Don't go back on your word now.
+<<PlaySound audio Loveday_Annoyed>>
 Loveday: And Elsie- you’re FROM Claredon. You know their inner workings the best. 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<< PlaySound audio Loveday_ComeOn>>
 Loveday: Prepare yourselves. This is just the beginning.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<< PlaySound audio Dahlia_Disgust>>
 Dahlia: Don’t have to tell me twice.
 <<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Agree>>
 Vera: I’m ready and raring to go!
 <<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
-Elsie: …okay…
+Elsie: …Okay…
 <<resetScaleRight PortraitContainerRight>>
 
 
 <<HQ DialogueSystem>>
+===
+
+title:Lose2
+---
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Yeah>>
+Vera: Oh YEAH!!! We lost, but I’m sooo pumped! <b>HAHAHAHHAHA!</b>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Angry>>
+Loveday: Damn it all to hell.
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<PlaySound audio Dahlia_Awkward>>
+Dahlia: Aren’t you just a little ray of sunshine…
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+Elsie: I-It’s probably because we didn’t buy enough items or something…
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: Lawrence… stop glaring at me.
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Annoyed>>
+Loveday: If we <b>BOUGHT</b> anything it would’ve been <b>EATEN</b> by Vera. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
+<<PlaySound audio Vera_Confused>>
+Vera: Okay so-
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<<PlaySound audio Dahlia_Disgust>>
+Dahlia: They’re still out there. So we gotta go. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+Elsie: Ngh… Won’t a super tawll and stwong woman come here and help a sad, pathetic widdle me…??
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+<<PlaySound audio Dahlia_Pleased>>
+Dahlia: You hurting all over again? Here, lemme help you. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
+Elsie: Oh. Hehe, okay! Hehehehehe… I’m blushing…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+<<PlaySound audio Dahlia_Pleased>>
+Dahlia: Hup!
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
+Elsie: Hehehe… Lili’s giving me uppies… I should let those vampires cut me up more often.
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Wow>>
+Vera: OK GUYS! I’m going to sing a PORT CONCETTA CLASSIC for you all to get our hopes up again!
+Vera: <i> Port Concetta, Port Concetta, oh how I love you so~ </i>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayScaredL">>
+<<PlaySound audio Loveday_Disgust>>
+Loveday: Where are a pair of earmuffs when I need them…
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+
+===
+
+title:Lose3
+---
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Angry>>
+Loveday: <b>ARE YOU KIDDING ME???</b> I was so CLOSE…! Maybe if I referred to my notes from the last fight… No…
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+Elsie: U-uh… Let’s calm down now…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Disgust>>
+Loveday: How many more times do I have to experience the same damn loss?!
+Loveday: It’s just like what they did before in Gailstad. It’s like nothing changed. If ANY damn vampire beats me again, I swear I’ll-
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: Loveday.
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_Bother>>
+Loveday: What are you doing?! Get your hands off m-
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<PlaySound audio Dahlia_Damnit>>
+Dahlia: LOVEDAY! <b>SNAP OUT OF IT.</b> Listen for just a minute, OKAY??
+Dahlia: You’re our squad leader, and we listen to you. So calm down and think of a plan. 
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+<<PlaySound audio Dahlia_Serious>>
+Dahlia: And for crying out loud, remember that it’s not all about you. We’re in this together.
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: …
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<PlaySound audio Loveday_Disgust>>
+Loveday: Hmph. Okay. Well, for one thing…
+Loveday: Elsie, control your breathing. Whenever you get shaky, your heals get weaker. Vera, your posture is your biggest detriment. If you duck a bit underneath your shield, our foes won’t be able to read your eyes. 
+Loveday: And Dahlia, stop looking at Elsie right before you attack. You keep missing the enemy’s vital points because of that. 
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<PlaySound audio Loveday_ComeOn>>
+Loveday: In simpler terms, that <b>DAMNED</b> creature needs to be put to sleep.
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<PlaySound audio Vera_Agree>>
+Vera: Awww! That’s the Loveday we know and love!! 
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Elsie: Love?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+<<PlaySound audio Dahlia_Awkward>>
+Dahlia: Vera, you’re so sappy. Let’s get on with it and win already.
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+
 ===

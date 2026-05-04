@@ -24,13 +24,7 @@ public class WhatYarn : MonoBehaviour
         int winCount = PlayerPrefs.GetInt("FightOneWin", 0);
         int loseCount = PlayerPrefs.GetInt("FightOneLoseCount", 0);
 
-        /*
-        int win2Count = PlayerPrefs.GetInt("FightOneWin", 0);
-        int lose2Count = PlayerPrefs.GetInt("FightOneLoseCount", 0);
-
-        int win3Count = PlayerPrefs.GetInt("FightOneWin", 0);
-        int lose3Count = PlayerPrefs.GetInt("FightOneLoseCount", 0);
-        */
+       
 
         if (winCount >= 1)
         {
@@ -45,33 +39,7 @@ public class WhatYarn : MonoBehaviour
            // PlayerPrefs.SetInt("FightOneLoseCount", 0);
         }
 
-        /*
-           else if (win2Count >= 1)
-        {
-            
-            dialogueRunner.StartDialogue(fightoneWin); 
-           // PlayerPrefs.SetInt("FightOneWin", 0); //this resets it back to zero lel)
-        }
-       
-        else if (lose2Count >= 1)
-        {
-            dialogueRunner.StartDialogue(fightoneLose);
-           // PlayerPrefs.SetInt("FightOneLoseCount", 0);
-        }
-
-         else if (win3Count >= 1)
-        {
-            
-            dialogueRunner.StartDialogue(fightoneWin); 
-           // PlayerPrefs.SetInt("FightOneWin", 0); //this resets it back to zero lel)
-        }
-       
-        else if (lose3Count >= 1)
-        {
-            dialogueRunner.StartDialogue(fightoneLose);
-           // PlayerPrefs.SetInt("FightOneLoseCount", 0);
-        }
-          */
+        
 
         else
         {
@@ -88,3 +56,5 @@ public class WhatYarn : MonoBehaviour
         SceneManager.LoadScene("HQ_realone");
     }
 }
+
+

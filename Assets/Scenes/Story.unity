@@ -761,6 +761,170 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd925b53ec56ce848873bd345df3b081, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[0].name
+      value: Dahlia_Serious
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a6b68f30fddcd0446b2fd4ea2010e6a8, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[1].name
+      value: Dahlia_Pleased
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e831546c5db4b1845ae1edefad330478, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[2].name
+      value: Dahlia_Damnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e1a8931b31f6831459602c735fc714e4, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[3].name
+      value: Dahlia_Curious
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0652992a1bfad8d49ac420bdb526a85c, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[4].name
+      value: Dahlia_Awkward
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b074bff1ae3f40246b2ed0b64a564884, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[5].name
+      value: Dahlia_Disgust
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 28c9f9faa3d0daa4d9542ef952c56e27, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[6].name
+      value: Vera_Agree
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c1c508a30a2f46e4c9251569494f81c0, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[7].name
+      value: Vera_Thinking
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b9a8744248686ac4c8c70f20652c0771, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[8].name
+      value: Vera_Frustrated
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fe67b89323a8dbf439b352b3aaa8821b, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[9].name
+      value: Vera_Confused
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 053513941ed07004a8583eabbfa55de1, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[10].name
+      value: Vera_Wow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0dc778326c86c9745af88daa26d85f79, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[11].name
+      value: Vera_Yeah
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a352b5f362f72044199654d3c6fe6b7f, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[12].name
+      value: Loveday_ComeOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8810de2e121a4b241a03b05e9e26661e, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[13].name
+      value: Loveday_Agree
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0692340d32c602445a5875ab68edba8d, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[14].name
+      value: Loveday_Realize
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b9960dda45bfedf4992e3b3cba821b47, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[15].name
+      value: Loveday_Annoyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 29ad409e26abce140a66bc2663d2f062, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[16].name
+      value: Loveday_Okay
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 96b4b5be203314d4c903c90f5809eb38, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[17].name
+      value: Loveday_Angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[18].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 338d911c66af1454183ccebcfc2f7fa5, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[18].name
+      value: Loveday_Bother
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 338d911c66af1454183ccebcfc2f7fa5, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[19].name
+      value: Loveday_Bother
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
