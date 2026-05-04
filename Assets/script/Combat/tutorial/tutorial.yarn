@@ -3,12 +3,11 @@
 Let’s start your first battle!
 <<Character tutorial>>
 These are your vampire characters. Each one has a different class.
-<<Enemy tutorial>>
-These are the enemies. After selecting Attack, you can choose a target to attack.
 <<BlueBar tutorial>>
-This is Mana. Each time a vampire uses a skill, it consumes Mana. Choose carefully when to use your skills.
+This is health and mana. When health runs out, the character dies. Each time a vampire uses a skill, it consumes mana. Choose carefully when to use your skills.
 <<Arrow tutorial>>
 This arrow means it is currently this character’s turn to act or take damage.
-You can try fighting first, and I’ll add more tutorials later.
-You could also leave your feedback and tell me what confused you during the fight, and I can add that to the tutorial later.
+<<Enemy tutorial>>
+These are the enemies. After selecting Attack, you can choose a target to attack.
+Looks like the enemy is a eolf. wolves are good at single target physical attacks and can deal high damage to one target. They are relatively simple monsters, so let’s get started!
 ===

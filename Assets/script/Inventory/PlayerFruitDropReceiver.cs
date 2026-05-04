@@ -19,6 +19,17 @@ public class PlayerFruitDropReceiver : MonoBehaviour, IDropHandler
             return;
         }
 
+        if (TurnBattleManager.Instance == null)
+        {
+            return;
+        }
+
+        if (!TurnBattleManager.Instance.CanUseInventoryItem())
+        {
+            TurnBattleManager.Instance.ShowFruitMessage("Choose Inventory first.");
+            return;
+        }
+
         FruitData fruitData = eventData.pointerDrag.GetComponent<FruitData>();
 
         if (fruitData == null)
@@ -38,11 +49,14 @@ public class PlayerFruitDropReceiver : MonoBehaviour, IDropHandler
 
         bool used = targetUnit.UseFruit(fruitData.currentFruit);
 
-        fruitData.wasDroppedOnValidTarget = used;
-
         if (!used)
         {
+            TurnBattleManager.Instance.ShowFruitMessage("This item cannot be used here.");
             Debug.Log("Fruit use failed on target: " + targetUnit.unitName);
+            return;
         }
+
+        fruitData.CompleteSuccessfulDrop();
+        TurnBattleManager.Instance.NotifyInventoryItemUsed();
     }
 }

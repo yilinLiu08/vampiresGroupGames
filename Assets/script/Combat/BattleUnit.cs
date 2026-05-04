@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class BattleUnit : MonoBehaviour
+public class BattleUnit : MonoBehaviour, IDropHandler
 {
     public enum SkillType
     {
@@ -158,6 +159,53 @@ public class BattleUnit : MonoBehaviour
         {
             characterAnimator.SyncDeadState(IsDead());
         }
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (eventData == null)
+        {
+            return;
+        }
+
+        if (eventData.pointerDrag == null)
+        {
+            return;
+        }
+
+        if (TurnBattleManager.Instance == null)
+        {
+            return;
+        }
+
+        FruitData data = eventData.pointerDrag.GetComponent<FruitData>();
+
+        if (data == null)
+        {
+            return;
+        }
+
+        if (data.currentFruit == null)
+        {
+            return;
+        }
+
+        if (!TurnBattleManager.Instance.CanUseInventoryItem())
+        {
+            TurnBattleManager.Instance.ShowFruitMessage("Choose Inventory first.");
+            return;
+        }
+
+        bool used = UseFruit(data.currentFruit);
+
+        if (!used)
+        {
+            TurnBattleManager.Instance.ShowFruitMessage("This item cannot be used here.");
+            return;
+        }
+
+        data.CompleteSuccessfulDrop();
+        TurnBattleManager.Instance.NotifyInventoryItemUsed();
     }
 
     void CacheOriginalColors()

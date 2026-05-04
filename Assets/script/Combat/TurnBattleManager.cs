@@ -13,7 +13,8 @@ public class TurnBattleManager : MonoBehaviour
     {
         None,
         Attack,
-        Skill
+        Skill,
+        Item
     }
 
     [Header("Players")]
@@ -35,14 +36,22 @@ public class TurnBattleManager : MonoBehaviour
     public TextMeshProUGUI messageText;
     public Button attackButton;
     public Button skillButton;
+    public Button inventoryButton;
     public TextMeshProUGUI attackButtonText;
+    public TextMeshProUGUI inventoryButtonText;
+
+    [Header("Inventory UI")]
+    public GameObject inventoryPanel;
 
     [Header("Button Labels")]
     public string attackLabel = "Attack";
     public string cancelAttackLabel = "Cancel";
+    public string inventoryLabel = "Inventory";
+    public string cancelInventoryLabel = "Cancel";
 
     [Header("Settings")]
     public float enemyActionDelay = 1f;
+    public float itemUseDelay = 0.8f;
 
     [Header("Scene Change")]
     public SceneChange loseSceneChange;
@@ -58,6 +67,9 @@ public class TurnBattleManager : MonoBehaviour
     private ActionType selectedAction = ActionType.None;
 
     private bool waitingForPlayerTarget = false;
+    private bool waitingForInventoryItem = false;
+    private bool itemUseLocked = false;
+
     private bool battleEnded = false;
     private bool changingRound = false;
     private bool loadingResultScene = false;
@@ -81,16 +93,29 @@ public class TurnBattleManager : MonoBehaviour
             attackButtonText = attackButton.GetComponentInChildren<TextMeshProUGUI>(true);
         }
 
+        if (inventoryButtonText == null && inventoryButton != null)
+        {
+            inventoryButtonText = inventoryButton.GetComponentInChildren<TextMeshProUGUI>(true);
+        }
+
         attackButton.onClick.RemoveAllListeners();
         attackButton.onClick.AddListener(OnClickAttack);
 
         skillButton.onClick.RemoveAllListeners();
         skillButton.onClick.AddListener(OnClickSkill);
 
+        if (inventoryButton != null)
+        {
+            inventoryButton.onClick.RemoveAllListeners();
+            inventoryButton.onClick.AddListener(OnClickInventory);
+        }
+
         HideActionButtons();
+        HideInventoryPanel();
         HideAllEnemyTargetButtons();
         ClearAllHighlights();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         SetRound(1);
         StartTurn();
@@ -124,6 +149,46 @@ public class TurnBattleManager : MonoBehaviour
         }
 
         attackButtonText.text = cancelAttackLabel;
+    }
+
+    void SetInventoryButtonNormal()
+    {
+        if (inventoryButtonText == null)
+        {
+            return;
+        }
+
+        inventoryButtonText.text = inventoryLabel;
+    }
+
+    void SetInventoryButtonCancel()
+    {
+        if (inventoryButtonText == null)
+        {
+            return;
+        }
+
+        inventoryButtonText.text = cancelInventoryLabel;
+    }
+
+    void ShowInventoryPanel()
+    {
+        if (inventoryPanel == null)
+        {
+            return;
+        }
+
+        inventoryPanel.SetActive(true);
+    }
+
+    void HideInventoryPanel()
+    {
+        if (inventoryPanel == null)
+        {
+            return;
+        }
+
+        inventoryPanel.SetActive(false);
     }
 
     void RefreshRoundSkillBoostStatusUI()
@@ -281,6 +346,7 @@ public class TurnBattleManager : MonoBehaviour
         roundSkillBoostExpireCycle = -1;
         roundSkillBoostSourceFruit = null;
         currentTurnGaveTeamShield = false;
+        itemUseLocked = false;
 
         SetEnemyGroupActive(round1Enemies, false);
         SetEnemyGroupActive(round2Enemies, false);
@@ -301,6 +367,7 @@ public class TurnBattleManager : MonoBehaviour
         ResetConsumedTurnSlots();
         RefreshRoundSkillBoostStatusUI();
         HideAllEnemyTargetButtons();
+        HideInventoryPanel();
     }
 
     private void SetEnemyGroupActive(BattleUnit[] group, bool value)
@@ -347,12 +414,17 @@ public class TurnBattleManager : MonoBehaviour
 
         selectedAction = ActionType.None;
         waitingForPlayerTarget = false;
+        waitingForInventoryItem = false;
+        itemUseLocked = false;
         currentTurnGaveTeamShield = false;
 
         HideAllEnemyTargetButtons();
         HideActionButtons();
+        HideInventoryPanel();
         ClearAllHighlights();
         currentUnit.SetHighlight(true);
+        SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         StartCoroutine(BeginTurnRoutine());
     }
@@ -500,7 +572,9 @@ public class TurnBattleManager : MonoBehaviour
     {
         ShowActionButtons();
         HideAllEnemyTargetButtons();
+        HideInventoryPanel();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
     }
@@ -520,6 +594,31 @@ public class TurnBattleManager : MonoBehaviour
 
         ShowActionButtons();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
+
+        if (messageText != null && currentUnit != null)
+        {
+            messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
+        }
+    }
+
+    void CancelInventorySelection()
+    {
+        waitingForInventoryItem = false;
+        selectedAction = ActionType.None;
+
+        HideInventoryPanel();
+        HideAllEnemyTargetButtons();
+        ClearAllHighlights();
+
+        if (currentUnit != null)
+        {
+            currentUnit.SetHighlight(true);
+        }
+
+        ShowActionButtons();
+        SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         if (messageText != null && currentUnit != null)
         {
@@ -530,6 +629,7 @@ public class TurnBattleManager : MonoBehaviour
     private IEnumerator EnemyTurnRoutine()
     {
         HideActionButtons();
+        HideInventoryPanel();
         HideAllEnemyTargetButtons();
 
         messageText.text = currentUnit.unitName + " is thinking...";
@@ -660,6 +760,11 @@ public class TurnBattleManager : MonoBehaviour
 
     public void OnClickAttack()
     {
+        if (waitingForInventoryItem)
+        {
+            return;
+        }
+
         if (waitingForPlayerTarget)
         {
             if (selectedAction == ActionType.Attack)
@@ -672,13 +777,21 @@ public class TurnBattleManager : MonoBehaviour
 
         selectedAction = ActionType.Attack;
         waitingForPlayerTarget = true;
+        waitingForInventoryItem = false;
 
         ShowAvailableEnemyTargets();
+        HideInventoryPanel();
         SetAttackButtonCancel();
+        SetInventoryButtonNormal();
 
         if (skillButton != null)
         {
             skillButton.interactable = false;
+        }
+
+        if (inventoryButton != null)
+        {
+            inventoryButton.interactable = false;
         }
 
         messageText.text = "Choose an enemy to attack.";
@@ -686,6 +799,11 @@ public class TurnBattleManager : MonoBehaviour
 
     public void OnClickSkill()
     {
+        if (waitingForInventoryItem)
+        {
+            return;
+        }
+
         if (waitingForPlayerTarget)
         {
             return;
@@ -696,7 +814,19 @@ public class TurnBattleManager : MonoBehaviour
         if (currentUnit.skillType == BattleUnit.SkillType.Damage)
         {
             waitingForPlayerTarget = true;
+            waitingForInventoryItem = false;
             ShowAvailableEnemyTargets();
+            HideInventoryPanel();
+
+            if (attackButton != null)
+            {
+                attackButton.interactable = false;
+            }
+
+            if (inventoryButton != null)
+            {
+                inventoryButton.interactable = false;
+            }
 
             messageText.text = currentUnit.unitName + " skill: " + currentUnit.GetSkillDescription();
             return;
@@ -710,9 +840,12 @@ public class TurnBattleManager : MonoBehaviour
         }
 
         waitingForPlayerTarget = false;
+        waitingForInventoryItem = false;
         HideAllEnemyTargetButtons();
         HideActionButtons();
+        HideInventoryPanel();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         if (currentUnit.skillType == BattleUnit.SkillType.TeamHeal)
         {
@@ -730,6 +863,134 @@ public class TurnBattleManager : MonoBehaviour
         {
             StartCoroutine(PlayerAoERoutine());
         }
+    }
+
+    public void OnClickInventory()
+    {
+        if (battleEnded)
+        {
+            return;
+        }
+
+        if (changingRound)
+        {
+            return;
+        }
+
+        if (itemUseLocked)
+        {
+            return;
+        }
+
+        if (currentUnit == null)
+        {
+            return;
+        }
+
+        if (!currentUnit.isPlayer)
+        {
+            return;
+        }
+
+        if (waitingForPlayerTarget)
+        {
+            return;
+        }
+
+        if (waitingForInventoryItem)
+        {
+            CancelInventorySelection();
+            return;
+        }
+
+        selectedAction = ActionType.Item;
+        waitingForInventoryItem = true;
+        waitingForPlayerTarget = false;
+
+        HideAllEnemyTargetButtons();
+        ShowInventoryPanel();
+        SetAttackButtonNormal();
+        SetInventoryButtonCancel();
+
+        if (attackButton != null)
+        {
+            attackButton.interactable = false;
+        }
+
+        if (skillButton != null)
+        {
+            skillButton.interactable = false;
+        }
+
+        if (inventoryButton != null)
+        {
+            inventoryButton.interactable = true;
+        }
+
+        messageText.text = "Choose an item and drag it to a target.";
+    }
+
+    public bool CanUseInventoryItem()
+    {
+        if (battleEnded)
+        {
+            return false;
+        }
+
+        if (changingRound)
+        {
+            return false;
+        }
+
+        if (itemUseLocked)
+        {
+            return false;
+        }
+
+        if (currentUnit == null)
+        {
+            return false;
+        }
+
+        if (!currentUnit.isPlayer)
+        {
+            return false;
+        }
+
+        if (!waitingForInventoryItem)
+        {
+            return false;
+        }
+
+        return selectedAction == ActionType.Item;
+    }
+
+    public void NotifyInventoryItemUsed()
+    {
+        if (!CanUseInventoryItem())
+        {
+            return;
+        }
+
+        itemUseLocked = true;
+        selectedAction = ActionType.None;
+        waitingForInventoryItem = false;
+        waitingForPlayerTarget = false;
+
+        HideInventoryPanel();
+        HideActionButtons();
+        HideAllEnemyTargetButtons();
+        SetAttackButtonNormal();
+        SetInventoryButtonNormal();
+
+        StartCoroutine(FinishInventoryItemRoutine());
+    }
+
+    private IEnumerator FinishInventoryItemRoutine()
+    {
+        yield return new WaitForSeconds(itemUseDelay);
+
+        FinishCurrentUnitTurn();
     }
 
     public void OnSelectEnemyTarget(BattleUnit target)
@@ -788,7 +1049,9 @@ public class TurnBattleManager : MonoBehaviour
 
         HideActionButtons();
         HideAllEnemyTargetButtons();
+        HideInventoryPanel();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         StartCoroutine(PlayerAttackRoutine(target, damage, isSkillAttack));
     }
@@ -1015,8 +1278,10 @@ public class TurnBattleManager : MonoBehaviour
             battleEnded = true;
             HideActionButtons();
             HideAllEnemyTargetButtons();
+            HideInventoryPanel();
             ClearAllHighlights();
             SetAttackButtonNormal();
+            SetInventoryButtonNormal();
             messageText.text = "All players are defeated.";
 
             if (!loadingResultScene)
@@ -1042,8 +1307,10 @@ public class TurnBattleManager : MonoBehaviour
             battleEnded = true;
             HideActionButtons();
             HideAllEnemyTargetButtons();
+            HideInventoryPanel();
             ClearAllHighlights();
             SetAttackButtonNormal();
+            SetInventoryButtonNormal();
             messageText.text = "All enemies are defeated.";
 
             if (!loadingResultScene)
@@ -1059,8 +1326,10 @@ public class TurnBattleManager : MonoBehaviour
 
         HideActionButtons();
         HideAllEnemyTargetButtons();
+        HideInventoryPanel();
         ClearAllHighlights();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         messageText.text = "Round 1 cleared. Round 2 starts.";
 
@@ -1083,6 +1352,12 @@ public class TurnBattleManager : MonoBehaviour
 
         attackButton.interactable = true;
         skillButton.interactable = true;
+
+        if (inventoryButton != null)
+        {
+            inventoryButton.gameObject.SetActive(true);
+            inventoryButton.interactable = true;
+        }
     }
 
     private void HideActionButtons()
@@ -1090,7 +1365,13 @@ public class TurnBattleManager : MonoBehaviour
         attackButton.gameObject.SetActive(false);
         skillButton.gameObject.SetActive(false);
 
+        if (inventoryButton != null)
+        {
+            inventoryButton.gameObject.SetActive(false);
+        }
+
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
     }
 
     private void HideAllEnemyTargetButtons()
@@ -1135,13 +1416,17 @@ public class TurnBattleManager : MonoBehaviour
 
         changingRound = false;
         waitingForPlayerTarget = false;
+        waitingForInventoryItem = false;
+        itemUseLocked = false;
         selectedAction = ActionType.None;
         currentTurnGaveTeamShield = false;
 
         HideActionButtons();
         HideAllEnemyTargetButtons();
+        HideInventoryPanel();
         ClearAllHighlights();
         SetAttackButtonNormal();
+        SetInventoryButtonNormal();
 
         SetRound(2);
 

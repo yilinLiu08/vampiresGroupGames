@@ -23,8 +23,6 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public TextMeshProUGUI manaText;
     public TextMeshProUGUI effectText;
 
-   
-
     [Header("Drag")]
     public bool wasDroppedOnValidTarget;
 
@@ -37,6 +35,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 
     private bool isPointerInside;
     private bool tooltipVisible;
+    private bool dropCompleted;
     private Vector2 lastPointerPosition;
     private Coroutine hoverRoutine;
 
@@ -49,6 +48,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     {
         StopHoverRoutine();
         HideTooltip();
+        ClearDragIcon();
     }
 
     public void LoadData()
@@ -204,6 +204,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         HideTooltip();
 
         wasDroppedOnValidTarget = false;
+        dropCompleted = false;
 
         CreateDragIcon();
 
@@ -236,22 +237,54 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
             canvasGroup.blocksRaycasts = true;
         }
 
-        if (dragIconObject != null)
+        ClearDragIcon();
+
+        if (dropCompleted)
         {
-            Destroy(dragIconObject);
+            return;
         }
 
         if (wasDroppedOnValidTarget)
         {
-            if (inventory != null)
-            {
-                inventory.RemoveFruit(currentFruit);
-            }
+            CompleteSuccessfulDrop();
+        }
+    }
 
-            if (grid != null)
-            {
-                grid.RefreshGrid();
-            }
+    public void CompleteSuccessfulDrop()
+    {
+        if (dropCompleted)
+        {
+            return;
+        }
+
+        dropCompleted = true;
+        wasDroppedOnValidTarget = true;
+
+        if (canvasGroup)
+        {
+            canvasGroup.blocksRaycasts = true;
+        }
+
+        ClearDragIcon();
+
+        if (inventory != null)
+        {
+            inventory.RemoveFruit(currentFruit);
+        }
+
+        if (grid != null)
+        {
+            grid.RefreshGrid();
+        }
+    }
+
+    void ClearDragIcon()
+    {
+        if (dragIconObject != null)
+        {
+            Destroy(dragIconObject);
+            dragIconObject = null;
+            dragIconRect = null;
         }
     }
 
