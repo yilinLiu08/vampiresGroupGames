@@ -191,6 +191,16 @@ public class TurnBattleManager : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
 
+    bool CurrentUnitHasEnoughMana()
+    {
+        if (currentUnit == null)
+        {
+            return false;
+        }
+
+        return currentUnit.currentMana >= currentUnit.skillManaCost;
+    }
+
     void RefreshRoundSkillBoostStatusUI()
     {
         bool active = IsRoundSkillBoostActive();
@@ -579,12 +589,14 @@ public class TurnBattleManager : MonoBehaviour
         messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
     }
 
-    void CancelAttackSelection()
+    void ReturnToPlayerActionState(string customMessage)
     {
         waitingForPlayerTarget = false;
+        waitingForInventoryItem = false;
         selectedAction = ActionType.None;
 
         HideAllEnemyTargetButtons();
+        HideInventoryPanel();
         ClearAllHighlights();
 
         if (currentUnit != null)
@@ -596,34 +608,36 @@ public class TurnBattleManager : MonoBehaviour
         SetAttackButtonNormal();
         SetInventoryButtonNormal();
 
-        if (messageText != null && currentUnit != null)
+        if (messageText == null)
+        {
+            return;
+        }
+
+        if (!string.IsNullOrEmpty(customMessage))
+        {
+            messageText.text = customMessage;
+            return;
+        }
+
+        if (currentUnit != null)
         {
             messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
         }
     }
 
+    void CancelAttackSelection()
+    {
+        ReturnToPlayerActionState("");
+    }
+
+    void CancelSkillSelection()
+    {
+        ReturnToPlayerActionState("");
+    }
+
     void CancelInventorySelection()
     {
-        waitingForInventoryItem = false;
-        selectedAction = ActionType.None;
-
-        HideInventoryPanel();
-        HideAllEnemyTargetButtons();
-        ClearAllHighlights();
-
-        if (currentUnit != null)
-        {
-            currentUnit.SetHighlight(true);
-        }
-
-        ShowActionButtons();
-        SetAttackButtonNormal();
-        SetInventoryButtonNormal();
-
-        if (messageText != null && currentUnit != null)
-        {
-            messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
-        }
+        ReturnToPlayerActionState("");
     }
 
     private IEnumerator EnemyTurnRoutine()
@@ -806,6 +820,11 @@ public class TurnBattleManager : MonoBehaviour
 
         if (waitingForPlayerTarget)
         {
+            if (selectedAction == ActionType.Skill)
+            {
+                CancelSkillSelection();
+            }
+
             return;
         }
 
@@ -813,6 +832,12 @@ public class TurnBattleManager : MonoBehaviour
 
         if (currentUnit.skillType == BattleUnit.SkillType.Damage)
         {
+            if (!CurrentUnitHasEnoughMana())
+            {
+                ReturnToPlayerActionState(currentUnit.unitName + " does not have enough mana.");
+                return;
+            }
+
             waitingForPlayerTarget = true;
             waitingForInventoryItem = false;
             ShowAvailableEnemyTargets();
@@ -828,14 +853,18 @@ public class TurnBattleManager : MonoBehaviour
                 inventoryButton.interactable = false;
             }
 
+            if (skillButton != null)
+            {
+                skillButton.interactable = true;
+            }
+
             messageText.text = currentUnit.unitName + " skill: " + currentUnit.GetSkillDescription();
             return;
         }
 
         if (!currentUnit.TryUseMana())
         {
-            messageText.text = currentUnit.unitName + " does not have enough mana.";
-            selectedAction = ActionType.None;
+            ReturnToPlayerActionState(currentUnit.unitName + " does not have enough mana.");
             return;
         }
 
@@ -1021,7 +1050,7 @@ public class TurnBattleManager : MonoBehaviour
         {
             if (!currentUnit.TryUseMana())
             {
-                messageText.text = currentUnit.unitName + " does not have enough mana.";
+                ReturnToPlayerActionState(currentUnit.unitName + " does not have enough mana.");
                 return;
             }
         }

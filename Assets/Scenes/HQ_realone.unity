@@ -6626,10 +6626,16 @@ MonoBehaviour:
   messageText: {fileID: 217517481}
   attackButton: {fileID: 247949577}
   skillButton: {fileID: 1685798549}
+  inventoryButton: {fileID: 0}
   attackButtonText: {fileID: 0}
+  inventoryButtonText: {fileID: 0}
+  inventoryPanel: {fileID: 0}
   attackLabel: Attack
   cancelAttackLabel: Cancel
+  inventoryLabel: Inventory
+  cancelInventoryLabel: Cancel
   enemyActionDelay: 1
+  itemUseDelay: 0.8
   loseSceneChange: {fileID: 0}
   winSceneChange: {fileID: 0}
   resultSceneName: Story
@@ -24253,10 +24259,16 @@ MonoBehaviour:
   messageText: {fileID: 377937611469508664}
   attackButton: {fileID: 2482481372851330837}
   skillButton: {fileID: 974268775528029293}
+  inventoryButton: {fileID: 0}
   attackButtonText: {fileID: 0}
+  inventoryButtonText: {fileID: 0}
+  inventoryPanel: {fileID: 0}
   attackLabel: Attack
   cancelAttackLabel: Cancel
+  inventoryLabel: Inventory
+  cancelInventoryLabel: Cancel
   enemyActionDelay: 1
+  itemUseDelay: 0.8
   loseSceneChange: {fileID: 0}
   winSceneChange: {fileID: 0}
   resultSceneName: Story
@@ -33057,7 +33069,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 627616247457641927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8651589677323713840}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: LoadNextScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fight2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5222551403637949491
 MonoBehaviour:
   m_ObjectHideFlags: 0
