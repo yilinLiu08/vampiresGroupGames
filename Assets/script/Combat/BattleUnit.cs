@@ -49,6 +49,8 @@ public class BattleUnit : MonoBehaviour
     public Transform effectPoint;
     public GameObject attackHitEffectPrefab;
     public GameObject healEffectPrefab;
+    public Transform[] attackEffectPoints = new Transform[4];
+    public Transform[] healEffectPoints = new Transform[4];
     public float effectDestroyDelay = 2f;
 
     [Header("Status")]
@@ -204,22 +206,7 @@ public class BattleUnit : MonoBehaviour
 
     public void SpawnAttackEffectOn(BattleUnit target)
     {
-        SpawnEffectOn(target, attackHitEffectPrefab);
-    }
-
-    public void SpawnHealEffectOn(BattleUnit target)
-    {
-        SpawnEffectOn(target, healEffectPrefab);
-    }
-
-    void SpawnEffectOn(BattleUnit target, GameObject effectPrefab)
-    {
         if (target == null)
-        {
-            return;
-        }
-
-        if (effectPrefab == null)
         {
             return;
         }
@@ -231,10 +218,96 @@ public class BattleUnit : MonoBehaviour
             spawnPoint = target.transform;
         }
 
+        SpawnEffectAtPoint(attackHitEffectPrefab, spawnPoint);
+    }
+
+    public void SpawnHealEffectOn(BattleUnit target)
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        Transform spawnPoint = target.effectPoint;
+
+        if (spawnPoint == null)
+        {
+            spawnPoint = target.transform;
+        }
+
+        SpawnEffectAtPoint(healEffectPrefab, spawnPoint);
+    }
+
+    public void SpawnAttackEffectAtIndex(int index)
+    {
+        if (attackEffectPoints == null)
+        {
+            return;
+        }
+
+        if (index < 0 || index >= attackEffectPoints.Length)
+        {
+            return;
+        }
+
+        Transform spawnPoint = attackEffectPoints[index];
+
+        if (spawnPoint == null)
+        {
+            return;
+        }
+
+        SpawnEffectAtPoint(attackHitEffectPrefab, spawnPoint);
+    }
+
+    public void SpawnHealEffectAtIndex(int index)
+    {
+        if (healEffectPoints == null)
+        {
+            return;
+        }
+
+        if (index < 0 || index >= healEffectPoints.Length)
+        {
+            return;
+        }
+
+        Transform spawnPoint = healEffectPoints[index];
+
+        if (spawnPoint == null)
+        {
+            return;
+        }
+
+        SpawnEffectAtPoint(healEffectPrefab, spawnPoint);
+    }
+
+    void SpawnEffectAtPoint(GameObject effectPrefab, Transform spawnPoint)
+    {
+        if (effectPrefab == null)
+        {
+            return;
+        }
+
+        if (spawnPoint == null)
+        {
+            return;
+        }
+
         GameObject effect = Instantiate(effectPrefab, spawnPoint);
-        effect.transform.localPosition = Vector3.zero;
-        effect.transform.localRotation = Quaternion.identity;
-        effect.transform.localScale = Vector3.one;
+
+        RectTransform effectRect = effect.transform as RectTransform;
+
+        if (effectRect != null)
+        {
+            effectRect.anchoredPosition = Vector2.zero;
+            effectRect.localRotation = Quaternion.identity;
+        }
+        else
+        {
+            effect.transform.localPosition = Vector3.zero;
+            effect.transform.localRotation = Quaternion.identity;
+        }
 
         Destroy(effect, effectDestroyDelay);
     }

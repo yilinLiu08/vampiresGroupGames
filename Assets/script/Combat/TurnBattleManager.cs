@@ -569,12 +569,14 @@ public class TurnBattleManager : MonoBehaviour
 
     private IEnumerator EnemyNormalAttackRoutine()
     {
-        BattleUnit target = GetRandomAlivePlayer();
+        int targetIndex = GetRandomAlivePlayerIndex();
 
-        if (target == null)
+        if (targetIndex < 0)
         {
             yield break;
         }
+
+        BattleUnit target = players[targetIndex];
 
         ClearAllHighlights();
         currentUnit.SetHighlight(true);
@@ -586,7 +588,7 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
-        currentUnit.SpawnAttackEffectOn(target);
+        currentUnit.SpawnAttackEffectAtIndex(targetIndex);
         target.TakeDamage(currentUnit.GetAttackDamage());
 
         yield return new WaitForSeconds(0.8f);
@@ -647,7 +649,7 @@ public class TurnBattleManager : MonoBehaviour
             }
 
             players[i].SetHighlight(true);
-            currentUnit.SpawnAttackEffectOn(players[i]);
+            currentUnit.SpawnAttackEffectAtIndex(i);
             players[i].TakeDamage(currentUnit.enemyMagicDamage);
         }
 
@@ -829,7 +831,7 @@ public class TurnBattleManager : MonoBehaviour
         {
             if (!allyTeam[i].IsDead())
             {
-                currentUnit.SpawnHealEffectOn(allyTeam[i]);
+                currentUnit.SpawnHealEffectAtIndex(i);
                 allyTeam[i].Heal(currentUnit.healAmount);
             }
         }
@@ -934,25 +936,25 @@ public class TurnBattleManager : MonoBehaviour
         return currentEnemies;
     }
 
-    private BattleUnit GetRandomAlivePlayer()
+    private int GetRandomAlivePlayerIndex()
     {
-        List<BattleUnit> alivePlayers = new List<BattleUnit>();
+        List<int> alivePlayerIndexes = new List<int>();
 
         for (int i = 0; i < players.Length; i++)
         {
             if (!players[i].IsDead())
             {
-                alivePlayers.Add(players[i]);
+                alivePlayerIndexes.Add(i);
             }
         }
 
-        if (alivePlayers.Count == 0)
+        if (alivePlayerIndexes.Count == 0)
         {
-            return null;
+            return -1;
         }
 
-        int randomIndex = Random.Range(0, alivePlayers.Count);
-        return alivePlayers[randomIndex];
+        int randomIndex = Random.Range(0, alivePlayerIndexes.Count);
+        return alivePlayerIndexes[randomIndex];
     }
 
     private IEnumerator LoadLoseSceneRoutine()
@@ -1160,6 +1162,11 @@ public class TurnBattleManager : MonoBehaviour
             return false;
         }
 
-        return waitingForPlayerTarget && selectedAction == ActionType.Attack;
+        if (!waitingForPlayerTarget)
+        {
+            return false;
+        }
+
+        return selectedAction == ActionType.Attack || selectedAction == ActionType.Skill;
     }
 }
