@@ -18355,6 +18355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cf91b932da64a428859f8cf1c66a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurnBattleManager
+  battleLevel: 1
   players:
   - {fileID: 3681763398187783063}
   - {fileID: 4950556436950619536}

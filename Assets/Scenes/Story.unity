@@ -407,10 +407,10 @@ MonoBehaviour:
   fightoneWin: Win
   fightoneLose: Lose
   pregame: Pregame
-  fighttwoWin: Win2
-  fighttwoLose: Lose2
-  fightthreeWin: Win3
-  fightthreeLose: Lose3
+  fighttwoWin: NPCFight2Win
+  fighttwoLose: NPCFight2Lose
+  fightthreeWin: NPCFight3Win
+  fightthreeLose: NPCFight3Lose
 --- !u!1 &280098943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,10 +1265,10 @@ MonoBehaviour:
   fightoneWin: Win
   fightoneLose: Lose
   pregame: Pregame
-  fighttwoWin: Win2
-  fighttwoLose: Lose2
-  fightthreeWin: Win3
-  fightthreeLose: Lose3
+  fighttwoWin: NPCFight2Win
+  fighttwoLose: NPCFight2Lose
+  fightthreeWin: NPCFight3Win
+  fightthreeLose: NPCFight3Lose
 --- !u!4 &1766153710
 Transform:
   m_ObjectHideFlags: 0

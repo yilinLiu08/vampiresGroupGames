@@ -17,6 +17,16 @@ public class TurnBattleManager : MonoBehaviour
         Item
     }
 
+    public enum BattleLevel
+    {
+        Level1,
+        Level2,
+        Level3
+    }
+
+    [Header("Battle Level")]
+    public BattleLevel battleLevel = BattleLevel.Level1;
+
     [Header("Players")]
     public BattleUnit[] players = new BattleUnit[4];
 
@@ -199,6 +209,21 @@ public class TurnBattleManager : MonoBehaviour
         }
 
         return currentUnit.currentMana >= currentUnit.skillManaCost;
+    }
+
+    int GetBattleLevelNumber()
+    {
+        if (battleLevel == BattleLevel.Level1)
+        {
+            return 1;
+        }
+
+        if (battleLevel == BattleLevel.Level2)
+        {
+            return 2;
+        }
+
+        return 3;
     }
 
     void RefreshRoundSkillBoostStatusUI()
@@ -1255,11 +1280,25 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(resultSceneDelay);
 
+        int fightNumber = GetBattleLevelNumber();
+
         if (loseSceneChange != null)
         {
-            loseSceneChange.LoadNextScene(resultSceneName);
+            loseSceneChange.LoadBattleResultScene(fightNumber, false, resultSceneName);
             yield break;
         }
+
+        SceneChange sceneChange = FindObjectOfType<SceneChange>();
+
+        if (sceneChange != null)
+        {
+            sceneChange.LoadBattleResultScene(fightNumber, false, resultSceneName);
+            yield break;
+        }
+
+        PlayerPrefs.SetInt("LastFightNumber", fightNumber);
+        PlayerPrefs.SetInt("LastFightWon", 0);
+        PlayerPrefs.Save();
 
         SceneManager.LoadScene(resultSceneName);
     }
@@ -1270,11 +1309,25 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(resultSceneDelay);
 
+        int fightNumber = GetBattleLevelNumber();
+
         if (winSceneChange != null)
         {
-            winSceneChange.LoadNextScene(resultSceneName);
+            winSceneChange.LoadBattleResultScene(fightNumber, true, resultSceneName);
             yield break;
         }
+
+        SceneChange sceneChange = FindObjectOfType<SceneChange>();
+
+        if (sceneChange != null)
+        {
+            sceneChange.LoadBattleResultScene(fightNumber, true, resultSceneName);
+            yield break;
+        }
+
+        PlayerPrefs.SetInt("LastFightNumber", fightNumber);
+        PlayerPrefs.SetInt("LastFightWon", 1);
+        PlayerPrefs.Save();
 
         SceneManager.LoadScene(resultSceneName);
     }

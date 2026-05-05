@@ -440,3 +440,31 @@ Dahlia: Vera, you’re so sappy. Let’s get on with it and win already.
 <<HQ DialogueSystem>>
 
 ===
+
+title:NPCFight2Win
+---
+Yilin: level2hehehehe
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+===
+
+title:NPCFight2Lose
+---
+Yilin: level2NONONO
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+===
+
+title:NPCFight3Win
+---
+Yilin: 3 hehehehe
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+===
+
+title:NPCFight3Lose
+---
+Yilin: 3 NONONONO
+<<resetScaleLeft PortraitContainerLeft>>
+<<HQ DialogueSystem>>
+===
