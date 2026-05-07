@@ -1,54 +1,95 @@
 ﻿title:Win
 ---
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: WE DID IT! Aw yeah~ Woo yeah~ We did it yeahhh~
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Do you ever shut that mouth of yours??
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: I’d worry more about yours. You’ll be missing a couple teeth soon, pretty boy.
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: What the hell???
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: O-oh no! Lili… You’re still bleeding…!
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Hm?
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Mmph…  (HEARTBEAT)
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: A-ack! That stings… Those damn leeches got me good.
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Your blood tastes so sweet, Lili~
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Whenever you guys do this, I CAN’T WATCH!!!
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: You FREAKS! I hate gay lesbians. 
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Loveday, are you good? Your eye is twitching a bit. 
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Hm? Oh, yeah. I stayed up all night keeping watch, but it’s okay, since I am The Anti-Sleep. 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: W-Why didn’t you tell me earlier? I could’ve concocted something for you…
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Are we just gonna ignore that he called himself “The Anti-Sleep”???
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Don’t speak ill of me. I’m going to refer to page 20 of the <i>Squad Communing Handbook-</i>  (CRINKLE)
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: FUCK THIS BOOK!!! AGHH!!  (SPLASH)
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: MY BOOK…!
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Oh wow, that went flying! Oh… Wow… Now it’s sinking in that pond over there.
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Lawrence, it’s okay! Y-you can take some pages out of my Human Journal and rewrite those squad rules yourself!   (BOOK_OPEN)
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Your what? 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: You know, the book where I jot down all my findings. 
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Uh… anyways… My brothers would’ve loved to see our fight! 
 Vera: Oh. There’s still some werewolf residue on my dagger.  (CLOTH1)
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Ack! Why are you wiping it on your skirt?? It takes hours to wash that out, you know?! <i>(I spent so long making that for you…)</i>
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: OH Puh-lease. Take a chill pill… This stuff will only get dirtier the more we fight.
-Vera: Imagine how many more vampires I’m gonna poke with my dagger, hehehe…
+Vera: Imagine how many more vampires I’m gonna poke with my dagger, 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: It’s like when we first met…! Remember, Lili? 
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Oh yeah! Didn’t you guys travel together for a bit before joining this squad?  (QUESTION)
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Uhhh… Yeah…
 
 
 DHALIA CUTSCENE!!!!
-
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: …And then Elsie over here was EATING my damn brother. 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Nnghhh…! I was nottttt!!!! >_<
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Okay. Just kidding. Elsie was tending to his wounds. That’s how we first met.
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: AWW, how romantic!  (INTEREST)
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: …Dahlia? 
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Hm? 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Santhe doesn’t know you’re doing this, does he?  (QUESTION)
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: No. I just told him half of it. I may have lied a little too.
 Dahlia: Besides, it’s better that way. If he finds out one day that I’ve been slaughtered by some lousy vampires, he might do something stupid. 
 Dahlia: Better to let him think I died to a pack of wolves. 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: …Don’t say that. 
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Say what? 
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Don’t say that like you’re going to die. Like you’re going to leave me alone. Like you’re going to leave everyone alone. 
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: …
+<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: She’s just being realistic. We barely got out of that alive.
+<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: :(
 
 
@@ -198,35 +239,35 @@ Loveday: Haven’t you been a vampire longer than me and Dahlia? How’s your hu
 <<PlaySound audio Vera_Wow>>
 Vera: Hey… it’s been years since I ate this good.
 Vera: But check out all this energy that tasty blood gave me! WHEEEE!!!
-<<resetScaleRight PortraitContainerRight>>
+<<changeNPCImageRight PortraitContainerRight "empty">>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 << PlaySound audio Dahlia_Curious>>
 Dahlia: And… she ran off.
 <<resetScaleLeft PortraitContainerLeft>>
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<changeNPCImageRight PortraitContainerRight "LovedayMadR">>
 <<PlaySound audio Loveday_Agree>>
 Loveday: Oh…my… Well. Forget it. It’s not like anyone knows that I broke the rules.
-<<resetScaleLeft PortraitContainerLeft>>
+<<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 << PlaySound audio Dahlia_Awkward>>
 Dahlia: You broke rules? What rules?
 <<resetScaleLeft PortraitContainerLeft>>
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<changeNPCImageRight PortraitContainerRight "LovedayMadR">>
 <<PlaySound audio Loveday_Realize>>
 Loveday: Ahem. I’m referring to the first rule in the <i>Squad Communing Handbook.</i> “Rule 1: Squad leaders must attempt to keep all squad members within eyeshot.”
-<<resetScaleLeft PortraitContainerLeft>>
+<<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Boi you broke the next five too, if I’m reading things corre-
 <<resetScaleLeft PortraitContainerLeft>>
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<changeNPCImageRight PortraitContainerRight "LovedayMadR">>
 Loveday: “Rule 67: Squad leader is permitted to backhand ill-tempered squad members at any time without warning.”
-<<resetScaleLeft PortraitContainerLeft>>
+<<resetScaleRight PortraitContainerRight>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 << PlaySound audio Dahlia_Disgust>>
