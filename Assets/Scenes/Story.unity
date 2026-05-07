@@ -212,6 +212,30 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 791336545582589345, guid: 71a05c75149cdb6449d5c717f2a301b9, type: 3}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2958262986520364887, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -763,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.size
-      value: 19
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[0].clip
@@ -920,10 +944,58 @@ PrefabInstance:
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[19].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 338d911c66af1454183ccebcfc2f7fa5, type: 3}
+      objectReference: {fileID: 8300000, guid: 5a2bac1ef3ceba94e8e659b4b6102da8, type: 3}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[19].name
-      value: Loveday_Bother
+      value: Elsie_Worried
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7716c1cc54a34b7428b85bf0bb6f6e3f, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[20].name
+      value: Elsie_Happy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 16ae678994ac61047baf194355177e33, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[21].name
+      value: Elsie_Scared
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 93e8b1848180b2c4fb455167b0e34f79, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[22].name
+      value: Elsie_Sob
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[23].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ec12757ccd78ba4898759817c34d479, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[23].name
+      value: Elsie_Hesitant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[24].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1df6046fd7128ff48aeeaed51391e68b, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[24].name
+      value: Elsie_Uncomfy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[25].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1df6046fd7128ff48aeeaed51391e68b, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[25].name
+      value: Elsie_Uncomfy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1265,10 +1337,10 @@ MonoBehaviour:
   fightoneWin: Win
   fightoneLose: Lose
   pregame: Pregame
-  fighttwoWin: NPCFight2Win
-  fighttwoLose: NPCFight2Lose
-  fightthreeWin: NPCFight3Win
-  fightthreeLose: NPCFight3Lose
+  fighttwoWin: Win2
+  fighttwoLose: Lose2
+  fightthreeWin: Win3
+  fightthreeLose: Lose3
 --- !u!4 &1766153710
 Transform:
   m_ObjectHideFlags: 0
