@@ -1,55 +1,62 @@
 ﻿title:Win
 ---
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-Vera: Whew, oh man. I thought we were absolutely done for. 
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: ….!
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
-Vera: Whew, oh man. I thought we were absolutely done for. 
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
-Elsie: What… I’m all out of elixir...
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: What?! 
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
-Dahlia: Pff… I’m just sayin… Did you really give it your all?
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+Vera: WE DID IT! Aw yeah~ Woo yeah~ We did it yeahhh~
 Loveday: Do you ever shut that mouth of yours??
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: I’d worry more about yours. You’ll be missing a couple teeth soon, pretty boy.
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+Loveday: What the hell???
 Elsie: O-oh no! Lili… You’re still bleeding…!
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Hm?
-<<resetScaleLeft PortraitContainerLeft>>
-
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
-Elsie: Mmph…
-<<resetScaleRight PortraitContainerRight>>
-
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Elsie: Mmph…  (HEARTBEAT)
 Dahlia: A-ack! That stings… Those damn leeches got me good.
-<<resetScaleLeft PortraitContainerLeft>>
+Elsie: Your blood tastes so sweet, Lili~
+Vera: Whenever you guys do this, I CAN’T WATCH!!!
+Loveday: You FREAKS! I hate gay lesbians. 
+Dahlia: Loveday, are you good? Your eye is twitching a bit. 
+Loveday: Hm? Oh, yeah. I stayed up all night keeping watch, but it’s okay, since I am The Anti-Sleep. 
+Elsie: W-Why didn’t you tell me earlier? I could’ve concocted something for you…
+Dahlia: Are we just gonna ignore that he called himself “The Anti-Sleep”???
+Loveday: Don’t speak ill of me. I’m going to refer to page 20 of the <i>Squad Communing Handbook-</i>  (CRINKLE)
+Dahlia: FUCK THIS BOOK!!! AGHH!!  (SPLASH)
+Loveday: MY BOOK…!
+Vera: Oh wow, that went flying! Oh… Wow… Now it’s sinking in that pond over there.
+Elsie: Lawrence, it’s okay! Y-you can take some pages out of my Human Journal and rewrite those squad rules yourself!   (BOOK_OPEN)
+Loveday: Your what? 
+Elsie: You know, the book where I jot down all my findings. 
+Vera: Uh… anyways… My brothers would’ve loved to see our fight! 
+Vera: Oh. There’s still some werewolf residue on my dagger.  (CLOTH1)
+Dahlia: Ack! Why are you wiping it on your skirt?? It takes hours to wash that out, you know?! <i>(I spent so long making that for you…)</i>
+Vera: OH Puh-lease. Take a chill pill… This stuff will only get dirtier the more we fight.
+Vera: Imagine how many more vampires I’m gonna poke with my dagger, hehehe…
+Elsie: It’s like when we first met…! Remember, Lili? 
+Vera: Oh yeah! Didn’t you guys travel together for a bit before joining this squad?  (QUESTION)
+Dahlia: Uhhh… Yeah…
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
-Loveday: THIS STORY IS IN PROGRESS
+
+DHALIA CUTSCENE!!!!
+
+Dahlia: …And then Elsie over here was EATING my damn brother. 
+Elsie: Nnghhh…! I was nottttt!!!! >_<
+Dahlia: Okay. Just kidding. Elsie was tending to his wounds. That’s how we first met.
+Vera: AWW, how romantic!  (INTEREST)
+Elsie: …Dahlia? 
+Dahlia: Hm? 
+Elsie: Santhe doesn’t know you’re doing this, does he?  (QUESTION)
+Dahlia: No. I just told him half of it. I may have lied a little too.
+Dahlia: Besides, it’s better that way. If he finds out one day that I’ve been slaughtered by some lousy vampires, he might do something stupid. 
+Dahlia: Better to let him think I died to a pack of wolves. 
+Elsie: …Don’t say that. 
+Dahlia: Say what? 
+Elsie: Don’t say that like you’re going to die. Like you’re going to leave me alone. Like you’re going to leave everyone alone. 
+Dahlia: …
+Loveday: She’s just being realistic. We barely got out of that alive.
+Elsie: :(
+
+
+elSIE CUTSCENE
+
+
+
+
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
 ===
@@ -441,28 +448,95 @@ Dahlia: Vera, you’re so sappy. Let’s get on with it and win already.
 
 ===
 
-title:NPCFight2Win
+title:Win2
 ---
-Yilin: level2hehehehe
+Vera: <i>Mmmph. Mmmmph.</i>   (SLURP)
+Vera: Ahem. Dahlia? This could honestly use some seasoning. 
+Dahlia: Okay. Do you want to eat it raw next time? 
+Vera: Should I be honest?  (QUESTION)
+Elsie: Mmmmmh…. Lili, feed me…
+Dahlia: Open wide. 
+Elsie: …Mm! <i>So soft and warm…</i>
+Elsie: I heard humans have a larger food palate compared to vampires… I'm curious if there are any foods you guys miss eating…
+Dahlia: Huh, it’s something I never thought about before.
+Vera: <b>REALLY???</b> I think about it all the time!!!
+Vera: Tessian barbecue… Concetta ham…  (INTEREST)
+Vera: Whenever my brothers and I smelled Mom’s meat stew, we practically floated over to the kitchen!
+Dahlia: Ah… Stop making me any more hungry than I am, Vera.
+Loveday: Well, I suppose sharing meals as a human proved to be more of a bonding thing.
+Loveday: Most of the foods I think about are meals shared with loved ones.
+Elsie: Mm…. I see. 
+Elsie: Lili, you like it when we eat together like this?
+Dahlia: Yeah, <i>especially</i> with you.
+Loveday: <b>EW GAY LESBIANS!</b>  (DREAD)
+Dahlia: Santhe and I used to catch beetles that were as big as our heads. 
+Vera: OH MAN, I would’ve loved to see one of those. 
+Dahlia: We’d go and show our mom… fun times.
+Loveday: Sorry, what does this have to do with food?  (QUESTION)
+Dahlia: Glad you asked. After we caught those beetles… we’d throw ‘em in a pot and EAT ‘em.
+Loveday: Oh.
+Vera: You’re talking about the famous Cindbrook stew! Wow, the delicacies of the world! When I turn back into a human, I want to traverse the lands and eat it all!
+Elsie: Oooh wait, are we telling stories? Lili, my turn!  
+Elsie: Once upon a time, there was a cute little girl in a dark, dark forest. She was sooo alone and scared. I mean, who wouldn’t be in a forest that dark and quiet? 
+Elsie: T-Then, there was a loud WHOOOSH! And standing before her was a tall… pretty… tasty….. woma-  (HEARTBEAT)
+Dahlia: C’mon Elsie, you know that’s not how it went. 
+Dahlia: Damn, it’s kind of chilly once you step away from this fire.  (CLOTH1)
+Loveday: You are quite literally wearing the thinnest dress in the world right now. 
+Dahlia: You think I can’t tell that you’re cold too? You’d fit perfectly in my village’s farm with all those goosebumps running down your arms.  
+Vera: Oh wow, you guys would have <i>HATED</i> the Port Concetta breeze.
+Vera: No one in my town wore hats because the coastal winds would blow them right off.
+Elsie: Port Concetta sounds kinda fun, actually~ You think we could visit sometime? I’d like to conduct some research over there…
+Vera: Oh, haha… Yeaahh! It’s probably a little quieter than before over there. Well, honestly I don’t know. It’s been well over 10 years since I've been there. 
+Dahlia: Well, I’m down to visit too. I’m sure your brothers will be excited to have you back home. 
+Vera: …Haha…
+Vera: Can I…
+Vera: Can I be honest with you guys for a second…?
+
+
+VERA CUTSCENE
+Loveday: …
+Elsie: Vera…
+Dahlia: Vera, I’m sorry. I didn’t mean to-
+Vera: It’s okay, Dahlia! You didn’t know. My family would’ve loved to have you guys over!  (IDEA_DING)
+Vera: Somewhere out there, they’re watching over me and seeing the same beautiful sights and hearing the same wonderful sounds. 
+Vera: …You guys remind me of my brothers. We didn’t get along all the time, but we’d watch each other's backs. They were all truly my best friends.
+Vera: With that being said… I’m going to keep fighting the good fight, AND NO ONE WILL DIE BEHIND MY SHIELD!!! <b> FOR PORT CONCETTA, MY FAMILY, AND THE SQUAD! </b> (DREAD)
+Elsie: F-For the squad!!!
+Loveday: I’m not saying that. 
+Dahlia: Dude, I can’t believe we never had a squad name.
+Vera: Uhhh…….. What about <i>”The Queerest Ferantays”</i> ?  (THUD)
+Elsie: Oh! It has a ring to it, heheh…  (INTEREST)
+Dahlia: What the hell is that even supposed to mean? You just strung some gobbledygook together. 
+Elsie: …If Dahlia doesn’t like it, then I don’t like it! Hmph!
+Vera: Then what about…
+Loveday: <i>(I haven’t been at ease in a while.)</i>
+Loveday: <i>(Four individuals, who were never destined to meet… are somehow sitting around a fire together.)</i>
+Loveday: <i>(Laughing. Chatting. Talking about their past lives.)</i>
+Loveday: <i>(I wonder what the future holds for us.)</i>
+
+
+
+
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
 ===
 
-title:NPCFight2Lose
+title:poop2
 ---
 Yilin: level2NONONO
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
 ===
 
-title:NPCFight3Win
+
+title:Win3
 ---
-Yilin: 3 hehehehe
+
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
 ===
 
-title:NPCFight3Lose
+title:poop3
 ---
 Yilin: 3 NONONONO
 <<resetScaleLeft PortraitContainerLeft>>

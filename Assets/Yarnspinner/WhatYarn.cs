@@ -10,11 +10,17 @@ public class WhatYarn : MonoBehaviour
     public string fightoneLose = "Lose";
     public string pregame = "Pregame";
 
-    public string fighttwoWin = "NPCFight2Win";
+    // public string fighttwoWin = "NPCFight2Win";
+    //public string fighttwoLose = "Lose2";
+
+    // public string fightthreeWin = "NPCFight3Win";
+    // public string fightthreeLose = "NPCFight3Lose";
+
+    public string fighttwoWin = "Win2";
     public string fighttwoLose = "Lose2";
 
-    public string fightthreeWin = "NPCFight3Win";
-    public string fightthreeLose = "NPCFight3Lose";
+    public string fightthreeWin = "Win3";
+    public string fightthreeLose = "Lose3";
 
     void Start()
     {
