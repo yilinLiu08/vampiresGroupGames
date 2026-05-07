@@ -578,70 +578,194 @@ Dahlia: Vera, you’re so sappy. Let’s get on with it and win already.
 
 title:Win2
 ---
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: <i>Mmmph. Mmmmph.</i>   (SLURP)
 Vera: Ahem. Dahlia? This could honestly use some seasoning. 
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Okay. Do you want to eat it raw next time? 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Should I be honest?  (QUESTION)
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Mmmmmh…. Lili, feed me…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Open wide. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: …Mm! <i>So soft and warm…</i>
 Elsie: I heard humans have a larger food palate compared to vampires… I'm curious if there are any foods you guys miss eating…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Huh, it’s something I never thought about before.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: <b>REALLY???</b> I think about it all the time!!!
 Vera: Tessian barbecue… Concetta ham…  (INTEREST)
 Vera: Whenever my brothers and I smelled Mom’s meat stew, we practically floated over to the kitchen!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Ah… Stop making me any more hungry than I am, Vera.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Well, I suppose sharing meals as a human proved to be more of a bonding thing.
 Loveday: Most of the foods I think about are meals shared with loved ones.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Mm…. I see. 
 Elsie: Lili, you like it when we eat together like this?
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Yeah, <i>especially</i> with you.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: <b>EW GAY LESBIANS!</b>  (DREAD)
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Santhe and I used to catch beetles that were as big as our heads. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: OH MAN, I would’ve loved to see one of those. 
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: We’d go and show our mom… fun times.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Sorry, what does this have to do with food?  (QUESTION)
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Glad you asked. After we caught those beetles… we’d throw ‘em in a pot and EAT ‘em.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Oh.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: You’re talking about the famous Cindbrook stew! Wow, the delicacies of the world! When I turn back into a human, I want to traverse the lands and eat it all!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Oooh wait, are we telling stories? Lili, my turn!  
 Elsie: Once upon a time, there was a cute little girl in a dark, dark forest. She was sooo alone and scared. I mean, who wouldn’t be in a forest that dark and quiet? 
 Elsie: T-Then, there was a loud WHOOOSH! And standing before her was a tall… pretty… tasty….. woma-  (HEARTBEAT)
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: C’mon Elsie, you know that’s not how it went. 
 Dahlia: Damn, it’s kind of chilly once you step away from this fire.  (CLOTH1)
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: You are quite literally wearing the thinnest dress in the world right now. 
-Dahlia: You think I can’t tell that you’re cold too? You’d fit perfectly in my village’s farm with all those goosebumps running down your arms.  
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+Dahlia: You think I can’t tell that you’re cold too? You’d fit perfectly in my village’s farm with all those goosebumps running down your arms. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Oh wow, you guys would have <i>HATED</i> the Port Concetta breeze.
 Vera: No one in my town wore hats because the coastal winds would blow them right off.
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Port Concetta sounds kinda fun, actually~ You think we could visit sometime? I’d like to conduct some research over there…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Oh, haha… Yeaahh! It’s probably a little quieter than before over there. Well, honestly I don’t know. It’s been well over 10 years since I've been there. 
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Well, I’m down to visit too. I’m sure your brothers will be excited to have you back home. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: …Haha…
 Vera: Can I…
 Vera: Can I be honest with you guys for a second…?
+<<resetScaleRight PortraitContainerRight>>
 
 
-VERA CUTSCENE
+Vera: VERA CUTSCENE
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: …
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Vera…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Vera, I’m sorry. I didn’t mean to-
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: It’s okay, Dahlia! You didn’t know. My family would’ve loved to have you guys over!  (IDEA_DING)
 Vera: Somewhere out there, they’re watching over me and seeing the same beautiful sights and hearing the same wonderful sounds. 
 Vera: …You guys remind me of my brothers. We didn’t get along all the time, but we’d watch each other's backs. They were all truly my best friends.
 Vera: With that being said… I’m going to keep fighting the good fight, AND NO ONE WILL DIE BEHIND MY SHIELD!!! <b> FOR PORT CONCETTA, MY FAMILY, AND THE SQUAD! </b> (DREAD)
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: F-For the squad!!!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: I’m not saying that. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Dude, I can’t believe we never had a squad name.
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Uhhh…….. What about <i>”The Queerest Ferantays”</i> ?  (THUD)
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Oh! It has a ring to it, heheh…  (INTEREST)
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: What the hell is that even supposed to mean? You just strung some gobbledygook together. 
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: …If Dahlia doesn’t like it, then I don’t like it! Hmph!
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Then what about…
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: <i>(I haven’t been at ease in a while.)</i>
 Loveday: <i>(Four individuals, who were never destined to meet… are somehow sitting around a fire together.)</i>
 Loveday: <i>(Laughing. Chatting. Talking about their past lives.)</i>
 Loveday: <i>(I wonder what the future holds for us.)</i>
-
+<<resetScaleLeft PortraitContainerLeft>>
 
 
 
@@ -659,6 +783,62 @@ Yilin: level2NONONO
 
 title:Win3
 ---
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: <i>Huff huf huf…</i>  (WALK)
+Loveday: We’re here. The castle entrance.
+Dahlia: Ugh… Elsie needs her rest. 
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Hmm… She’s clearly not <i>The Anti-Sleep.</i>  (THUD)
+Dahlia: Enough with that shit.
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: OW! VERA! You’re carrying me all wrong.
+Vera: What’s the right way to do it? Like this? 
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: NO! STOP! STOP TOUCHING- AHHHH! 
+Vera: You’re just so dang heavy, Loveday! 
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Gee, thanks. 
+Dahlia: Pff. 
+Elsie: H-Hey, guys? Did we win? Where are we?  (QUESTION)
+Dahlia: Poor thing. Rise and shine. 
+Elsie: This is so embarrassing! 
+Vera: Woah, Elsie! Where’d the rest of your body go?!  (DREAD)
+Elsie: Put me back together, please!
+Dahlia: Sorry… there’s just…. nothing left.
+Elsie: <b>WHAT!!!!</b>  (THUD)
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Your body was in a bazillion pieces back there, it was unsalvageable. 
+Elsie: W-wuh… Don’t let go of me, Lili! I think I’m getting motion sick. I’m gonna faint… Wuughh… <i>H-HURK!!!</i>
+Vera: <b>NO! WAKE UP! WAKE UP ELSIE! ELSIEEEE!!!!!!!!</i>  (DREAD)
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Quiet! Your voice is piercing! 
+Vera: Piercing what?
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: …
+Dahlia: We’re so close guys. 
+Dahlia: Just past that gate and a little bit more… and then we’re finally at Claredon. 
+Vera: It better be a challenge this time! I heard Claredon guards have to master 10 different weapon techniques before they’re officially guards…
+Elsie: E-Eeeeep! I don’t even think I’ve seen 10 weapons in my life…! But… I’m more prepared now! 
+Vera: What will you guys do when y’all get cured?  (IDEA_DING)
+Dahlia: When I turn back into a human, I’m going to go back and tell Santhe about all my adventures. Then, I’ll run away with Elsie. We’ll live in a small cottage. 
+Vera: Wow, you have everything planned out! When I turn back, I’m probably going to travel the seas and meet all different kinds of people. Man, oh man do I miss the sun on my skin…
+Vera: What about you, Loveday? 
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: Me? Well… I’d go back to Gailstad. Continue living my life as if nothing ever happened.
+Elsie: When you turn back into a human, Lili, I’m gonna… I’m gonna let you use me however you want!  (HEARTBEAT)
+Dahlia: Shouldn’t have said that here, but I’m ready. 
+Vera: How much longer are we going to stand here for? I’m ready to bust down that door crazy style!
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+Loveday: What are we waiting for then? Let’s go. 
 
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
