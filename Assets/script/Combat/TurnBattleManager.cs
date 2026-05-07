@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using Yarn.Unity;
 
 public class TurnBattleManager : MonoBehaviour
 {
@@ -63,6 +65,16 @@ public class TurnBattleManager : MonoBehaviour
     public float enemyActionDelay = 1f;
     public float itemUseDelay = 0.8f;
 
+    [Header("Round Events")]
+    public UnityEvent onRound2Start;
+
+    [Header("Round 2 Dialogue")]
+    public DialogueRunner dialogueRunner;
+    public string level1Round2Node = "Round2OfFight1";
+    public string level2Round2Node = "Round2OfFight2";
+    public string level3Round2Node = "Round2OfFight3";
+    public bool waitForRound2DialogueToFinish = true;
+
     [Header("Scene Change")]
     public SceneChange loseSceneChange;
     public SceneChange winSceneChange;
@@ -84,6 +96,7 @@ public class TurnBattleManager : MonoBehaviour
     private bool changingRound = false;
     private bool loadingResultScene = false;
     private bool currentTurnGaveTeamShield = false;
+    private bool round2StartEventTriggered = false;
 
     private float roundSkillBoostMultiplier = 1f;
     private int roundSkillBoostExpireCycle = -1;
@@ -372,6 +385,53 @@ public class TurnBattleManager : MonoBehaviour
         return null;
     }
 
+    private void TriggerRound2StartEvent()
+    {
+        if (round2StartEventTriggered)
+        {
+            return;
+        }
+
+        round2StartEventTriggered = true;
+        onRound2Start.Invoke();
+        StartRound2Dialogue();
+    }
+
+    private void StartRound2Dialogue()
+    {
+        if (dialogueRunner == null)
+        {
+            return;
+        }
+
+        if (dialogueRunner.IsDialogueRunning)
+        {
+            return;
+        }
+
+        dialogueRunner.StartDialogue(GetRound2DialogueNode());
+    }
+
+    private string GetRound2DialogueNode()
+    {
+        if (battleLevel == BattleLevel.Level1)
+        {
+            return level1Round2Node;
+        }
+
+        if (battleLevel == BattleLevel.Level2)
+        {
+            return level2Round2Node;
+        }
+
+        if (battleLevel == BattleLevel.Level3)
+        {
+            return level3Round2Node;
+        }
+
+        return level1Round2Node;
+    }
+
     private void SetRound(int round)
     {
         currentRound = round;
@@ -388,6 +448,8 @@ public class TurnBattleManager : MonoBehaviour
 
         if (round == 1)
         {
+            round2StartEventTriggered = false;
+
             currentEnemies = round1Enemies;
             turnOrder = round1TurnOrder;
             SetEnemyGroupActive(round1Enemies, true);
@@ -403,6 +465,11 @@ public class TurnBattleManager : MonoBehaviour
         RefreshRoundSkillBoostStatusUI();
         HideAllEnemyTargetButtons();
         HideInventoryPanel();
+
+        if (round == 2)
+        {
+            TriggerRound2StartEvent();
+        }
     }
 
     private void SetEnemyGroupActive(BattleUnit[] group, bool value)
@@ -1423,6 +1490,14 @@ public class TurnBattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        if (waitForRound2DialogueToFinish && dialogueRunner != null)
+        {
+            while (dialogueRunner.IsDialogueRunning)
+            {
+                yield return null;
+            }
+        }
+
         changingRound = false;
         StartTurn();
     }
@@ -1513,6 +1588,22 @@ public class TurnBattleManager : MonoBehaviour
         SetRound(2);
 
         messageText.text = "Round 2 starts.";
+
+        if (waitForRound2DialogueToFinish && dialogueRunner != null && dialogueRunner.IsDialogueRunning)
+        {
+            StartCoroutine(StartTurnAfterRound2DialogueRoutine());
+            return;
+        }
+
+        StartTurn();
+    }
+
+    private IEnumerator StartTurnAfterRound2DialogueRoutine()
+    {
+        while (dialogueRunner.IsDialogueRunning)
+        {
+            yield return null;
+        }
 
         StartTurn();
     }

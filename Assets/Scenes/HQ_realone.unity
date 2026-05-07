@@ -6637,6 +6637,14 @@ MonoBehaviour:
   cancelInventoryLabel: Cancel
   enemyActionDelay: 1
   itemUseDelay: 0.8
+  onRound2Start:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueRunner: {fileID: 0}
+  level1Round2Node: Round2OfFight1
+  level2Round2Node: Round2OfFight2
+  level3Round2Node: Round2OfFight3
+  waitForRound2DialogueToFinish: 1
   loseSceneChange: {fileID: 0}
   winSceneChange: {fileID: 0}
   resultSceneName: Story
@@ -24443,6 +24451,14 @@ MonoBehaviour:
   cancelInventoryLabel: Cancel
   enemyActionDelay: 1
   itemUseDelay: 0.8
+  onRound2Start:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueRunner: {fileID: 0}
+  level1Round2Node: Round2OfFight1
+  level2Round2Node: Round2OfFight2
+  level3Round2Node: Round2OfFight3
+  waitForRound2DialogueToFinish: 1
   loseSceneChange: {fileID: 0}
   winSceneChange: {fileID: 0}
   resultSceneName: Story
@@ -37390,11 +37406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4b9eaaba4f6dc408521defe6cef129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FruitInventory
-  fruits:
-  - {fileID: 11400000, guid: 356559a85c2a1a04683f8bd786c7ee76, type: 2}
-  - {fileID: 11400000, guid: 356559a85c2a1a04683f8bd786c7ee76, type: 2}
-  - {fileID: 11400000, guid: 22075a0ec1947b94d8b71db506775ccd, type: 2}
-  - {fileID: 11400000, guid: 2558701b6acb26f42806b45fbb71cb3c, type: 2}
+  fruits: []
 --- !u!1 &7676719888078033760
 GameObject:
   m_ObjectHideFlags: 0
