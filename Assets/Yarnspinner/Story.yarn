@@ -2,98 +2,185 @@
 ---
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: WE DID IT! Aw yeah~ Woo yeah~ We did it yeahhh~
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Do you ever shut that mouth of yours??
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
 Dahlia: I’d worry more about yours. You’ll be missing a couple teeth soon, pretty boy.
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: What the hell???
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: O-oh no! Lili… You’re still bleeding…!
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Hm?
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 Elsie: Mmph…  (HEARTBEAT)
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 Dahlia: A-ack! That stings… Those damn leeches got me good.
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 Elsie: Your blood tastes so sweet, Lili~
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
 Vera: Whenever you guys do this, I CAN’T WATCH!!!
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<resetScaleRight PortraitContainerRight>>
+
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: You FREAKS! I hate gay lesbians. 
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Loveday, are you good? Your eye is twitching a bit. 
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: Hm? Oh, yeah. I stayed up all night keeping watch, but it’s okay, since I am The Anti-Sleep. 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: W-Why didn’t you tell me earlier? I could’ve concocted something for you…
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 Dahlia: Are we just gonna ignore that he called himself “The Anti-Sleep”???
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Don’t speak ill of me. I’m going to refer to page 20 of the <i>Squad Communing Handbook-</i>  (CRINKLE)
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 Dahlia: FUCK THIS BOOK!!! AGHH!!  (SPLASH)
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: MY BOOK…!
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Oh wow, that went flying! Oh… Wow… Now it’s sinking in that pond over there.
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Lawrence, it’s okay! Y-you can take some pages out of my Human Journal and rewrite those squad rules yourself!   (BOOK_OPEN)
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: Your what? 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: You know, the book where I jot down all my findings. 
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Uh… anyways… My brothers would’ve loved to see our fight! 
 Vera: Oh. There’s still some werewolf residue on my dagger.  (CLOTH1)
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Ack! Why are you wiping it on your skirt?? It takes hours to wash that out, you know?! <i>(I spent so long making that for you…)</i>
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: OH Puh-lease. Take a chill pill… This stuff will only get dirtier the more we fight.
 Vera: Imagine how many more vampires I’m gonna poke with my dagger, 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 Elsie: It’s like when we first met…! Remember, Lili? 
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: Oh yeah! Didn’t you guys travel together for a bit before joining this squad?  (QUESTION)
+<<resetScaleRight PortraitContainerRight>>
+
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Uhhh… Yeah…
+<<resetScaleLeft PortraitContainerLeft>>
 
 
-DHALIA CUTSCENE!!!!
+
+Loveday: DHALIA CUTSCENE!!!! uhhhh
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: …And then Elsie over here was EATING my damn brother. 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: Nnghhh…! I was nottttt!!!! >_<
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
 Dahlia: Okay. Just kidding. Elsie was tending to his wounds. That’s how we first met.
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: AWW, how romantic!  (INTEREST)
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleRight PortraitContainerRight>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: …Dahlia? 
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Hm? 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: Santhe doesn’t know you’re doing this, does he?  (QUESTION)
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: No. I just told him half of it. I may have lied a little too.
 Dahlia: Besides, it’s better that way. If he finds out one day that I’ve been slaughtered by some lousy vampires, he might do something stupid. 
 Dahlia: Better to let him think I died to a pack of wolves. 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: …Don’t say that. 
+<<resetScaleRight PortraitContainerRight>>
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Say what? 
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 Elsie: Don’t say that like you’re going to die. Like you’re going to leave me alone. Like you’re going to leave everyone alone. 
+<<resetScaleRight PortraitContainerRight>>
+
+
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: …
+<<resetScaleLeft PortraitContainerLeft>>
+
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 Loveday: She’s just being realistic. We barely got out of that alive.
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+<<resetScaleLeft PortraitContainerLeft>>
+
+
+<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 Elsie: :(
 
 
-elSIE CUTSCENE
+dahlia: elSIE CUTSCENE
 
 
 
@@ -112,7 +199,7 @@ Dahlia: <b>DAMMIT!</b>
 <<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 <<PlaySound audio Loveday_Angry>>
 Loveday: The technique was impeccable… just how did the guy swing like that? 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<resetScaleLeft PortraitContainerLeft>>
 
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Disgust>>
