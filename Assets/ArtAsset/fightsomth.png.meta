@@ -1,0 +1,1937 @@
+fileFormatVersion: 2
+guid: 3949cd92fd08c5747a6f62884ffd4dd8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2903272470692374973
+    second: fightsomth_0
+  - first:
+      213: 6306084432803773014
+    second: fightsomth_1
+  - first:
+      213: 8731632623019622838
+    second: fightsomth_2
+  - first:
+      213: 5820454411520586943
+    second: fightsomth_3
+  - first:
+      213: -734022248617137682
+    second: fightsomth_4
+  - first:
+      213: 1455434875314522200
+    second: fightsomth_5
+  - first:
+      213: 5349893693315923840
+    second: fightsomth_6
+  - first:
+      213: 8021923488218817780
+    second: fightsomth_7
+  - first:
+      213: 305025219364852967
+    second: fightsomth_8
+  - first:
+      213: -1792015865849003887
+    second: fightsomth_9
+  - first:
+      213: 629157297205834751
+    second: fightsomth_10
+  - first:
+      213: 8634826116917708600
+    second: fightsomth_11
+  - first:
+      213: -2824201502200637294
+    second: fightsomth_12
+  - first:
+      213: 8783889647683317167
+    second: fightsomth_13
+  - first:
+      213: -8611160107981483872
+    second: fightsomth_14
+  - first:
+      213: -8745591935450713743
+    second: fightsomth_15
+  - first:
+      213: 6224221123689649004
+    second: fightsomth_16
+  - first:
+      213: 2566088753821947914
+    second: fightsomth_17
+  - first:
+      213: -8423500736191370431
+    second: fightsomth_18
+  - first:
+      213: -7142434141469566334
+    second: fightsomth_19
+  - first:
+      213: 7952564292631118438
+    second: fightsomth_20
+  - first:
+      213: 1753856104723646847
+    second: fightsomth_21
+  - first:
+      213: -117735765578874422
+    second: fightsomth_22
+  - first:
+      213: -4054075388430634274
+    second: fightsomth_23
+  - first:
+      213: 8961744347900452504
+    second: fightsomth_24
+  - first:
+      213: -7428659996523231384
+    second: fightsomth_25
+  - first:
+      213: 1660090223540380871
+    second: fightsomth_26
+  - first:
+      213: 7776893581004356829
+    second: fightsomth_27
+  - first:
+      213: -2954179795533105355
+    second: fightsomth_28
+  - first:
+      213: -6743198754582147345
+    second: fightsomth_29
+  - first:
+      213: -1503781190721310326
+    second: fightsomth_30
+  - first:
+      213: -242899401088230425
+    second: fightsomth_31
+  - first:
+      213: -4304809169750981571
+    second: fightsomth_32
+  - first:
+      213: 4666823339770379056
+    second: fightsomth_33
+  - first:
+      213: -6479869029566380936
+    second: fightsomth_34
+  - first:
+      213: 1091751617992905592
+    second: fightsomth_35
+  - first:
+      213: 7196118473636154613
+    second: fightsomth_36
+  - first:
+      213: 1200370971061335334
+    second: fightsomth_37
+  - first:
+      213: -3539846479573863206
+    second: fightsomth_38
+  - first:
+      213: -4860006974881794949
+    second: fightsomth_39
+  - first:
+      213: -8729541415352136459
+    second: fightsomth_40
+  - first:
+      213: -5955969953652172536
+    second: fightsomth_41
+  - first:
+      213: -5134286468445120130
+    second: fightsomth_42
+  - first:
+      213: 894143642827883510
+    second: fightsomth_43
+  - first:
+      213: -8958986367408029734
+    second: fightsomth_44
+  - first:
+      213: 6052678584909310280
+    second: fightsomth_45
+  - first:
+      213: 8141485710939697749
+    second: fightsomth_46
+  - first:
+      213: 1983100717761340514
+    second: fightsomth_47
+  - first:
+      213: -692874735160905587
+    second: fightsomth_48
+  - first:
+      213: 2287447000265417329
+    second: fightsomth_49
+  - first:
+      213: -950404869194314286
+    second: fightsomth_50
+  - first:
+      213: 7135246497892395578
+    second: fightsomth_51
+  - first:
+      213: -7250814504822020162
+    second: fightsomth_52
+  - first:
+      213: -236544720379742111
+    second: fightsomth_53
+  - first:
+      213: -7819436509445691514
+    second: fightsomth_54
+  - first:
+      213: 6897433655657550895
+    second: fightsomth_55
+  - first:
+      213: 63796670518020492
+    second: fightsomth_56
+  - first:
+      213: 7743547222672284681
+    second: fightsomth_57
+  - first:
+      213: -6823366331596387322
+    second: fightsomth_58
+  - first:
+      213: 6049481881853596106
+    second: fightsomth_59
+  - first:
+      213: -2528696648675630067
+    second: fightsomth_60
+  - first:
+      213: 7273520114727203788
+    second: fightsomth_61
+  - first:
+      213: 7268690875290388441
+    second: fightsomth_62
+  - first:
+      213: 532023799660758101
+    second: fightsomth_63
+  - first:
+      213: -4253823562317292360
+    second: fightsomth_64
+  - first:
+      213: -6841789218980437788
+    second: fightsomth_65
+  - first:
+      213: 6570765155502802818
+    second: fightsomth_66
+  - first:
+      213: 7718523572995294609
+    second: fightsomth_67
+  - first:
+      213: 8675462491491955112
+    second: fightsomth_68
+  - first:
+      213: -3912841546994395718
+    second: fightsomth_69
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fightsomth_0
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 2490
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db92acd0eee7a4820800000000000000
+      internalID: 2903272470692374973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_1
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1989
+        width: 250
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ab3ec6166b38750800000000000000
+      internalID: 6306084432803773014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_2
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2060
+        width: 214
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b10c44cb9dfc2970800000000000000
+      internalID: 8731632623019622838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_3
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 2279
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb43a0ef27866c050800000000000000
+      internalID: 5820454411520586943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1751
+        width: 258
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee921f567aa30d5f0800000000000000
+      internalID: -734022248617137682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_5
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1584
+        width: 437
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85846d0de4eb23410800000000000000
+      internalID: 1455434875314522200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_6
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2037
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fb23818f3ae3a40800000000000000
+      internalID: 5349893693315923840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_7
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1960
+        width: 125
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f425aa19e8935f60800000000000000
+      internalID: 8021923488218817780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_8
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1708
+        width: 266
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e417c722daab3400800000000000000
+      internalID: 305025219364852967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_9
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 2018
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190c434801b7127e0800000000000000
+      internalID: -1792015865849003887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_10
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1692
+        width: 224
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff37cc77a373bb800800000000000000
+      internalID: 629157297205834751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_11
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1767
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8374524aa9015d770800000000000000
+      internalID: 8634826116917708600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_12
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1788
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298d43f62bb6ec8d0800000000000000
+      internalID: -2824201502200637294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_13
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 1785
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad25647815a6e970800000000000000
+      internalID: 8783889647683317167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_14
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 1794
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0dfb371830f7880800000000000000
+      internalID: -8611160107981483872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_15
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1780
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17170f8887a61a680800000000000000
+      internalID: -8745591935450713743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_16
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 1777
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6311097220e06650800000000000000
+      internalID: 6224221123689649004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_17
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1775
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a089ea930249c9320800000000000000
+      internalID: 2566088753821947914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_18
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 1769
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b6216c5b6b91b80800000000000000
+      internalID: -8423500736191370431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_19
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 1682
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a95169df9f0ec90800000000000000
+      internalID: -7142434141469566334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_20
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 1756
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662cbb3f61f2d5e60800000000000000
+      internalID: 7952564292631118438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_21
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 1489
+        width: 60
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79043db5d2f65810800000000000000
+      internalID: 1753856104723646847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_22
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1730
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1005be1f7bd5ef0800000000000000
+      internalID: -117735765578874422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_23
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 1729
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed230f3e9e70db7c0800000000000000
+      internalID: -4054075388430634274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_24
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 1724
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e9878c0038e5c70800000000000000
+      internalID: 8961744347900452504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_25
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1715
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8670416871918e890800000000000000
+      internalID: -7428659996523231384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_26
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1708
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c429354343d90710800000000000000
+      internalID: 1660090223540380871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_27
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 1621
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcb7c712831deb60800000000000000
+      internalID: 7776893581004356829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_28
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1632
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537fc9cb025a007d0800000000000000
+      internalID: -2954179795533105355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_29
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1637
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee464fa5785b62a0800000000000000
+      internalID: -6743198754582147345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_30
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1634
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81742379fe712be0800000000000000
+      internalID: -1503781190721310326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_31
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 1641
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb1bf9184c01acf0800000000000000
+      internalID: -242899401088230425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_32
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1613
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3406233ede3244c0800000000000000
+      internalID: -4304809169750981571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_33
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1516
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bf3840a13e3c040800000000000000
+      internalID: 4666823339770379056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_34
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1598
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87404ad0371e216a0800000000000000
+      internalID: -6479869029566380936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_35
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 1596
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873dc6def4ea62f00800000000000000
+      internalID: 1091751617992905592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_36
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1593
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc85b600afbdd360800000000000000
+      internalID: 7196118473636154613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_37
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1614
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6253dc0d90398a010800000000000000
+      internalID: 1200370971061335334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_38
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1578
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad43599b160ffdec0800000000000000
+      internalID: -3539846479573863206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_39
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1605
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74ff30e769cd8cb0800000000000000
+      internalID: -4860006974881794949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_40
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1606
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc00e575507ad680800000000000000
+      internalID: -8729541415352136459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_41
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1354
+        width: 23
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80999ab12e4285da0800000000000000
+      internalID: -5955969953652172536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_42
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1332
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79db39d8a95fb8b0800000000000000
+      internalID: -5134286468445120130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_43
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1327
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f30ee0e7e2a86c00800000000000000
+      internalID: 894143642827883510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_44
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 1319
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adfb3179d594ba380800000000000000
+      internalID: -8958986367408029734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_45
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 1284
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8492221ca1f6ff350800000000000000
+      internalID: 6052678584909310280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_46
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 1306
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552ba706e1e5cf070800000000000000
+      internalID: 8141485710939697749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_47
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1261
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264acfb8893658b10800000000000000
+      internalID: 1983100717761340514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_48
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1246
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8034e0791a6266f0800000000000000
+      internalID: -692874735160905587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_49
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 1259
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1726a556de4aebf10800000000000000
+      internalID: 2287447000265417329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_50
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1234
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd0fd29ecb7fc2f0800000000000000
+      internalID: -950404869194314286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_51
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1266
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ae9bbb2ec750360800000000000000
+      internalID: 7135246497892395578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_52
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1258
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb765d3df9eef5b90800000000000000
+      internalID: -7250814504822020162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_53
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1256
+        width: 221
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168754084df97bcf0800000000000000
+      internalID: -236544720379742111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_54
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 1305
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687e4ce7ce7cb7390800000000000000
+      internalID: -7819436509445691514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_55
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1353
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24da4b9d5b98bf50800000000000000
+      internalID: 6897433655657550895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_56
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 1336
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89441cdbb6a2e000800000000000000
+      internalID: 63796670518020492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_57
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 1331
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c18d40c2b967b60800000000000000
+      internalID: 7743547222672284681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_58
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 1297
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c46d029788e41a0800000000000000
+      internalID: -6823366331596387322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_59
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1298
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac19b0358b314f350800000000000000
+      internalID: 6049481881853596106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_60
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 1259
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04e7feabc348ecd0800000000000000
+      internalID: -2528696648675630067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_61
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 1523
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc339f0f10cb0f460800000000000000
+      internalID: 7273520114727203788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_62
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1279
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d78ec307d39fd460800000000000000
+      internalID: 7268690875290388441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_63
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 1068
+        width: 89
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55445d6b3d0226700800000000000000
+      internalID: 532023799660758101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_64
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 1349
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc14eef10267f4c0800000000000000
+      internalID: -4253823562317292360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_65
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 1344
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0e29664f41d01a0800000000000000
+      internalID: -6841789218980437788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_66
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1316
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2874244781c003b50800000000000000
+      internalID: 6570765155502802818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_67
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 1281
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1950dde8b44bd1b60800000000000000
+      internalID: 7718523572995294609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_68
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 1278
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a17a93eb2f656870800000000000000
+      internalID: 8675462491491955112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsomth_69
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 1240
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab55209185bc2b9c0800000000000000
+      internalID: -3912841546994395718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fightsomth_0: 2903272470692374973
+      fightsomth_1: 6306084432803773014
+      fightsomth_10: 629157297205834751
+      fightsomth_11: 8634826116917708600
+      fightsomth_12: -2824201502200637294
+      fightsomth_13: 8783889647683317167
+      fightsomth_14: -8611160107981483872
+      fightsomth_15: -8745591935450713743
+      fightsomth_16: 6224221123689649004
+      fightsomth_17: 2566088753821947914
+      fightsomth_18: -8423500736191370431
+      fightsomth_19: -7142434141469566334
+      fightsomth_2: 8731632623019622838
+      fightsomth_20: 7952564292631118438
+      fightsomth_21: 1753856104723646847
+      fightsomth_22: -117735765578874422
+      fightsomth_23: -4054075388430634274
+      fightsomth_24: 8961744347900452504
+      fightsomth_25: -7428659996523231384
+      fightsomth_26: 1660090223540380871
+      fightsomth_27: 7776893581004356829
+      fightsomth_28: -2954179795533105355
+      fightsomth_29: -6743198754582147345
+      fightsomth_3: 5820454411520586943
+      fightsomth_30: -1503781190721310326
+      fightsomth_31: -242899401088230425
+      fightsomth_32: -4304809169750981571
+      fightsomth_33: 4666823339770379056
+      fightsomth_34: -6479869029566380936
+      fightsomth_35: 1091751617992905592
+      fightsomth_36: 7196118473636154613
+      fightsomth_37: 1200370971061335334
+      fightsomth_38: -3539846479573863206
+      fightsomth_39: -4860006974881794949
+      fightsomth_4: -734022248617137682
+      fightsomth_40: -8729541415352136459
+      fightsomth_41: -5955969953652172536
+      fightsomth_42: -5134286468445120130
+      fightsomth_43: 894143642827883510
+      fightsomth_44: -8958986367408029734
+      fightsomth_45: 6052678584909310280
+      fightsomth_46: 8141485710939697749
+      fightsomth_47: 1983100717761340514
+      fightsomth_48: -692874735160905587
+      fightsomth_49: 2287447000265417329
+      fightsomth_5: 1455434875314522200
+      fightsomth_50: -950404869194314286
+      fightsomth_51: 7135246497892395578
+      fightsomth_52: -7250814504822020162
+      fightsomth_53: -236544720379742111
+      fightsomth_54: -7819436509445691514
+      fightsomth_55: 6897433655657550895
+      fightsomth_56: 63796670518020492
+      fightsomth_57: 7743547222672284681
+      fightsomth_58: -6823366331596387322
+      fightsomth_59: 6049481881853596106
+      fightsomth_6: 5349893693315923840
+      fightsomth_60: -2528696648675630067
+      fightsomth_61: 7273520114727203788
+      fightsomth_62: 7268690875290388441
+      fightsomth_63: 532023799660758101
+      fightsomth_64: -4253823562317292360
+      fightsomth_65: -6841789218980437788
+      fightsomth_66: 6570765155502802818
+      fightsomth_67: 7718523572995294609
+      fightsomth_68: 8675462491491955112
+      fightsomth_69: -3912841546994395718
+      fightsomth_7: 8021923488218817780
+      fightsomth_8: 305025219364852967
+      fightsomth_9: -1792015865849003887
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

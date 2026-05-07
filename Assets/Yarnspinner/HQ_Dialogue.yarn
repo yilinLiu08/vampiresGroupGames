@@ -2,9 +2,10 @@
 ---
 Jude: Hey! Y'all finally made it! I was startin' to get worried there.
 Jude: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
-Jude: It's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
-Loveday: Thanks for this, really.
--> (Let's see what Jude's got.)
+Loveday: What can I offer in exchange?
+Jude: Maybe snaggin' a few coins from those damn guards can work! I saw them down to the right!
+Jude: But it's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
+-> Sure thing.
     <<open_shop Player>>
 -> I think we're good for now.
 ===
@@ -13,9 +14,9 @@ title:NPCFight1Win
 ---
 Jude: Hey. I got new stuff for ya! Wanna check it out?
 Loveday: What is it?
-Jude: It's GARLIC!!!!
+Jude: It's garlic! Pretty proten for vampires~
 <<unlock_garlic Player>>    
--> Sure gimme garlic.
+-> Why not.
     <<open_shop Player>>
 -> I'm okay.
 ===

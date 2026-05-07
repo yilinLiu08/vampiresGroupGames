@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: d5a9f9adb299c2144b0f37913d24a264
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5563265072547197689
+    second: fightsued_0
+  - first:
+      213: -8237195926580461031
+    second: fightsued_1
+  - first:
+      213: -1089929224790161994
+    second: fightsued_2
+  - first:
+      213: 280518754429507773
+    second: fightsued_3
+  - first:
+      213: -4860172615007765919
+    second: fightsued_4
+  - first:
+      213: 2037621651866611472
+    second: fightsued_5
+  - first:
+      213: 5991582337075707735
+    second: fightsued_6
+  - first:
+      213: -5463509777896225879
+    second: fightsued_7
+  - first:
+      213: 4160489981486000564
+    second: fightsued_8
+  - first:
+      213: 9040959251746135953
+    second: fightsued_9
+  - first:
+      213: -7652103006124963733
+    second: fightsued_10
+  - first:
+      213: 4045560420948949722
+    second: fightsued_11
+  - first:
+      213: 7467752409658590649
+    second: fightsued_12
+  - first:
+      213: -4200600797511882343
+    second: fightsued_13
+  - first:
+      213: 4989206966863618788
+    second: fightsued_14
+  - first:
+      213: 3747663752714646413
+    second: fightsued_15
+  - first:
+      213: -1980455603347485676
+    second: fightsued_16
+  - first:
+      213: -1520063244419605207
+    second: fightsued_17
+  - first:
+      213: -1396620901447156054
+    second: fightsued_18
+  - first:
+      213: -8807243718936904899
+    second: fightsued_19
+  - first:
+      213: -4119446193363462610
+    second: fightsued_20
+  - first:
+      213: -4511202758142903247
+    second: fightsued_21
+  - first:
+      213: 7531678527442705588
+    second: fightsued_22
+  - first:
+      213: 1976851373708398915
+    second: fightsued_23
+  - first:
+      213: 8348102699522331906
+    second: fightsued_24
+  - first:
+      213: -5135244354786488400
+    second: fightsued_25
+  - first:
+      213: 6920847679311009363
+    second: fightsued_26
+  - first:
+      213: 422815547073474248
+    second: fightsued_27
+  - first:
+      213: 6691348318182209798
+    second: fightsued_28
+  - first:
+      213: 7051145166898024545
+    second: fightsued_29
+  - first:
+      213: 3119213352669400710
+    second: fightsued_30
+  - first:
+      213: -3808434857621458662
+    second: fightsued_31
+  - first:
+      213: 1330523065073688179
+    second: fightsued_32
+  - first:
+      213: -1031506388543645295
+    second: fightsued_33
+  - first:
+      213: -2928634606727482476
+    second: fightsued_34
+  - first:
+      213: -7973994125481395709
+    second: fightsued_35
+  - first:
+      213: -7234183019768619564
+    second: fightsued_36
+  - first:
+      213: 3783277394390639605
+    second: fightsued_37
+  - first:
+      213: -8066192306463509402
+    second: fightsued_38
+  - first:
+      213: -1879517025309151157
+    second: fightsued_39
+  - first:
+      213: 1537823096154119358
+    second: fightsued_40
+  - first:
+      213: -2913296782173635736
+    second: fightsued_41
+  - first:
+      213: 7067574380464558014
+    second: fightsued_42
+  - first:
+      213: 7158501219283996887
+    second: fightsued_43
+  - first:
+      213: -305489366049579712
+    second: fightsued_44
+  - first:
+      213: 5396533063986277150
+    second: fightsued_45
+  - first:
+      213: 8121361582206155648
+    second: fightsued_46
+  - first:
+      213: 7573496606938644785
+    second: fightsued_47
+  - first:
+      213: 6561141277982382292
+    second: fightsued_48
+  - first:
+      213: -2791272926993890173
+    second: fightsued_49
+  - first:
+      213: 111751603685023
+    second: fightsued_50
+  - first:
+      213: -7460380689966949939
+    second: fightsued_51
+  - first:
+      213: -60889032606544502
+    second: fightsued_52
+  - first:
+      213: 1273774574920092563
+    second: fightsued_53
+  - first:
+      213: 6565045856770289122
+    second: fightsued_54
+  - first:
+      213: -7666953957621639166
+    second: fightsued_55
+  - first:
+      213: 7118941930246196582
+    second: fightsued_56
+  - first:
+      213: 8142488095640940349
+    second: fightsued_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fightsued_0
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 203
+        width: 971
+        height: 1211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f27388ab10b43d40800000000000000
+      internalID: 5563265072547197689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_1
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 804
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91280e282f99fad80800000000000000
+      internalID: -8237195926580461031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_2
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 828
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5c01e052bcfd0f0800000000000000
+      internalID: -1089929224790161994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_3
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 814
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db81b96225a94e300800000000000000
+      internalID: 280518754429507773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_4
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 677
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a7167c1c23d8cb0800000000000000
+      internalID: -4860172615007765919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_5
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 687
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f672ab816174c10800000000000000
+      internalID: 2037621651866611472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_6
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 688
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ff6eb0460662350800000000000000
+      internalID: 5991582337075707735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_7
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 598
+        width: 34
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a34f9dcdc6bd24b0800000000000000
+      internalID: -5463509777896225879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_8
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 667
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b96b0e48970db930800000000000000
+      internalID: 4160489981486000564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_9
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 641
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f1c15d980f77d70800000000000000
+      internalID: 9040959251746135953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_10
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 517
+        width: 60
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b680937cbd44ec590800000000000000
+      internalID: -7652103006124963733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_11
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 561
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adaba00c4c7b42830800000000000000
+      internalID: 4045560420948949722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_12
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 592
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b584403049c2a760800000000000000
+      internalID: 7467752409658590649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_13
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 585
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999e41594d774b5c0800000000000000
+      internalID: -4200600797511882343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_14
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 146
+        width: 301
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e26fca6d493d3540800000000000000
+      internalID: 4989206966863618788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_15
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 584
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83f92eb350620430800000000000000
+      internalID: 3747663752714646413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_16
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 585
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c8a052f120484e0800000000000000
+      internalID: -1980455603347485676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_17
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 430
+        width: 114
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ddd386886a7eae0800000000000000
+      internalID: -1520063244419605207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_18
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 594
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae3b5390b43e9ce0800000000000000
+      internalID: -1396620901447156054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_19
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 584
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bb97a108266c580800000000000000
+      internalID: -8807243718936904899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_20
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 599
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e265c3d4389c4d6c0800000000000000
+      internalID: -4119446193363462610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_21
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 570
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c312b2efcf461c0800000000000000
+      internalID: -4511202758142903247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_22
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 570
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcd8a657b5e58860800000000000000
+      internalID: 7531678527442705588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_23
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 568
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341d1afb9df2f6b10800000000000000
+      internalID: 1976851373708398915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_24
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 560
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2051281dc2b6ad370800000000000000
+      internalID: 8348102699522331906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_25
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 548
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf0f1e8772fbb8b0800000000000000
+      internalID: -5135244354786488400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_26
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 541
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3565bedcb4acb0060800000000000000
+      internalID: 6920847679311009363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_27
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 549
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cea3d8ff742ed500800000000000000
+      internalID: 422815547073474248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_28
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 534
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60978a5d7d17cdc50800000000000000
+      internalID: 6691348318182209798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_29
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 528
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1605ba4bb23bad160800000000000000
+      internalID: 7051145166898024545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_30
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 518
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ec388940ca94b20800000000000000
+      internalID: 3119213352669400710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_31
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 494
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11f149cca8b52bc0800000000000000
+      internalID: -3808434857621458662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_32
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 487
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e5e23ada7f67210800000000000000
+      internalID: 1330523065073688179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_33
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 405
+        width: 44
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1995f4f976a5fa1f0800000000000000
+      internalID: -1031506388543645295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_34
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 481
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493b71d77566b57d0800000000000000
+      internalID: -2928634606727482476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_35
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 469
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a31a5479ea65190800000000000000
+      internalID: -7973994125481395709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_36
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 464
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd57823fd40b9b90800000000000000
+      internalID: -7234183019768619564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_37
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 445
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f36b6bdeb6e08430800000000000000
+      internalID: 3783277394390639605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_38
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 443
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664f04375d02f0090800000000000000
+      internalID: -8066192306463509402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_39
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 426
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40362d393d9ae5e0800000000000000
+      internalID: -1879517025309151157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_40
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 414
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc58ad45f1775510800000000000000
+      internalID: 1537823096154119358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_41
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 410
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b704d0304e197d0800000000000000
+      internalID: -2913296782173635736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_42
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 397
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebfcd331471151260800000000000000
+      internalID: 7067574380464558014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_43
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 394
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d09f9b7eea185360800000000000000
+      internalID: 7158501219283996887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_44
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 355
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d94f54a0fa2cbf0800000000000000
+      internalID: -305489366049579712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_45
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 366
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b6d89ca3654ea40800000000000000
+      internalID: 5396533063986277150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_46
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 357
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bf6e7845fd4b070800000000000000
+      internalID: 8121361582206155648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_47
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 364
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1314434b9077a1960800000000000000
+      internalID: 7573496606938644785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_48
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 339
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8da4bda3bdd0b50800000000000000
+      internalID: 6561141277982382292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_49
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 327
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3844d5bcf086349d0800000000000000
+      internalID: -2791272926993890173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_50
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 193
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9604a233a5600000800000000000000
+      internalID: 111751603685023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_51
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 202
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9165d0a47677890800000000000000
+      internalID: -7460380689966949939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_52
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 209
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d05c85fbda72ff0800000000000000
+      internalID: -60889032606544502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_53
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 214
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b49062a3b5da110800000000000000
+      internalID: 1273774574920092563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_54
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 207
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed61f27c6abb1b50800000000000000
+      internalID: 6565045856770289122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_55
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 197
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208dfae2ff1899590800000000000000
+      internalID: -7666953957621639166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_56
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 205
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d45f0c7ff8bc260800000000000000
+      internalID: 7118941930246196582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fightsued_57
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 151
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f668048cdeff070800000000000000
+      internalID: 8142488095640940349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fightsued_0: 5563265072547197689
+      fightsued_1: -8237195926580461031
+      fightsued_10: -7652103006124963733
+      fightsued_11: 4045560420948949722
+      fightsued_12: 7467752409658590649
+      fightsued_13: -4200600797511882343
+      fightsued_14: 4989206966863618788
+      fightsued_15: 3747663752714646413
+      fightsued_16: -1980455603347485676
+      fightsued_17: -1520063244419605207
+      fightsued_18: -1396620901447156054
+      fightsued_19: -8807243718936904899
+      fightsued_2: -1089929224790161994
+      fightsued_20: -4119446193363462610
+      fightsued_21: -4511202758142903247
+      fightsued_22: 7531678527442705588
+      fightsued_23: 1976851373708398915
+      fightsued_24: 8348102699522331906
+      fightsued_25: -5135244354786488400
+      fightsued_26: 6920847679311009363
+      fightsued_27: 422815547073474248
+      fightsued_28: 6691348318182209798
+      fightsued_29: 7051145166898024545
+      fightsued_3: 280518754429507773
+      fightsued_30: 3119213352669400710
+      fightsued_31: -3808434857621458662
+      fightsued_32: 1330523065073688179
+      fightsued_33: -1031506388543645295
+      fightsued_34: -2928634606727482476
+      fightsued_35: -7973994125481395709
+      fightsued_36: -7234183019768619564
+      fightsued_37: 3783277394390639605
+      fightsued_38: -8066192306463509402
+      fightsued_39: -1879517025309151157
+      fightsued_4: -4860172615007765919
+      fightsued_40: 1537823096154119358
+      fightsued_41: -2913296782173635736
+      fightsued_42: 7067574380464558014
+      fightsued_43: 7158501219283996887
+      fightsued_44: -305489366049579712
+      fightsued_45: 5396533063986277150
+      fightsued_46: 8121361582206155648
+      fightsued_47: 7573496606938644785
+      fightsued_48: 6561141277982382292
+      fightsued_49: -2791272926993890173
+      fightsued_5: 2037621651866611472
+      fightsued_50: 111751603685023
+      fightsued_51: -7460380689966949939
+      fightsued_52: -60889032606544502
+      fightsued_53: 1273774574920092563
+      fightsued_54: 6565045856770289122
+      fightsued_55: -7666953957621639166
+      fightsued_56: 7118941930246196582
+      fightsued_57: 8142488095640940349
+      fightsued_6: 5991582337075707735
+      fightsued_7: -5463509777896225879
+      fightsued_8: 4160489981486000564
+      fightsued_9: 9040959251746135953
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

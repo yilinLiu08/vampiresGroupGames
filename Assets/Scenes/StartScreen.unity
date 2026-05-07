@@ -400,8 +400,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.41
 --- !u!222 &304677563
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c51024f33a2944a73d854d4e2c1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleBackgroundParallax
-  parallaxStrength: 0.7
+  parallaxStrength: 0.4
   smoothSpeed: 5
 --- !u!1 &824105772
 GameObject:
@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c51024f33a2944a73d854d4e2c1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleBackgroundParallax
-  parallaxStrength: 0.4
+  parallaxStrength: 0.2
   smoothSpeed: 5
 --- !u!1 &1387236695
 GameObject:
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c51024f33a2944a73d854d4e2c1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleBackgroundParallax
-  parallaxStrength: 0.1
+  parallaxStrength: 0.06
   smoothSpeed: 5
 --- !u!1 &1862126851
 GameObject:
