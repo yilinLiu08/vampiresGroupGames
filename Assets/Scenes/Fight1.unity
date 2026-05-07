@@ -2442,6 +2442,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353681506}
   m_CullTransparentMesh: 1
+--- !u!114 &365154143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+  m_PrefabInstance: {fileID: 43782336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &373487912
 GameObject:
   m_ObjectHideFlags: 0
@@ -13792,7 +13803,7 @@ Transform:
   m_GameObject: {fileID: 7129367324607706739}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69, y: 99, z: -3015}
+  m_LocalPosition: {x: -69, y: 126.5, z: -3015}
   m_LocalScale: {x: 50.477802, y: 50.477802, z: 50.477802}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16620,18 +16631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e9012adb253a48964add974bf7547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedColor
-  startDelay: 0
-  totalDuration: 2
-  blinkInterval: 0.15
-  graphic: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  hasGraphic: 0
-  hasSpriteRenderer: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!1 &5041983157212660087
 GameObject:
   m_ObjectHideFlags: 0
@@ -17764,7 +17763,7 @@ Transform:
   m_GameObject: {fileID: 5892033775223071712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: -29, z: -3015}
+  m_LocalPosition: {x: -7, y: -1.5000038, z: -3015}
   m_LocalScale: {x: 50.477802, y: 50.477802, z: 50.477802}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17812,8 +17811,8 @@ MonoBehaviour:
   isPlayer: 1
   maxHP: 100
   currentHP: 100
-  attackDamage: 35
-  skillDamage: 35
+  attackDamage: 30
+  skillDamage: 50
   maxMana: 100
   currentMana: 100
   skillManaCost: 30
@@ -18165,7 +18164,7 @@ Transform:
   m_GameObject: {fileID: 7276233847560024576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -157, y: -21, z: -3015}
+  m_LocalPosition: {x: -157, y: 6.499996, z: -3015}
   m_LocalScale: {x: 50.477802, y: 50.477802, z: 50.477802}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18221,18 +18220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e9012adb253a48964add974bf7547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedColor
-  startDelay: 0
-  totalDuration: 2
-  blinkInterval: 1
-  graphic: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  hasGraphic: 0
-  hasSpriteRenderer: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!1 &7052464320740608115
 GameObject:
   m_ObjectHideFlags: 0
@@ -18348,7 +18335,7 @@ Transform:
   m_GameObject: {fileID: 2519551751648549716}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: -24.7, z: -3330}
+  m_LocalPosition: {x: 15, y: -0.22728157, z: -3330}
   m_LocalScale: {x: 36.93157, y: 36.93157, z: 36.93157}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18561,6 +18548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cf91b932da64a428859f8cf1c66a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurnBattleManager
+  battleLevel: 0
   players:
   - {fileID: 3681763398187783063}
   - {fileID: 4950556436950619536}
@@ -18606,6 +18594,14 @@ MonoBehaviour:
   cancelInventoryLabel: Cancel
   enemyActionDelay: 1
   itemUseDelay: 0.8
+  onRound2Start:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueRunner: {fileID: 365154143}
+  level1Round2Node: Round2OfFight1
+  level2Round2Node: Round2OfFight2
+  level3Round2Node: Round2OfFight3
+  waitForRound2DialogueToFinish: 1
   loseSceneChange: {fileID: 804825721}
   winSceneChange: {fileID: 1949458411}
   resultSceneName: Story
@@ -18910,7 +18906,7 @@ Transform:
   m_GameObject: {fileID: 6537908275897680362}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 119, y: 102, z: -3015}
+  m_LocalPosition: {x: 119, y: 129.5, z: -3015}
   m_LocalScale: {x: 50.477802, y: 50.477802, z: 50.477802}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19177,18 +19173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e9012adb253a48964add974bf7547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedColor
-  startDelay: 0
-  totalDuration: 2
-  blinkInterval: 0.15
-  graphic: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  hasGraphic: 0
-  hasSpriteRenderer: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!224 &8233489326356520417
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19310,18 +19294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e9012adb253a48964add974bf7547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedColor
-  startDelay: 0
-  totalDuration: 2
-  blinkInterval: 0.15
-  graphic: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  hasGraphic: 0
-  hasSpriteRenderer: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!1 &8461285676384483381
 GameObject:
   m_ObjectHideFlags: 0
@@ -19598,18 +19570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e9012adb253a48964add974bf7547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedColor
-  startDelay: 0
-  totalDuration: 2
-  blinkInterval: 0.15
-  graphic: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  hasGraphic: 0
-  hasSpriteRenderer: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!224 &9095291229070967661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19720,18 +19680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3e9012adb253a48964add974bf7547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedColor
-  startDelay: 0
-  totalDuration: 2
-  blinkInterval: 0.15
-  graphic: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  hasGraphic: 0
-  hasSpriteRenderer: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!224 &9203811932194943068
 RectTransform:
   m_ObjectHideFlags: 0

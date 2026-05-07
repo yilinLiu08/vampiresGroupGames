@@ -9,5 +9,22 @@ This is health and mana. When health runs out, the character dies. Each time a v
 This arrow means it is currently this character’s turn to act or take damage.
 <<Enemy tutorial>>
 These are the enemies. After selecting Attack, you can choose a target to attack.
-Looks like the enemy is a eolf. wolves are good at single target physical attacks and can deal high damage to one target. They are relatively simple monsters, so let’s get started!
+Looks like the enemy is a wolf. wolves are good at single target physical attacks and can deal high damage to one target. They are relatively simple monsters, so let’s get started!
+===
+
+title: Round2OfFight1
+---
+Looks like a more dangerous enemy has appeared.
+She has an AoE skill, so we’d better deal with her first.
+===
+
+title: Round2OfFight2
+---
+evil scientist has appeared!!!
+He seems to be able to heal enemies. so we’d better deal with him first.
+===
+
+title: Round2OfFight3
+---
+Boss has appeared!!!
 ===
