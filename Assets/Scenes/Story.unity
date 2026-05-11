@@ -392,6 +392,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8020628925184811238, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8020628925673895293, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -444,6 +448,10 @@ PrefabInstance:
       propertyPath: yarnProject
       value: 
       objectReference: {fileID: 7545569452688597077, guid: e642db49d45215d4784e799f752086e0, type: 3}
+    - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: runSelectedOptionAsLine
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -855,7 +863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.size
-      value: 25
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[0].clip
@@ -1060,10 +1068,122 @@ PrefabInstance:
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[25].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 1df6046fd7128ff48aeeaed51391e68b, type: 3}
+      objectReference: {fileID: 8300000, guid: 4293f10f75a8b9e4f981e715c6fdf4d2, type: 3}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[25].name
-      value: Elsie_Uncomfy
+      value: BookOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[26].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9311c3467b4a8b24abef958fe5b6bdf8, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[26].name
+      value: Cloth1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[27].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 698dd7a19ce84c74ea5a526aed801523, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[27].name
+      value: Cloth2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[28].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 65dc7b1a43b845f47a425b5271aabea0, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[28].name
+      value: Crinkle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[29].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 096418bc671162743b5afabbdd34fd2e, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[29].name
+      value: Dread
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[30].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18f946f9475b89a41b99b8bb5183be9b, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[30].name
+      value: Heartbeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[31].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b547ceee42bdec34ca57d1cbe6b2dd1f, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[31].name
+      value: IdeaDing
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[32].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a07785c56d733d4892713814bd116f3, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[32].name
+      value: Interest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[33].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 77a22f81e3255f749bd6ae528fb05174, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[33].name
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[34].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cd60925b6e2c904e85a7866ca4d65a2, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[34].name
+      value: RunAway
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[35].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a8fb2a12c1af56549ba7ff2490e89f40, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[35].name
+      value: Slurp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[36].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31cc3cef2977db345a637978d9c3afda, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[36].name
+      value: Splash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[37].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31c262163e9d98b4fb0d626b884fc29e, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[37].name
+      value: Thud
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[38].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b4620405e88da9648a9020e0d9923e54, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[38].name
+      value: Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[39].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1df6046fd7128ff48aeeaed51391e68b, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[39].name
+      value: RunAway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1436,9 +1556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c238c0cbabb8804e8f26e9d07ef0550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YarnCutscene
-  elsieCutscene: {fileID: 0}
+  elsieCutscene: {fileID: 1398604978}
   videoPlayer: {fileID: 1398604979}
-  yarnCanvas: {fileID: 0}
+  yarnCanvas: {fileID: 1398604978}
 --- !u!224 &1791301381 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2355361765340444347, guid: 52571f68872914e24837210513edea1d, type: 3}
