@@ -1724,7 +1724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &244658555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6752,7 +6752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1124934154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7213,7 +7213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1174079966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10022,7 +10022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1613924719
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14904,7 +14904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &4830425607089118326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17026,7 +17026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cf91b932da64a428859f8cf1c66a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurnBattleManager
-  battleLevel: 1
+  battleLevel: 2
   players:
   - {fileID: 3681763398187783063}
   - {fileID: 4950556436950619536}
