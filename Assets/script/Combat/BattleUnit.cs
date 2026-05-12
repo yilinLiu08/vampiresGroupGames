@@ -19,7 +19,8 @@ public class BattleUnit : MonoBehaviour, IDropHandler
     {
         NormalAttack,
         Healer,
-        MagicAoE
+        MagicAoE,
+        Boss
     }
 
     [Header("Info")]
@@ -45,6 +46,9 @@ public class BattleUnit : MonoBehaviour, IDropHandler
     public EnemyActionType enemyActionType = EnemyActionType.NormalAttack;
     public int enemyHealAmount = 15;
     public int enemyMagicDamage = 15;
+
+    [Header("Boss Action")]
+    public float bossSpecialLockChance = 0.3f;
 
     [Header("Battle Effects")]
     public Transform effectPoint;
@@ -83,6 +87,7 @@ public class BattleUnit : MonoBehaviour, IDropHandler
 
     [Header("UI")]
     public Image hpBarImage;
+    public GameObject manaUIRoot;
     public Image manaBarImage;
     public Image highlightImage;
     public TextMeshProUGUI hpText;
@@ -101,6 +106,8 @@ public class BattleUnit : MonoBehaviour, IDropHandler
 
     private float nauseaFailChance = 0f;
     private int nauseaTurnsRemaining = 0;
+
+    private bool specialLockedByBoss = false;
 
     private Color[] originalSpriteColors;
     private Color[] originalImageColors;
@@ -694,6 +701,11 @@ public class BattleUnit : MonoBehaviour, IDropHandler
 
     public bool TryUseMana()
     {
+        if (IsSpecialLocked())
+        {
+            return false;
+        }
+
         if (currentMana < skillManaCost)
         {
             return false;
@@ -709,6 +721,63 @@ public class BattleUnit : MonoBehaviour, IDropHandler
     public int GetAttackDamage()
     {
         return Mathf.RoundToInt(attackDamage * damageBoostMultiplier);
+    }
+
+    public void ApplyBossSpecialLock()
+    {
+        if (!isPlayer)
+        {
+            return;
+        }
+
+        if (IsDead())
+        {
+            return;
+        }
+
+        specialLockedByBoss = true;
+
+        UpdateManaUI();
+    }
+
+    public bool IsSpecialLocked()
+    {
+        return specialLockedByBoss;
+    }
+
+    public void ClearBossSpecialLock()
+    {
+        if (!specialLockedByBoss)
+        {
+            return;
+        }
+
+        specialLockedByBoss = false;
+
+        UpdateManaUI();
+    }
+
+    void SetManaUIVisible(bool value)
+    {
+        if (manaUIRoot != null)
+        {
+            manaUIRoot.SetActive(value);
+            return;
+        }
+
+        switch (manaBarImage)
+        {
+            case Image image:
+                image.gameObject.SetActive(value);
+                break;
+        }
+
+        switch (manaText)
+        {
+            case TextMeshProUGUI text:
+                text.gameObject.SetActive(value);
+                break;
+        }
     }
 
     void RegisterPersistentDisplay(Fruit fruit, FruitEffect effect)
@@ -1204,6 +1273,14 @@ public class BattleUnit : MonoBehaviour, IDropHandler
 
     public void UpdateManaUI()
     {
+        if (IsSpecialLocked())
+        {
+            SetManaUIVisible(false);
+            return;
+        }
+
+        SetManaUIVisible(true);
+
         switch (manaBarImage)
         {
             case Image image:
@@ -1264,6 +1341,11 @@ public class BattleUnit : MonoBehaviour, IDropHandler
 
     public string GetSkillDescription()
     {
+        if (IsSpecialLocked())
+        {
+            return "Special is locked this turn.";
+        }
+
         if (skillType == SkillType.Damage)
         {
             return "Deal " + skillDamage + " damage to one enemy. Cost: " + skillManaCost + " MP.";

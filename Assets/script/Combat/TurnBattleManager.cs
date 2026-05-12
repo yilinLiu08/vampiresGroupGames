@@ -97,6 +97,7 @@ public class TurnBattleManager : MonoBehaviour
     private bool loadingResultScene = false;
     private bool currentTurnGaveTeamShield = false;
     private bool round2StartEventTriggered = false;
+    private bool clearBossSpecialLockAfterNextPlayerTurn = false;
 
     private float roundSkillBoostMultiplier = 1f;
     private int roundSkillBoostExpireCycle = -1;
@@ -217,6 +218,11 @@ public class TurnBattleManager : MonoBehaviour
     bool CurrentUnitHasEnoughMana()
     {
         if (currentUnit == null)
+        {
+            return false;
+        }
+
+        if (currentUnit.IsSpecialLocked())
         {
             return false;
         }
@@ -442,6 +448,7 @@ public class TurnBattleManager : MonoBehaviour
         roundSkillBoostSourceFruit = null;
         currentTurnGaveTeamShield = false;
         itemUseLocked = false;
+        clearBossSpecialLockAfterNextPlayerTurn = false;
 
         SetEnemyGroupActive(round1Enemies, false);
         SetEnemyGroupActive(round2Enemies, false);
@@ -465,6 +472,7 @@ public class TurnBattleManager : MonoBehaviour
         RefreshRoundSkillBoostStatusUI();
         HideAllEnemyTargetButtons();
         HideInventoryPanel();
+        ClearAllBossSpecialLocks();
 
         if (round == 2)
         {
@@ -670,6 +678,45 @@ public class TurnBattleManager : MonoBehaviour
         return null;
     }
 
+    private void ClearAllBossSpecialLocks()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i] == null)
+            {
+                continue;
+            }
+
+            players[i].ClearBossSpecialLock();
+        }
+    }
+
+    private void ScheduleBossSpecialLockClear()
+    {
+        clearBossSpecialLockAfterNextPlayerTurn = true;
+    }
+
+    private void TryClearBossSpecialLockAfterPlayerTurn()
+    {
+        if (!clearBossSpecialLockAfterNextPlayerTurn)
+        {
+            return;
+        }
+
+        if (currentUnit == null)
+        {
+            return;
+        }
+
+        if (!currentUnit.isPlayer)
+        {
+            return;
+        }
+
+        ClearAllBossSpecialLocks();
+        clearBossSpecialLockAfterNextPlayerTurn = false;
+    }
+
     private void StartPlayerTurn()
     {
         ShowActionButtons();
@@ -677,6 +724,17 @@ public class TurnBattleManager : MonoBehaviour
         HideInventoryPanel();
         SetAttackButtonNormal();
         SetInventoryButtonNormal();
+
+        if (currentUnit.IsSpecialLocked())
+        {
+            if (skillButton != null)
+            {
+                skillButton.interactable = false;
+            }
+
+            messageText.text = currentUnit.unitName + " turn. Special is locked this turn.";
+            return;
+        }
 
         messageText.text = currentUnit.unitName + " turn. Skill: " + currentUnit.GetSkillDescription();
     }
@@ -699,6 +757,14 @@ public class TurnBattleManager : MonoBehaviour
         ShowActionButtons();
         SetAttackButtonNormal();
         SetInventoryButtonNormal();
+
+        if (currentUnit != null && currentUnit.IsSpecialLocked())
+        {
+            if (skillButton != null)
+            {
+                skillButton.interactable = false;
+            }
+        }
 
         if (messageText == null)
         {
@@ -770,6 +836,12 @@ public class TurnBattleManager : MonoBehaviour
             yield break;
         }
 
+        if (currentUnit.enemyActionType == BattleUnit.EnemyActionType.Boss)
+        {
+            yield return StartCoroutine(EnemyBossAttackRoutine());
+            yield break;
+        }
+
         yield return StartCoroutine(EnemyNormalAttackRoutine());
     }
 
@@ -796,6 +868,45 @@ public class TurnBattleManager : MonoBehaviour
 
         currentUnit.SpawnAttackEffectAtIndex(targetIndex);
         target.TakeDamage(currentUnit.GetAttackDamage());
+
+        yield return new WaitForSeconds(0.8f);
+
+        FinishCurrentUnitTurn();
+    }
+
+    private IEnumerator EnemyBossAttackRoutine()
+    {
+        int targetIndex = GetRandomAlivePlayerIndex();
+
+        if (targetIndex < 0)
+        {
+            yield break;
+        }
+
+        BattleUnit target = players[targetIndex];
+
+        ClearAllHighlights();
+        currentUnit.SetHighlight(true);
+        target.SetHighlight(true);
+
+        messageText.text = currentUnit.unitName + " attacks " + target.unitName + ".";
+        currentUnit.PlayAttackAnimation();
+        currentUnit.PlayAttackSFX();
+
+        yield return new WaitForSeconds(0.4f);
+
+        currentUnit.SpawnAttackEffectAtIndex(targetIndex);
+        target.TakeDamage(currentUnit.GetAttackDamage());
+
+        if (!target.IsDead())
+        {
+            if (Random.value < currentUnit.bossSpecialLockChance)
+            {
+                target.ApplyBossSpecialLock();
+                ScheduleBossSpecialLockClear();
+                messageText.text = currentUnit.unitName + " attacks " + target.unitName + ". " + target.unitName + " cannot use Special for one player turn.";
+            }
+        }
 
         yield return new WaitForSeconds(0.8f);
 
@@ -907,6 +1018,12 @@ public class TurnBattleManager : MonoBehaviour
     {
         if (waitingForInventoryItem)
         {
+            return;
+        }
+
+        if (currentUnit.IsSpecialLocked())
+        {
+            ReturnToPlayerActionState(currentUnit.unitName + " cannot use Special this turn.");
             return;
         }
 
@@ -1276,8 +1393,16 @@ public class TurnBattleManager : MonoBehaviour
 
     private void FinishCurrentUnitTurn()
     {
+        bool finishedPlayerTurn = currentUnit != null && currentUnit.isPlayer;
+
         currentUnit.AdvanceBuffTurn(currentTurnGaveTeamShield);
+
         currentTurnGaveTeamShield = false;
+
+        if (finishedPlayerTurn)
+        {
+            TryClearBossSpecialLockAfterPlayerTurn();
+        }
 
         CheckBattleResult();
 
@@ -1577,11 +1702,13 @@ public class TurnBattleManager : MonoBehaviour
         itemUseLocked = false;
         selectedAction = ActionType.None;
         currentTurnGaveTeamShield = false;
+        clearBossSpecialLockAfterNextPlayerTurn = false;
 
         HideActionButtons();
         HideAllEnemyTargetButtons();
         HideInventoryPanel();
         ClearAllHighlights();
+        ClearAllBossSpecialLocks();
         SetAttackButtonNormal();
         SetInventoryButtonNormal();
 
