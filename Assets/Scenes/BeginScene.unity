@@ -552,9 +552,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1428703914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d81ac688ae9e83f47a0b132e46b75976, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e2183362b088054dbe09237472b8b25, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VideoSceneLoader
+  m_EditorClassIdentifier: Assembly-CSharp::VideoPlay
+  delayInSeconds: 51
+  nextScene: HQ_realone
 --- !u!1 &1578355824
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1578355825
 RectTransform:
   m_ObjectHideFlags: 0

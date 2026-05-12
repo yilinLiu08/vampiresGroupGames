@@ -63,7 +63,7 @@ using UnityEngine;
 using Yarn.Unity;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(AudioSource))]
+
 public class YarnVoice : MonoBehaviour
 {
     
@@ -104,7 +104,7 @@ public class YarnVoice : MonoBehaviour
         if (_soundLibrary.TryGetValue(soundName, out AudioClip clip))
         {
             _audioSource.clip = clip;
-            _audioSource.Play();
+            _audioSource.PlayOneShot(clip);
         }
         else
         {

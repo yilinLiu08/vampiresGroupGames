@@ -5,7 +5,7 @@ public class NPC_Trigger : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
 
-    [Header("Dialogue Node Names")]
+  
     public string winNode = "Fight1Win";
     public string loseNode = "Fight1Lose";
     public string defaultNode = "StartNode";
@@ -16,9 +16,11 @@ public class NPC_Trigger : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+            Debug.Log("Hit person");
         {
             if (!dialogueRunner.IsDialogueRunning)
             {
+                Debug.Log("dialoguerunner is running ");
                 DetermineAndStartDialogue();
             }
         }
@@ -56,5 +58,6 @@ public class NPC_Trigger : MonoBehaviour
         }
 
         dialogueRunner.StartDialogue(nodeToPlay);
+        Debug.Log("start dialogue ");
     }
 }
