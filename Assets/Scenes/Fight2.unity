@@ -593,6 +593,50 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477828, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477829, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477829, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477829, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 791336545582589345, guid: 71a05c75149cdb6449d5c717f2a301b9, type: 3}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 5.72
+      objectReference: {fileID: 0}
     - target: {fileID: 2958262986520364887, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1098,6 +1142,7 @@ MonoBehaviour:
   enemyActionType: 2
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 965330693}
   attackHitEffectPrefab: {fileID: 3540140049916521087, guid: 0723a3e31d4ec214997a5584d4373496, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -1129,6 +1174,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 215033135}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 1640082429}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 561207804}
   hpText: {fileID: 377915485}
@@ -2643,7 +2689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.202835, y: -57.81595}
+  m_AnchoredPosition: {x: -72.2, y: -57.81595}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353681508
@@ -2722,8 +2768,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5033884579438549468, guid: 9433bb3c513a7a148b985841ab32c3ec, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2731,7 +2777,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 15.5
 --- !u!222 &353681510
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5114,6 +5160,7 @@ MonoBehaviour:
   enemyActionType: 2
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 401263015}
   attackHitEffectPrefab: {fileID: 3540140049916521087, guid: 0723a3e31d4ec214997a5584d4373496, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -5145,6 +5192,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1689449197}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 2126843754}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 2127676541}
   hpText: {fileID: 74769654}
@@ -7432,7 +7480,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9a6e15df9b4cb03458d1baa8aa098959, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7ccb8b59e7e7db44181a422000aef952, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7562,6 +7610,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 287203819}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -7593,6 +7642,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1788936304}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 1735181744}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 643139498}
   hpText: {fileID: 1735756327}
@@ -7911,6 +7961,7 @@ MonoBehaviour:
   enemyActionType: 2
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 1128988775}
   attackHitEffectPrefab: {fileID: 3540140049916521087, guid: 0723a3e31d4ec214997a5584d4373496, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -7942,6 +7993,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 815520148}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 338935376}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 2045498540}
   hpText: {fileID: 902236216}
@@ -8247,8 +8299,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10574,6 +10626,7 @@ MonoBehaviour:
   enemyActionType: 1
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 1317770908}
   attackHitEffectPrefab: {fileID: 3341271149964255606, guid: f068383ae4ede834a8a8de1e34e92d4d, type: 3}
   healEffectPrefab: {fileID: 3341271149964255606, guid: f068383ae4ede834a8a8de1e34e92d4d, type: 3}
@@ -10601,6 +10654,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 667082310}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 30776425}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 153354692}
   hpText: {fileID: 40434942}
@@ -13272,15 +13326,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.63522005, g: 0.63522005, b: 0.63522005, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: -5033884579438549468, guid: 9433bb3c513a7a148b985841ab32c3ec, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -13288,7 +13342,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 34.7
 --- !u!114 &328105692112534527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13709,6 +13763,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 1606460524}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -13740,6 +13795,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 868228988}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 3504409257638913607}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 328105692112534527}
   hpText: {fileID: 745359950}
@@ -14688,8 +14744,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14955,6 +15011,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 7614824113429070788, guid: d8ed17bdb4dfc5c448280df58b6d280d, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -14985,6 +15042,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 373487915}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 371625853790781915}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 455964179382776317}
   highlightImage: {fileID: 3803418230165280901}
   hpText: {fileID: 5910698096315664516}
@@ -15104,6 +15162,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -15134,6 +15193,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1259804144}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 2123400551179890132}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 7007297239028584052}
   highlightImage: {fileID: 4496402063200917459}
   hpText: {fileID: 6763717609345811361}
@@ -16375,6 +16435,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 2249639689328600452, guid: c67e824618a860f4584830069e04522b, type: 3}
@@ -16405,6 +16466,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1443199296}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 4602982784091987325}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 5250835089860576338}
   highlightImage: {fileID: 1495993056812187867}
   hpText: {fileID: 2177228175810565108}
@@ -16781,8 +16843,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -17554,7 +17616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -5033884579438549468, guid: 9433bb3c513a7a148b985841ab32c3ec, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17563,7 +17625,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 20
 --- !u!222 &6408041000189730632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17639,6 +17701,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -17670,6 +17733,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1242838654}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 1910073837141471203}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 5240520423045833689}
   highlightImage: {fileID: 2236670076558502587}
   hpText: {fileID: 1360432129465716909}
@@ -18248,8 +18312,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 13.5
+  m_fontSizeBase: 13.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18287,7 +18351,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -69.17528, w: -10.672047}
+  m_margin: {x: 0, y: 0, z: -32.840622, w: -10.672047}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -19180,7 +19244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103, y: -100}
+  m_AnchoredPosition: {x: 122.1, y: -102.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &8592820144372109554
@@ -19428,8 +19492,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5033884579438549468, guid: 9433bb3c513a7a148b985841ab32c3ec, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -19437,7 +19501,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 15.27
 --- !u!114 &9180815179789042463
 MonoBehaviour:
   m_ObjectHideFlags: 0
