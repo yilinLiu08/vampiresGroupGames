@@ -13452,7 +13452,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -13582,6 +13582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &995321475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13620,7 +13622,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995321466}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 7a3428afb6e9a9442970b398f298ee3f, type: 2}
   m_Animations: []
@@ -13639,7 +13641,7 @@ Animator:
   m_GameObject: {fileID: 995321466}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8abdbf6743a922449a20a912f1d0dd90, type: 2}
+  m_Controller: {fileID: 9100000, guid: b5a5aeaea48b55f4a921a02f8cd62c3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
