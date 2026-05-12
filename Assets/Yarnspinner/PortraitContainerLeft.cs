@@ -4,8 +4,8 @@ using Yarn.Unity;
 
 public class PortraitControllerLeft : MonoBehaviour
 {
-    private Vector3 originalScale = new Vector3(8.5f, 10f, 10f);
-    private Vector3 zoomedScale = new Vector3(9.5f, 11f, 11f);
+    private Vector3 originalScale = new Vector3(8f, 10f, 10f);
+    private Vector3 zoomedScale = new Vector3(8.8f, 11f, 11f);
     private Vector3 targetScale;
 
     public Sprite ElsieBaseL;
@@ -27,6 +27,8 @@ public class PortraitControllerLeft : MonoBehaviour
     public Sprite VeraScaredL;
     public Sprite VeraMadL;
     public Sprite VeraHappyL;
+
+    public Sprite DahliaElsie;
 
     public Sprite empty;
 
@@ -186,6 +188,14 @@ public class PortraitControllerLeft : MonoBehaviour
             targetScale = zoomedScale;
             Show();
         }
+
+        if (character == "DahliaElsie")
+        {
+            portrait.sprite = DahliaElsie;
+            targetScale = zoomedScale;
+            Show();
+        }
+
 
 
         else if (character == "empty")

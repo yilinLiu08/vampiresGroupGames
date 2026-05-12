@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: 
+      value: Win3
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -664,6 +664,7 @@ MonoBehaviour:
   VeraScaredL: {fileID: 21300000, guid: de9fdf22ac69ce747b435d914772e776, type: 3}
   VeraMadL: {fileID: 21300000, guid: df9688454dd26054c867fd55c344d2ee, type: 3}
   VeraHappyL: {fileID: 21300000, guid: 7ca9318bd9b1dbb46bde77f2ff164916, type: 3}
+  DahliaElsie: {fileID: 21300000, guid: 62fedf1eff1ff334a81728a25261148b, type: 3}
   empty: {fileID: 21300000, guid: 531289e8fa00b3a47b7feddf428d2bf9, type: 3}
   cvGroup: {fileID: 368972622}
   portrait: {fileID: 1018457377}

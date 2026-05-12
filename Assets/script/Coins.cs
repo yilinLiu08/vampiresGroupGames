@@ -39,7 +39,7 @@ public class Coins : MonoBehaviour
         int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
         if (coinAmt != null)
         {
-            coinAmt.text = "Coins: " + currentCoins;
+            coinAmt.text = ": " + currentCoins;
         }
     }
 }

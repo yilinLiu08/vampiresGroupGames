@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoPlay
   delayInSeconds: 51
-  nextScene: HQ_realone
+  nextScene: Story
 --- !u!1 &1578355824
 GameObject:
   m_ObjectHideFlags: 0

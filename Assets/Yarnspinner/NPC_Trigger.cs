@@ -80,6 +80,7 @@ public class NPC_Trigger : MonoBehaviour
     public string win2Node = "Fight2Win";
     
 
+
     //public PlayerMovement playerScript;
 
     public GameObject talkPromptUI; 
@@ -87,6 +88,9 @@ public class NPC_Trigger : MonoBehaviour
 
     public GameObject markerJude;
     public GameObject markerForest;
+
+    public GameObject unlockFight2;
+    public GameObject unlockFight3;
 
     public string npcName = "Yomomma";
 
@@ -218,6 +222,22 @@ public class NPC_Trigger : MonoBehaviour
     public void ShowMarkerForest()
     {
         markerForest.SetActive(true);
+
+
+    }
+
+    [YarnCommand("ShowFight2")]
+    public void ShowFight2()
+    {
+        unlockFight2.SetActive(false);
+
+
+    }
+
+    [YarnCommand("ShowFight3")]
+    public void ShowFight3()
+    {
+        unlockFight3.SetActive(false);
 
 
     }

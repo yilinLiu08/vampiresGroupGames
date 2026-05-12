@@ -1,6 +1,7 @@
-﻿title:StartNode
+title:StartNode
 ---
 <<HideMarkerJude Jude>>
+<<ShowFight2 Jude>>
 Jude: Hey! Y'all finally made it! I was startin' to get worried there.
 Jude: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
 Loveday: What can I offer in exchange?
@@ -10,7 +11,7 @@ Jude: But it's nothing too crazy right now, but feel free to come back time to t
     <<open_shop Player>>
     <<ShowMarkerForest Jude>>
 -> I think we're good for now.
-<<ShowMarkerForest Jude>>
+    <<ShowMarkerForest Jude>>
 ===
 
 title:NPCFight1Win
