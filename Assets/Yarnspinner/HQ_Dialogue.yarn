@@ -1,5 +1,6 @@
 ﻿title:StartNode
 ---
+<<HideMarkerJude Jude>>
 Jude: Hey! Y'all finally made it! I was startin' to get worried there.
 Jude: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
 Loveday: What can I offer in exchange?
@@ -7,7 +8,9 @@ Jude: Maybe snaggin' a few coins from those damn guards can work! I saw them dow
 Jude: But it's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
 -> Sure thing.
     <<open_shop Player>>
+    <<ShowMarkerForest Jude>>
 -> I think we're good for now.
+<<ShowMarkerForest Jude>>
 ===
 
 title:NPCFight1Win
@@ -126,4 +129,56 @@ Loveday: (Are stars not visible where she’s originally from?)
         Vera: My days used to be filled with fog that was within arms-reach.
 
     -> Leave her to gaze.
+===
+
+title:ElsieF2W
+---
+Elsie: To think Vera had to go through such monstrosities… Vampires really are wicked.
+Loveday: Truly.
+Elsie: She’s always so happy… I wonder why she never told us… <i>*hic hic hic*</i> P-Poor Vera…!
+Loveday: Don’t worry. She has us. She has other people to live for now.
+Elsie: Hehe… You’re right… Speaking of other people, Dahlia fed me today…
+Loveday: Is that not a daily occurrence? Why act as if it is rare?
+Elsie: N-no! It’s different!
+Elsie: I’ve always studied how humans treat food as a sacred, intimate thing, so to experience that with her… you wouldn’t understand! 
+Loveday: (I really don’t.)
+===
+
+
+
+
+title:VeraF2W
+---
+Vera: Ahoy hoy, Loveday!!
+Vera: I have a question for you! A lifetime supply of hardtack for the rest of your life, or a gill of rum a week? 
+    -> Obviously the rum. 
+        Vera: Oooh yeah. Rum’s a good choice!
+        Vera: If we had any, you’d probably be drinking your sorrows away!
+        Loveday: What’s that supposed to mean?!
+
+    -> Why would I pick the hardtack? 
+        Vera: Oh. What do you mean? 
+        Loveday: It’s… disgusting. 
+        Vera: Oh… I think it tastes great. 
+        Loveday: <i>(So that’s where all of it’s been going…)</i>
+
+===
+
+title:DahliaF2W
+---
+Dahlia: Yo, captain. 
+Loveday: Hey.
+Dahlia: I can’t wait to go back home and tell Santhe about my adventures. 
+Dahlia: Who knows? Maybe with Vera’s cooking advice, he might actually stomach the food I make.
+Loveday: (Something tells me deep down Santhe is just as stubborn as his sister.)
+	-> Most likely not.
+        Dahlia: Seriously? Is it that bad?
+        Loveday: Yes. Even Vera, who thrives on a diet of hardtacks, criticizes your lack of cooking skills. 
+	-> Perhaps. 
+        Dahlia: Huh? Goin’ soft on me now?
+        Loveday: I take it back.
+	    Dahlia: Ugh! Whatever.
+        Dahlia: I heard too much seasoning makes vampire blood sour anyways. You know who I have to keep myself sweet for.
+	    Loveday: That’s disgusting. 
+
 ===
