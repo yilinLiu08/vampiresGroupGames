@@ -1751,6 +1751,7 @@ MonoBehaviour:
   enemyActionType: 1
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 1583815123}
   attackHitEffectPrefab: {fileID: 3341271149964255606, guid: f068383ae4ede834a8a8de1e34e92d4d, type: 3}
   healEffectPrefab: {fileID: 3341271149964255606, guid: f068383ae4ede834a8a8de1e34e92d4d, type: 3}
@@ -1778,6 +1779,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1467561614}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 270158511}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 1334882186}
   hpText: {fileID: 1205472685}
@@ -6779,6 +6781,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 287203819}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -6810,6 +6813,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1788936304}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 1735181744}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 643139498}
   hpText: {fileID: 1735756327}
@@ -7274,6 +7278,7 @@ MonoBehaviour:
   enemyActionType: 2
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 1128988775}
   attackHitEffectPrefab: {fileID: 3540140049916521087, guid: 0723a3e31d4ec214997a5584d4373496, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -7305,6 +7310,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 815520148}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 338935376}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 2045498540}
   hpText: {fileID: 902236216}
@@ -10075,6 +10081,7 @@ MonoBehaviour:
   enemyActionType: 1
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 1317770908}
   attackHitEffectPrefab: {fileID: 3341271149964255606, guid: f068383ae4ede834a8a8de1e34e92d4d, type: 3}
   healEffectPrefab: {fileID: 3341271149964255606, guid: f068383ae4ede834a8a8de1e34e92d4d, type: 3}
@@ -10102,6 +10109,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 667082310}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 30776425}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 153354692}
   hpText: {fileID: 40434942}
@@ -12307,9 +12315,10 @@ MonoBehaviour:
   skillManaCost: 20
   skillType: 0
   healAmount: 30
-  enemyActionType: 0
+  enemyActionType: 3
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 1
   effectPoint: {fileID: 1606460524}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -12341,6 +12350,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 868228988}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 3504409257638913607}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 0}
   highlightImage: {fileID: 328105692112534527}
   hpText: {fileID: 745359950}
@@ -13556,6 +13566,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 7614824113429070788, guid: d8ed17bdb4dfc5c448280df58b6d280d, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -13586,6 +13597,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 373487915}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 371625853790781915}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 455964179382776317}
   highlightImage: {fileID: 3803418230165280901}
   hpText: {fileID: 5910698096315664516}
@@ -13705,6 +13717,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -13735,6 +13748,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1259804144}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 2123400551179890132}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 7007297239028584052}
   highlightImage: {fileID: 4496402063200917459}
   hpText: {fileID: 6763717609345811361}
@@ -14977,6 +14991,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 2249639689328600452, guid: c67e824618a860f4584830069e04522b, type: 3}
@@ -15007,6 +15022,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1443199296}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 4602982784091987325}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 5250835089860576338}
   highlightImage: {fileID: 1495993056812187867}
   hpText: {fileID: 2177228175810565108}
@@ -16300,6 +16316,7 @@ MonoBehaviour:
   enemyActionType: 0
   enemyHealAmount: 15
   enemyMagicDamage: 15
+  bossSpecialLockChance: 0.3
   effectPoint: {fileID: 0}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
@@ -16331,6 +16348,7 @@ MonoBehaviour:
   persistentEffectIconImage: {fileID: 1242838654}
   persistentEffectTooltipUI: {fileID: 712720042}
   hpBarImage: {fileID: 1910073837141471203}
+  manaUIRoot: {fileID: 0}
   manaBarImage: {fileID: 5240520423045833689}
   highlightImage: {fileID: 2236670076558502587}
   hpText: {fileID: 1360432129465716909}
@@ -17078,7 +17096,7 @@ MonoBehaviour:
   cancelAttackLabel: Cancel
   inventoryLabel: Inventory
   cancelInventoryLabel: Cancel
-  enemyActionDelay: 1
+  enemyActionDelay: 0.5
   itemUseDelay: 0.8
   onRound2Start:
     m_PersistentCalls:
