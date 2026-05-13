@@ -42,12 +42,16 @@ public class Movement : MonoBehaviour
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     float horizontalInput;
     bool isFacingRight = true;
+
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     Rigidbody2D rb;
 
@@ -61,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -71,6 +77,15 @@ public class PlayerMovement : MonoBehaviour
             float moveLeft = Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed ? -1 : 0;
             float moveRight = Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed ? 1 : 0;
             horizontalInput = moveLeft + moveRight;
+        }
+
+        if (horizontalInput != 0)
+        {
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
         }
 
         FlipSprite();
@@ -84,16 +99,28 @@ public class PlayerMovement : MonoBehaviour
 
     void FlipSprite()
     {
-        if ((isFacingRight && horizontalInput < 0f) || (!isFacingRight && horizontalInput > 0f))
+        if (horizontalInput < 0f)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
+            isFacingRight = false;
+            spriteRenderer.flipX = true;
         }
+
+        if (horizontalInput > 0f)
+        {
+            isFacingRight = true;
+            spriteRenderer.flipX = false;
+        }
+
+        // if ((isFacingRight && horizontalInput < 0f) || (!isFacingRight && horizontalInput > 0f))
+        // {
+        //     isFacingRight = !isFacingRight;
+        //     Vector3 ls = transform.localScale;
+        //     ls.x *= -1f;
+        //     transform.localScale = ls;
+        // }
     }
 
-
+    
 
 
 }
