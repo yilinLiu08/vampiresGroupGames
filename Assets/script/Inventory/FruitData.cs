@@ -40,7 +40,7 @@ public class FruitData : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     private Coroutine hoverRoutine;
 
     void Awake()
-    {
+    {   
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
