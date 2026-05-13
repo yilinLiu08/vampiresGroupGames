@@ -7,7 +7,7 @@ Vera: WE DID IT! Aw yeah~ Woo yeah~ We did it yeahhh~
 <<resetScaleRight PortraitContainerRight>>
 
 
-<<ShowFight2 Jude>>
+
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Loveday_Annoyed>>
