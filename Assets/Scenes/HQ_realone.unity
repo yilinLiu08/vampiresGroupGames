@@ -5061,6 +5061,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: 356559a85c2a1a04683f8bd786c7ee76, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &322172626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6211,6 +6213,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: fbcd02e896c94dd4da466fa99e6335d5, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &438599496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9334,6 +9338,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: 22075a0ec1947b94d8b71db506775ccd, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &714194695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13462,6 +13468,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: fbcd02e896c94dd4da466fa99e6335d5, type: 2}
   coinSystem: {fileID: 0}
   youPoor: {fileID: 0}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!1 &985348849
 GameObject:
   m_ObjectHideFlags: 0
@@ -13683,7 +13691,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -13813,6 +13821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &995321475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13851,7 +13861,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995321466}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 7a3428afb6e9a9442970b398f298ee3f, type: 2}
   m_Animations: []
@@ -13870,7 +13880,7 @@ Animator:
   m_GameObject: {fileID: 995321466}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8abdbf6743a922449a20a912f1d0dd90, type: 2}
+  m_Controller: {fileID: 9100000, guid: b5a5aeaea48b55f4a921a02f8cd62c3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16227,6 +16237,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: b9fa1434b8dfa1143a9a47259c6bac7c, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &1259528051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21695,6 +21707,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: f09b490535117214a9b4bd5b827080a2, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &1775316253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22955,6 +22969,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: 9eca756acae75ac4c9d8af6130857771, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &1880855280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24229,6 +24245,8 @@ MonoBehaviour:
   itemToGive: {fileID: 11400000, guid: 2558701b6acb26f42806b45fbb71cb3c, type: 2}
   coinSystem: {fileID: 2102601208}
   youPoor: {fileID: 327391297}
+  dialogueRunner: {fileID: 0}
+  inventoryFullNodeName: InventoryFull
 --- !u!114 &2036834059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39259,6 +39277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FruitInventory
   fruits: []
+  maxFruitCount: 9
 --- !u!1 &7676719888078033760
 GameObject:
   m_ObjectHideFlags: 0
@@ -40127,7 +40146,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 132, y: 30}
+=======
+  m_AnchoredPosition: {x: 147, y: 43.1}
+>>>>>>> 5/12Branch
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8134564076762712180
@@ -40159,7 +40182,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!114 &8155504320418213713
 MonoBehaviour:
