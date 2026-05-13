@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using Yarn.Unity;
 
 public class Buy : MonoBehaviour
 {
@@ -13,10 +12,6 @@ public class Buy : MonoBehaviour
     public Coins coinSystem;
 
     public GameObject youPoor;
-
-    [Header("Yarn")]
-    public DialogueRunner dialogueRunner;
-    public string inventoryFullNodeName = "InventoryFull";
 
     // public TextMeshProUGUI coinAmt;
 
@@ -43,12 +38,6 @@ public class Buy : MonoBehaviour
 
         if (inv != null && itemToGive != null)
         {
-            if (inv.IsFull())
-            {
-                PlayInventoryFullDialogue();
-                return;
-            }
-
             int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
 
             // Check if player can afford it
@@ -60,30 +49,11 @@ public class Buy : MonoBehaviour
             else
             {
                 Debug.Log("u poor ass");
-
+                
                 StopAllCoroutines();
                 StartCoroutine(Poor());
 
             }
-        }
-    }
-
-    void PlayInventoryFullDialogue()
-    {
-        //Debug.Log("Inventory full, starting Yarn node: " + inventoryFullNodeName);
-
-        if (dialogueRunner == null)
-        {
-            dialogueRunner = FindObjectOfType<DialogueRunner>();
-        }
-
-        if (dialogueRunner != null)
-        {
-            dialogueRunner.StartDialogue(inventoryFullNodeName);
-        }
-        else
-        {
-            Debug.LogWarning("DialogueRunner not found. Cannot start InventoryFull dialogue.");
         }
     }
 
@@ -93,11 +63,11 @@ public class Buy : MonoBehaviour
         int currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
         currentCoins -= amount;
 
-
+        
         PlayerPrefs.SetInt("TotalCoins", currentCoins);
         PlayerPrefs.Save();
 
-
+        
         if (coinSystem != null)
         {
             coinSystem.UpdateUI();
@@ -112,3 +82,4 @@ public class Buy : MonoBehaviour
         youPoor.SetActive(false);
     }
 }
+

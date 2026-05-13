@@ -1605,9 +1605,9 @@ public class TurnBattleManager : MonoBehaviour
         SetAttackButtonNormal();
         SetInventoryButtonNormal();
 
-        messageText.text = "Round 1 cleared.";
+        messageText.text = "Round 1 cleared. Round 2 starts.";
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         SetRound(2);
 
