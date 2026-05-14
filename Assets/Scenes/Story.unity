@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: 
+      value: Win
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -949,7 +949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.size
-      value: 39
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[0].clip
@@ -1266,10 +1266,18 @@ PrefabInstance:
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[39].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 1df6046fd7128ff48aeeaed51391e68b, type: 3}
+      objectReference: {fileID: 8300000, guid: 731060f8c379d814187c9338639683ed, type: 3}
     - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
       propertyPath: soundEffects.Array.data[39].name
-      value: RunAway
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[40].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 328a06181a0c5f7439ad70d00e61b677, type: 3}
+    - target: {fileID: 2342426709225470202, guid: 75a7d6795644c9146b131671e07edef8, type: 3}
+      propertyPath: soundEffects.Array.data[40].name
+      value: Music2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

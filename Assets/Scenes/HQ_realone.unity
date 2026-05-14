@@ -2991,7 +2991,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Heal 30 HP to an ally of your choice. x30'
+  m_text: ' Heal 30 HP to an ally of your choice. x5
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6168,7 +6170,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: The Brew of Vigor. Gives an ally of your choice a 2x attack boost for the
-    rest of the round. x30
+    rest of the round. x5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7318,7 +7320,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Holy Water. Inflicts "Clot" condition on an enemy of your choice. Chosen
-    enemy will be frozen for 2 turns. x15
+    enemy will be frozen for 2 turns. x10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14991,7 +14993,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: A Stake. Inflicts "Poison" condition on an enemy of your choice. Chosen
-    enemy will lose 20 HP each turn.  x15
+    enemy will lose 20 HP each turn.  x10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17341,7 +17343,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: A bulb of Garlic. Splits the enemies' health in half.Its skin feels papery
-    to the touch. x20
+    to the touch. x15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26185,7 +26187,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Charon''s Obol. Heads: you get a 1.5x boost to all skill attacks for the
-    rest of the round. Tails: All teammates lose 20. x15'
+    rest of the round. Tails: All teammates lose 20. x10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

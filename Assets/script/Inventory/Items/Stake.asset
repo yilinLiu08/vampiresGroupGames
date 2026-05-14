@@ -17,7 +17,8 @@ MonoBehaviour:
     will lose 20 HP each turn. A worn stake covered in ropes and grime. Still gets
     the job done.
   icon: {fileID: 21300000, guid: 7c13db8a7868f484f9c7c2d6ac21230b, type: 3}
-  price: 5
+  price: 10
+  useSFX: {fileID: 0}
   fruitCategory: 1
   healAmount: 0
   damageBoostMultiplier: 0

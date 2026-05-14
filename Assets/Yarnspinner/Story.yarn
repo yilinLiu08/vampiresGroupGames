@@ -1,5 +1,6 @@
 ﻿title:Win
 ---
+<<PlaySound audio Music2>>
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Wow>>
 
@@ -398,7 +399,7 @@ Elsie: …
 title:Lose
 ---
 
-
+<<PlaySound audio Music>>
 <<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Damnit>>
 <<PlaySound audio Dread>>
@@ -525,6 +526,7 @@ title:Pregame
 
 
 ---
+<<PlaySound audio Music>>
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Confused>>
 Vera: Now I could’ve sworn that big, tall tree was right here…
@@ -806,6 +808,7 @@ Elsie: …Okay…
 
 title:Lose2
 ---
+<<PlaySound audio Music>>
 <<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Yeah>>
 Vera: Oh YEAH!!! We lost, but I’m sooo pumped! <b>HAHAHAHHAHA!</b>
@@ -1077,6 +1080,7 @@ Dahlia: Vera, you’re so sappy. Let’s get on with it and win already.
 
 title:Win2
 ---
+<<PlaySound audio Music>>
 <<ShowCampfire Pregame>>
 
 <<PlaySound audio Slurp>>
@@ -1469,6 +1473,7 @@ Loveday: <i>(I wonder what the future holds for us.)</i>
 
 title:Win3
 ---
+<<PlaySound audio Music2>>
 <<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Walk>>
 Loveday: <i>Huff huf huf…</i>
@@ -1503,10 +1508,10 @@ Dahlia: Enough with that shit.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+<<changeNPCImageRight PortraitContainerRight "LovedayMadR">>
 <<PlaySound audio Loveday_Angry>>
 Loveday: OW! VERA! You’re carrying me all wrong.
-<<resetScaleLeft PortraitContainerLeft>>
+<<resetScaleRight PortraitContainerRight>>
 
 
 
