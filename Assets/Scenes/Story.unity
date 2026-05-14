@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: Win3
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -1777,12 +1777,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YarnCutscene
   elsieCutscene: {fileID: 0}
-  dahliaCutscene: {fileID: 0}
+  dahliaCutscene: {fileID: 1918526747}
   veraCutscene: {fileID: 0}
   campFire: {fileID: 0}
   endScene: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  yarnCanvas: {fileID: 0}
+  videoPlayer: {fileID: 1918526749}
+  yarnCanvas: {fileID: 1578417246}
 --- !u!328 &1918526749
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -1790,7 +1790,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918526747}
-  m_Enabled: 0
+  m_Enabled: 1
   m_VideoClip: {fileID: 32900000, guid: ccdd417f53873fe4fb6f482a9b9cc688, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0

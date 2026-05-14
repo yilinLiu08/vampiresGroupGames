@@ -188,19 +188,24 @@ public class NPC_Trigger : MonoBehaviour
     {
         
         int winCount = PlayerPrefs.GetInt(fight1Complete, 0);
+        int win2Count = PlayerPrefs.GetInt(fight2Complete, 0);
         int loseCount = PlayerPrefs.GetInt(fight1Lose, 0);
 
         string nodeToPlay = defaultNode;
 
-      
-        if (winCount >= 1)
+
+        if (win2Count >= 1)
+        {
+            nodeToPlay = win2Node;
+        }
+        else if (winCount >= 1)
         {
             nodeToPlay = winNode;
         }
-        else if (loseCount >= 1)
-        {
-            nodeToPlay = loseNode;
-        }
+        //else if (loseCount >= 1)
+        //{
+        //    nodeToPlay = loseNode;
+        //}
         else
         {
             nodeToPlay = defaultNode;
@@ -229,7 +234,7 @@ public class NPC_Trigger : MonoBehaviour
     [YarnCommand("ShowFight2")]
     public void ShowFight2()
     {
-        unlockFight2.SetActive(false);
+        unlockFight2.SetActive(true);
 
 
     }
@@ -237,7 +242,7 @@ public class NPC_Trigger : MonoBehaviour
     [YarnCommand("ShowFight3")]
     public void ShowFight3()
     {
-        unlockFight3.SetActive(false);
+        unlockFight3.SetActive(true);
 
 
     }

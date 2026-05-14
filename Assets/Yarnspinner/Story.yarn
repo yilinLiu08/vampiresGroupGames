@@ -1486,11 +1486,11 @@ Dahlia: Ugh… Elsie needs her rest.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayHappyL">>
+<<changeNPCImageRight PortraitContainerRight "LovedayHappyR">>
 <<PlaySound audio Thud>>
 <<PlaySound audio Loveday_Realize>>
 Loveday: Hmm… She’s clearly not <i>The Anti-Sleep.</i>
-<<resetScaleLeft PortraitContainerLeft>>
+<<resetScaleRight PortraitContainerRight>>
 
 
 
@@ -1662,8 +1662,8 @@ Loveday: …
 <<PlaySound audio Dahlia_Damnit>>
 Dahlia: We’re so close guys.
 Dahlia: Just past that gate and a little bit more… and then we’re finally at Claredon.
-<<Empty PortraitContainerLeft>>
-<<Empty PortraitContainerRight>>
+<<changeNPCImageLeft PortraitContainerLeft "empty">>
+<<changeNPCImageRight PortraitContainerRight "empty">>
 
 
 <<ShowEndScene Pregame>>
@@ -1750,7 +1750,7 @@ Loveday: What are we waiting for then? Let’s go.
 
 
 
-<<StartScreen DialogueRunner>>
+<<StartScreen DialogueSystem>>
 <<resetScaleLeft PortraitContainerLeft>>
-<<HQ DialogueSystem>>
+
 ===

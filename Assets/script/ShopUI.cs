@@ -8,6 +8,9 @@ public class ShopUI : MonoBehaviour
     public GameObject garlicOff;
     public GameObject shopUI;
 
+    public GameObject loamButton;
+    public GameObject loamOff;
+
     [YarnCommand("open_shop")]
 
 
@@ -17,6 +20,8 @@ public class ShopUI : MonoBehaviour
         
         shopUI.SetActive(true);
     }
+
+
 
     void Update()
     {
@@ -34,5 +39,14 @@ public class ShopUI : MonoBehaviour
     {
         garlicButton.SetActive(true);
         garlicOff.SetActive(false);
+    }
+
+
+    [YarnCommand("unlock_loam")]
+
+    public void Loam()
+    {
+        loamButton.SetActive(true);
+        loamOff.SetActive(false);
     }
 }

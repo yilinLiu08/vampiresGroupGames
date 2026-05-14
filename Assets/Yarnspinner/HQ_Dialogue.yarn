@@ -1,12 +1,12 @@
 title:StartNode
 ---
 <<HideMarkerJude Jude>>
-<<ShowFight2 Jude>>
+
 Jude: Hey! Y'all finally made it! I was startin' to get worried there.
 Jude: As I've promised, I got some elixirs and other stuff that'll keep y'all alive.
 Loveday: What can I offer in exchange?
 Jude: Maybe snaggin' a few coins from those damn guards can work! I saw them down to the right!
-Jude: But it's nothing too crazy right now, but feel free to come back time to time to see if I cooked up something new!
+Jude: Shop has nothing too crazy right now, but feel free to come back to see if I cooked up something new!
 -> Sure thing.
     <<open_shop Player>>
     <<ShowMarkerForest Jude>>
@@ -16,7 +16,11 @@ Jude: But it's nothing too crazy right now, but feel free to come back time to t
 
 title:NPCFight1Win
 ---
-Jude: Hey. I got new stuff for ya! Wanna check it out?
+<<HideMarkerJude Jude>>
+<<ShowFight2 Jude>>
+Jude: Hey. I heard y'all crushed it out there! 
+Jude: That's good. They've really to started to piss me off pestering about "food permits."
+Jude: Anyways, look at... THIS! 
 Loveday: What is it?
 Jude: It's garlic! Pretty potent for vampires~
 <<unlock_garlic Player>>    
@@ -34,6 +38,25 @@ Jude: Here to buy somethin'?
 -> Not right now. 
 ===
 
+
+title:NPCFight2Win
+---
+<<HideMarkerJude Jude>>
+<<ShowFight3 Jude>>
+Jude: Oh hey! I was startin' to get worried again. 
+Jude: But... good news.
+Loveday: What is it?
+Jude: Check it out. 
+Jude: A special mix of loam that can help a fallen teammate get back on their feet.
+Loveday: Sounds... useful.
+Jude: I heard y'all were gettin' ready to battle that Unicorn?
+Jude: Then trust me. Y'all will need this. 
+<<unlock_loam Player>>   
+<<unlock_garlic Player>>  
+-> We need this. 
+    <<open_shop Player>>
+-> I'm okay.
+===
 
 title:ElsieStart
 ---

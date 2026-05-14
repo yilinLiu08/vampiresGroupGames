@@ -4,9 +4,11 @@ using Yarn.Unity;
 
 public class FightSelection : MonoBehaviour
 {
-    public GameObject fightSelect;
+    public CanvasGroup fightSelect;
 
     public GameObject fightSelectButton;
+
+    
 
 
 
@@ -23,6 +25,7 @@ public class FightSelection : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             fightSelectButton.SetActive(false);
+            SetPopupState(false);
         }
     }
 
@@ -30,17 +33,32 @@ public class FightSelection : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            fightSelect.SetActive(false);
+            SetPopupState(false);
         }
     }
+
     public void Toggle()
     {
-
-        fightSelect.SetActive(true);
         fightSelectButton.SetActive(false);
+        Debug.Log("turned canvas off");
+        SetPopupState(true);
+        //fightSelectButton.SetActive(false);
+        
     }
+
+    
+   
+
+    
+    private void SetPopupState(bool isVisible)
+    {
+        fightSelect.alpha = isVisible ? 1 : 0;
+        fightSelect.interactable = isVisible;
+        fightSelect.blocksRaycasts = isVisible;
+    }
+}
 
 
     
 
-}
+
