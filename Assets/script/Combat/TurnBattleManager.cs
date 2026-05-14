@@ -369,6 +369,11 @@ public class TurnBattleManager : MonoBehaviour
 
             BattleUnit unit = turnOrder[i];
 
+            if (unit == null)
+            {
+                continue;
+            }
+
             if (!unit.isPlayer)
             {
                 continue;
@@ -385,6 +390,7 @@ public class TurnBattleManager : MonoBehaviour
             }
 
             MarkTurnSlotConsumed(i);
+            currentTurnIndex = i + 1;
             return unit;
         }
 
@@ -653,6 +659,11 @@ public class TurnBattleManager : MonoBehaviour
             }
 
             MarkTurnSlotConsumed(slotIndex);
+
+            if (unit == null)
+            {
+                continue;
+            }
 
             if (!unit.gameObject.activeInHierarchy)
             {

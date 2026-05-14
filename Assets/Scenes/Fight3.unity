@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f943a207cf78097429ed602333c0634a, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 151461849743632286, guid: f943a207cf78097429ed602333c0634a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2343,7 +2343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &337562531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3139,7 +3139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &467454945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4641,7 +4641,7 @@ MonoBehaviour:
   m_text: 999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f943a207cf78097429ed602333c0634a, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 151461849743632286, guid: f943a207cf78097429ed602333c0634a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7176,7 +7176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1166904616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10930,7 +10930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1899367877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12354,8 +12354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
   unitName: Enemy
   isPlayer: 0
-  maxHP: 250
-  currentHP: 250
+  maxHP: 200
+  currentHP: 200
   attackDamage: 20
   skillDamage: 35
   maxMana: 100
@@ -12366,7 +12366,7 @@ MonoBehaviour:
   enemyActionType: 3
   enemyHealAmount: 15
   enemyMagicDamage: 15
-  bossSpecialLockChance: 1
+  bossSpecialLockChance: 0.4
   effectPoint: {fileID: 1606460524}
   attackHitEffectPrefab: {fileID: 2908792109950182452, guid: 8d4510a6471b0084b96242ff61a62538, type: 3}
   healEffectPrefab: {fileID: 0}
