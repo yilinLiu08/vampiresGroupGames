@@ -7,7 +7,7 @@ Vera: WE DID IT! Aw yeah~ Woo yeah~ We did it yeahhh~
 <<resetScaleRight PortraitContainerRight>>
 
 
-<<ShowFight2 Jude>>
+//<<ShowFight2 Jude>>
 
 <<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Loveday_Annoyed>>
@@ -240,7 +240,7 @@ Dahlia: Uhhh… Yeah…
 
 
 
-Loveday: DAHLIA CUTSCENE! (come back here)
+<<PlayDahliaCutscene dahliacutscene>>
 
 
 
@@ -1077,7 +1077,8 @@ Dahlia: Vera, you’re so sappy. Let’s get on with it and win already.
 
 title:Win2
 ---
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+<<ShowCampfire Pregame>>
+
 <<PlaySound audio Slurp>>
 Vera: <i>Mmmph. Mmmmph.</i>
 Vera: Ahem. Dahlia? This could honestly use some seasoning.
@@ -1086,7 +1087,7 @@ Vera: Ahem. Dahlia? This could honestly use some seasoning.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 <<PlaySound audio Dahlia_Serious>>
 <<PlaySound audio Dahlia_Disgust>>
 Dahlia: Okay. Do you want to eat it raw next time?
@@ -1095,7 +1096,7 @@ Dahlia: Okay. Do you want to eat it raw next time?
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
 <<PlaySound audio Question>>
 <<PlaySound audio Vera_Confused>>
 Vera: Should I be honest?
@@ -1104,7 +1105,7 @@ Vera: Should I be honest?
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieBaseR">>
 <<PlaySound audio Elsie_Happy>>
 Elsie: Mmmmmh…. Lili, feed me…
 <<resetScaleRight PortraitContainerRight>>
@@ -1112,7 +1113,7 @@ Elsie: Mmmmmh…. Lili, feed me…
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: Open wide.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1120,7 +1121,7 @@ Dahlia: Open wide.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 <<PlaySound audio Elsie_Happy>>
 Elsie: …Mm! <i>So soft and warm…</i>
 Elsie: I heard humans have a larger food palate compared to vampires… I'm curious if there are any foods you guys miss eating…
@@ -1129,7 +1130,7 @@ Elsie: I heard humans have a larger food palate compared to vampires… I'm curi
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Curious>>
 Dahlia: Huh, it’s something I never thought about before.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1137,7 +1138,7 @@ Dahlia: Huh, it’s something I never thought about before.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Yeah>>
 Vera: <b>REALLY???</b> I think about it all the time!!!
 <<PlaySound audio Interest>>
@@ -1149,7 +1150,7 @@ Vera: Whenever my brothers and I smelled Mom’s meat stew, we practically float
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 <<PlaySound audio Dahlia_Damnit>>
 Dahlia: Ah… Stop making me any more hungry than I am, Vera.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1157,7 +1158,7 @@ Dahlia: Ah… Stop making me any more hungry than I am, Vera.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 <<PlaySound audio Loveday_Realize>>
 Loveday: Well, I suppose sharing meals as a human proved to be more of a bonding thing.
 Loveday: Most of the foods I think about are meals shared with loved ones.
@@ -1166,8 +1167,7 @@ Loveday: Most of the foods I think about are meals shared with loved ones.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
-<<PlaySound audio Elsie_Happy>>
+//<<PlaySound audio Elsie_Happy>>
 Elsie: Mm…. I see.
 Elsie: Lili, you like it when we eat together like this?
 <<resetScaleRight PortraitContainerRight>>
@@ -1175,7 +1175,7 @@ Elsie: Lili, you like it when we eat together like this?
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
 <<PlaySound audio Dahlia_Disgust>>
 Dahlia: Yeah, <i>especially</i> with you.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1183,7 +1183,7 @@ Dahlia: Yeah, <i>especially</i> with you.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Dread>>
 <<PlaySound audio Loveday_Annoyed>>
 Loveday: <b>EW GAY LESBIANS!</b>
@@ -1192,7 +1192,7 @@ Loveday: <b>EW GAY LESBIANS!</b>
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: Santhe and I used to catch beetles that were as big as our heads.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1200,7 +1200,7 @@ Dahlia: Santhe and I used to catch beetles that were as big as our heads.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Wow>>
 Vera: OH MAN, I would’ve loved to see one of those.
 <<resetScaleRight PortraitContainerRight>>
@@ -1208,7 +1208,7 @@ Vera: OH MAN, I would’ve loved to see one of those.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: We’d go and show our mom… fun times.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1216,7 +1216,7 @@ Dahlia: We’d go and show our mom… fun times.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 <<PlaySound audio Loveday_Bother>>
 <<PlaySound audio Question>>
 Loveday: Sorry, what does this have to do with food?
@@ -1225,14 +1225,14 @@ Loveday: Sorry, what does this have to do with food?
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 Dahlia: Glad you asked. After we caught those beetles… we’d throw ‘em in a pot and EAT ‘em.
 <<resetScaleLeft PortraitContainerLeft>>
 
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayScaredL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayScaredL">>
 <<PlaySound audio Loveday_Realize>>
 Loveday: Oh.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1240,7 +1240,7 @@ Loveday: Oh.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
 <<PlaySound audio Vera_Agree>>
 Vera: You’re talking about the famous Cindbrook stew! Wow, the delicacies of the world! When I turn back into a human, I want to traverse the lands and eat it all!
 <<resetScaleRight PortraitContainerRight>>
@@ -1248,31 +1248,31 @@ Vera: You’re talking about the famous Cindbrook stew! Wow, the delicacies of t
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 <<PlaySound audio Elsie_Hesitant>>
 Elsie: Oooh wait, are we telling stories? Lili, my turn!  
 <<PlaySound audio Elsie_Happy>>
 Elsie: Once upon a time, there was a cute little girl in a dark, dark forest. She was sooo alone and scared. I mean, who wouldn’t be in a forest that dark and quiet?
 <<PlaySound audio Heartbeat>>
-<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 Elsie: T-Then, there was a loud WHOOOSH! And standing before her was a tall… pretty… tasty….. woma-
 <<resetScaleRight PortraitContainerRight>>
 
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: C’mon Elsie, you know that’s not how it went.
 <<PlaySound audio Cloth1>>
-<<changeNPCImageRight PortraitContainerRight "DahliaMadR">>
+//<<changeNPCImageRight PortraitContainerRight "DahliaMadR">>
 Dahlia: Damn, it’s kind of chilly once you step away from this fire.
 <<resetScaleLeft PortraitContainerLeft>>
 
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Loveday_Annoyed>>
 Loveday: You are quite literally wearing the thinnest dress in the world right now.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1280,7 +1280,7 @@ Loveday: You are quite literally wearing the thinnest dress in the world right n
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Curious>>
 Dahlia: You think I can’t tell that you’re cold too? You’d fit perfectly in my village’s farm with all those goosebumps running down your arms.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1288,17 +1288,17 @@ Dahlia: You think I can’t tell that you’re cold too? You’d fit perfectly i
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraScaredR">>
 <<PlaySound audio Vera_Wow>>
 Vera: Oh wow, you guys would have <i>HATED</i> the Port Concetta breeze.
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: No one in my town wore hats because the coastal winds would blow them right off.
 <<resetScaleRight PortraitContainerRight>>
 
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 <<PlaySound audio Elsie_Happy>>
 Elsie: Port Concetta sounds kinda fun, actually~ You think we could visit sometime? I’d like to conduct some research over there…
 <<resetScaleRight PortraitContainerRight>>
@@ -1306,7 +1306,7 @@ Elsie: Port Concetta sounds kinda fun, actually~ You think we could visit someti
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Agree>>
 Vera: Oh, haha… Yeaahh! It’s probably a little quieter than before over there. Well, honestly I don’t know. It’s been well over 10 years since I've been there.
 <<resetScaleRight PortraitContainerRight>>
@@ -1314,7 +1314,7 @@ Vera: Oh, haha… Yeaahh! It’s probably a little quieter than before over ther
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaHappyL">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: Well, I’m down to visit too. I’m sure your brothers will be excited to have you back home.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1322,7 +1322,7 @@ Dahlia: Well, I’m down to visit too. I’m sure your brothers will be excited 
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 Vera: …Haha…
 Vera: Can I…
 Vera: Can I be honest with you guys for a second…?
@@ -1332,14 +1332,14 @@ Vera: Can I be honest with you guys for a second…?
 <<PlayVeraCutscene veracutscene>>
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 Loveday: …
 <<resetScaleLeft PortraitContainerLeft>>
 
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 <<PlaySound audio Elsie_Sob>>
 Elsie: Vera…
 <<resetScaleRight PortraitContainerRight>>
@@ -1347,7 +1347,7 @@ Elsie: Vera…
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 <<PlaySound audio Dahlia_Damnit>>
 Dahlia: Vera, I’m sorry. I didn’t mean to-
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1355,14 +1355,14 @@ Dahlia: Vera, I’m sorry. I didn’t mean to-
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Confused>>
 <<PlaySound audio IdeaDing>>
 Vera: It’s okay, Dahlia! You didn’t know. My family would’ve loved to have you guys over!
-<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraBaseR">>
 Vera: Somewhere out there, they’re watching over me and seeing the same beautiful sights and hearing the same wonderful sounds.
 Vera: …You guys remind me of my brothers. We didn’t get along all the time, but we’d watch each other's backs. They were all truly my best friends.
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Dread>>
 <<PlaySound audio Vera_Yeah>>
 Vera: With that being said… I’m going to keep fighting the good fight, AND NO ONE WILL DIE BEHIND MY SHIELD!!! <b> FOR PORT CONCETTA, MY FAMILY, AND THE SQUAD! </b>
@@ -1371,7 +1371,7 @@ Vera: With that being said… I’m going to keep fighting the good fight, AND N
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieScaredR">>
 <<PlaySound audio Elsie_Hesitant>>
 Elsie: F-For the squad!!!
 <<resetScaleRight PortraitContainerRight>>
@@ -1379,7 +1379,7 @@ Elsie: F-For the squad!!!
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Loveday_Bother>>
 Loveday: I’m not saying that.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1387,7 +1387,7 @@ Loveday: I’m not saying that.
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaBaseL">>
 <<PlaySound audio Dahlia_Curious>>
 Dahlia: Dude, I can’t believe we never had a squad name.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1395,16 +1395,16 @@ Dahlia: Dude, I can’t believe we never had a squad name.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Confused>>
 <<PlaySound audio Thud>>
 Vera: Uhhh…….. What about <i>”The Queerest Ferantays”</i> ?
-<<resetScaleRight PortraitContainerRight>>
+//<<resetScaleRight PortraitContainerRight>>
 
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieHappyR">>
 <<PlaySound audio Interest>>
 <<PlaySound audio Elsie_Happy>>
 Elsie: Oh! It has a ring to it, heheh…
@@ -1413,7 +1413,7 @@ Elsie: Oh! It has a ring to it, heheh…
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaMadL">>
 <<PlaySound audio Dahlia_Awkward>>
 Dahlia: What the hell is that even supposed to mean? You just strung some gobbledygook together.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1421,7 +1421,7 @@ Dahlia: What the hell is that even supposed to mean? You just strung some gobble
 
 
 
-<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
+//<<changeNPCImageRight PortraitContainerRight "ElsieMadR">>
 <<PlaySound audio Elsie_Sob>>
 Elsie: …If Dahlia doesn’t like it, then I don’t like it! Hmph!
 <<resetScaleRight PortraitContainerRight>>
@@ -1429,7 +1429,7 @@ Elsie: …If Dahlia doesn’t like it, then I don’t like it! Hmph!
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraMadR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraMadR">>
 <<PlaySound audio Vera_Agree>>
 Vera: Then what about…
 <<resetScaleRight PortraitContainerRight>>
@@ -1437,7 +1437,7 @@ Vera: Then what about…
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayHappyL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayHappyL">>
 Loveday: <i>(I haven’t been at ease in a while.)</i>
 Loveday: <i>(Four individuals, who were never destined to meet… are somehow sitting around a fire together.)</i>
 Loveday: <i>(Laughing. Chatting. Talking about their past lives.)</i>
@@ -1455,7 +1455,8 @@ Loveday: <i>(I wonder what the future holds for us.)</i>
 
 
 
-<<resetScaleLeft PortraitContainerLeft>>
+
+<<HideCampfire Pregame>>
 <<HQ DialogueSystem>>
 ===
 
@@ -1661,12 +1662,13 @@ Loveday: …
 <<PlaySound audio Dahlia_Damnit>>
 Dahlia: We’re so close guys.
 Dahlia: Just past that gate and a little bit more… and then we’re finally at Claredon.
-<<resetScaleLeft PortraitContainerLeft>>
+<<Empty PortraitContainerLeft>>
+<<Empty PortraitContainerRight>>
 
 
+<<ShowEndScene Pregame>>
 
-
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Agree>>
 Vera: It better be a challenge this time! I heard Claredon guards have to master 10 different weapon techniques before they’re officially guards…
 <<resetScaleRight PortraitContainerRight>>
@@ -1674,7 +1676,7 @@ Vera: It better be a challenge this time! I heard Claredon guards have to master
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
 <<PlaySound audio Elsie_Happy>>
 Elsie: E-Eeeeep! I don’t even think I’ve seen 10 weapons in my life…! But… I’m more prepared now!
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1682,7 +1684,7 @@ Elsie: E-Eeeeep! I don’t even think I’ve seen 10 weapons in my life…! But�
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Agree>>
 <<PlaySound audio IdeaDing>>
 Vera: What will you guys do when y’all get cured?
@@ -1691,7 +1693,7 @@ Vera: What will you guys do when y’all get cured?
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: When I turn back into a human, I’m going to go back and tell Santhe about all my adventures. Then, I’ll run away with Elsie. We’ll live in a small cottage.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1699,7 +1701,7 @@ Dahlia: When I turn back into a human, I’m going to go back and tell Santhe ab
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Yeah>>
 Vera: Wow, you have everything planned out! When I turn back, I’m probably going to travel the seas and meet all different kinds of people. Man, oh man do I miss the sun on my skin…
 Vera: What about you, Loveday?
@@ -1708,7 +1710,7 @@ Vera: What about you, Loveday?
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayBaseL">>
 <<PlaySound audio Loveday_Realize>>
 Loveday: Me? Well… I’d go back to Gailstad. Continue living my life as if nothing ever happened.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1716,7 +1718,7 @@ Loveday: Me? Well… I’d go back to Gailstad. Continue living my life as if no
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
 <<PlaySound audio Elsie_Scared>>
 <<PlaySound audio Heartbeat>>
 Elsie: When you turn back into a human, Lili, I’m gonna… I’m gonna let you use me however you want!
@@ -1725,7 +1727,7 @@ Elsie: When you turn back into a human, Lili, I’m gonna… I’m gonna let you
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
+//<<changeNPCImageLeft PortraitContainerLeft "DahliaElsie">>
 <<PlaySound audio Dahlia_Pleased>>
 Dahlia: Shouldn’t have said that here, but I’m ready.
 <<resetScaleLeft PortraitContainerLeft>>
@@ -1733,7 +1735,7 @@ Dahlia: Shouldn’t have said that here, but I’m ready.
 
 
 
-<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
+//<<changeNPCImageRight PortraitContainerRight "VeraHappyR">>
 <<PlaySound audio Vera_Agree>>
 Vera: How much longer are we going to stand here for? I’m ready to bust down that door crazy style!
 <<resetScaleRight PortraitContainerRight>>
@@ -1741,14 +1743,14 @@ Vera: How much longer are we going to stand here for? I’m ready to bust down t
 
 
 
-<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
+//<<changeNPCImageLeft PortraitContainerLeft "LovedayMadL">>
 <<PlaySound audio Loveday_ComeOn>>
 Loveday: What are we waiting for then? Let’s go.
 <<resetScaleLeft PortraitContainerLeft>>
 
 
 
-
+<<StartScreen DialogueRunner>>
 <<resetScaleLeft PortraitContainerLeft>>
 <<HQ DialogueSystem>>
 ===

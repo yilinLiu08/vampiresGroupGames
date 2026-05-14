@@ -68,4 +68,11 @@ public class WhatYarn : MonoBehaviour
         Debug.Log("go home after battle");
         SceneManager.LoadScene("HQ_realone");
     }
+
+    [YarnCommand("StartScreen")]
+    public void StartScreen()
+    {
+        Debug.Log("game completed");
+        SceneManager.LoadScene("StartScreen");
+    }
 }

@@ -18,7 +18,7 @@ title:NPCFight1Win
 ---
 Jude: Hey. I got new stuff for ya! Wanna check it out?
 Loveday: What is it?
-Jude: It's garlic! Pretty proten for vampires~
+Jude: It's garlic! Pretty potent for vampires~
 <<unlock_garlic Player>>    
 -> Why not.
     <<open_shop Player>>
